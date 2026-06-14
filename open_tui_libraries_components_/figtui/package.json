@@ -1,0 +1,47 @@
+{
+  "name": "figtui",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "FIGlet renderer for OpenTUI React terminals",
+  "keywords": [
+    "figlet",
+    "tui",
+    "opentui",
+    "react",
+    "terminal"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "demo": "bun run src/main.tsx",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "figlet": "^1.11.0"
+  },
+  "peerDependencies": {
+    "@opentui/react": "^0.1.107",
+    "react": "^19.2.0"
+  },
+  "devDependencies": {
+    "@opentui/core": "^0.1.107",
+    "@opentui/react": "^0.1.107",
+    "@types/bun": "^1.2.15",
+    "@types/node": "^25.9.0",
+    "@types/react": "^19.2.7",
+    "react": "^19.2.0",
+    "typescript": "^5.9.3"
+  }
+}

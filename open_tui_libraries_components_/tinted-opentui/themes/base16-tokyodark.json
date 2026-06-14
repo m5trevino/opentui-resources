@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Tokyodark",
+  "slug": "tokyodark",
+  "system": "base16",
+  "author": "Jamy Golden (https://github.com/JamyGolden), Based on Tokyodark.nvim (https://github.com/tiagovla/tokyodark.nvim)",
+  "palette": {
+    "base00": "#11121d",
+    "base01": "#212234",
+    "base02": "#212234",
+    "base03": "#353945",
+    "base04": "#4a5057",
+    "base05": "#a0a8cd",
+    "base06": "#abb2bf",
+    "base07": "#bcc2dc",
+    "base08": "#ee6d85",
+    "base09": "#f6955b",
+    "base0A": "#d7a65f",
+    "base0B": "#95c561",
+    "base0C": "#9fbbf3",
+    "base0D": "#7199ee",
+    "base0E": "#a485dd",
+    "base0F": "#773440"
+  },
+  "tokens": {
+    "background": "#11121d",
+    "surface": "#212234",
+    "surfaceAlt": "#212234",
+    "surfaceRaised": "#212234",
+    "border": "#353945",
+    "borderFocused": "#7199ee",
+    "text": "#a0a8cd",
+    "textMuted": "#4a5057",
+    "textSubtle": "#353945",
+    "textInverse": "#11121d",
+    "accent": "#7199ee",
+    "accentText": "#11121d",
+    "success": "#95c561",
+    "warning": "#d7a65f",
+    "danger": "#ee6d85",
+    "info": "#9fbbf3",
+    "selectionBg": "#212234",
+    "selectionFg": "#a0a8cd",
+    "cursor": "#7199ee",
+    "scrollbarTrack": "#212234",
+    "scrollbarThumb": "#353945"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#11121d",
+      "cursorColor": "#7199ee"
+    },
+    "box": {
+      "backgroundColor": "#11121d",
+      "borderColor": "#353945",
+      "focusedBorderColor": "#7199ee"
+    },
+    "text": {
+      "fg": "#a0a8cd",
+      "bg": "#11121d",
+      "selectionBg": "#212234",
+      "selectionFg": "#a0a8cd"
+    },
+    "input": {
+      "backgroundColor": "#212234",
+      "textColor": "#a0a8cd",
+      "focusedBackgroundColor": "#212234",
+      "focusedTextColor": "#a0a8cd",
+      "placeholderColor": "#4a5057",
+      "selectionBg": "#353945",
+      "selectionFg": "#a0a8cd",
+      "cursorColor": "#7199ee"
+    },
+    "textarea": {
+      "backgroundColor": "#212234",
+      "textColor": "#a0a8cd",
+      "focusedBackgroundColor": "#212234",
+      "focusedTextColor": "#a0a8cd",
+      "placeholderColor": "#4a5057",
+      "selectionBg": "#353945",
+      "selectionFg": "#a0a8cd",
+      "cursorColor": "#7199ee"
+    },
+    "select": {
+      "backgroundColor": "#11121d",
+      "textColor": "#a0a8cd",
+      "focusedBackgroundColor": "#212234",
+      "focusedTextColor": "#a0a8cd",
+      "selectedBackgroundColor": "#7199ee",
+      "selectedTextColor": "#11121d",
+      "descriptionColor": "#4a5057",
+      "selectedDescriptionColor": "#11121d"
+    },
+    "tabSelect": {
+      "backgroundColor": "#11121d",
+      "textColor": "#4a5057",
+      "focusedBackgroundColor": "#212234",
+      "focusedTextColor": "#a0a8cd",
+      "selectedBackgroundColor": "#7199ee",
+      "selectedTextColor": "#11121d",
+      "selectedDescriptionColor": "#11121d"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#212234",
+        "foregroundColor": "#353945"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#4a5057",
+        "backgroundColor": "#212234"
+      }
+    },
+    "markdown": {
+      "fg": "#a0a8cd",
+      "bg": "#11121d",
+      "borderColor": "#353945"
+    },
+    "code": {
+      "fg": "#a0a8cd",
+      "bg": "#11121d",
+      "selectionBg": "#212234",
+      "selectionFg": "#a0a8cd"
+    }
+  }
+}

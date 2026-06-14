@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "UwUnicorn",
+  "slug": "uwunicorn",
+  "system": "base16",
+  "author": "Fernando Marques (https://github.com/RakkiUwU) and Gabriel Fontes (https://github.com/Misterio77)",
+  "palette": {
+    "base00": "#241b26",
+    "base01": "#2f2a3f",
+    "base02": "#46354a",
+    "base03": "#6c3cb2",
+    "base04": "#7e5f83",
+    "base05": "#eed5d9",
+    "base06": "#d9c2c6",
+    "base07": "#e4ccd0",
+    "base08": "#877bb6",
+    "base09": "#de5b44",
+    "base0A": "#a84a73",
+    "base0B": "#c965bf",
+    "base0C": "#9c5fce",
+    "base0D": "#6a9eb5",
+    "base0E": "#78a38f",
+    "base0F": "#a3a079"
+  },
+  "tokens": {
+    "background": "#241b26",
+    "surface": "#2f2a3f",
+    "surfaceAlt": "#46354a",
+    "surfaceRaised": "#46354a",
+    "border": "#6c3cb2",
+    "borderFocused": "#6a9eb5",
+    "text": "#eed5d9",
+    "textMuted": "#7e5f83",
+    "textSubtle": "#6c3cb2",
+    "textInverse": "#241b26",
+    "accent": "#6a9eb5",
+    "accentText": "#241b26",
+    "success": "#c965bf",
+    "warning": "#a84a73",
+    "danger": "#877bb6",
+    "info": "#9c5fce",
+    "selectionBg": "#46354a",
+    "selectionFg": "#eed5d9",
+    "cursor": "#6a9eb5",
+    "scrollbarTrack": "#2f2a3f",
+    "scrollbarThumb": "#6c3cb2"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#241b26",
+      "cursorColor": "#6a9eb5"
+    },
+    "box": {
+      "backgroundColor": "#241b26",
+      "borderColor": "#6c3cb2",
+      "focusedBorderColor": "#6a9eb5"
+    },
+    "text": {
+      "fg": "#eed5d9",
+      "bg": "#241b26",
+      "selectionBg": "#46354a",
+      "selectionFg": "#eed5d9"
+    },
+    "input": {
+      "backgroundColor": "#2f2a3f",
+      "textColor": "#eed5d9",
+      "focusedBackgroundColor": "#46354a",
+      "focusedTextColor": "#eed5d9",
+      "placeholderColor": "#7e5f83",
+      "selectionBg": "#6c3cb2",
+      "selectionFg": "#eed5d9",
+      "cursorColor": "#6a9eb5"
+    },
+    "textarea": {
+      "backgroundColor": "#2f2a3f",
+      "textColor": "#eed5d9",
+      "focusedBackgroundColor": "#46354a",
+      "focusedTextColor": "#eed5d9",
+      "placeholderColor": "#7e5f83",
+      "selectionBg": "#6c3cb2",
+      "selectionFg": "#eed5d9",
+      "cursorColor": "#6a9eb5"
+    },
+    "select": {
+      "backgroundColor": "#241b26",
+      "textColor": "#eed5d9",
+      "focusedBackgroundColor": "#2f2a3f",
+      "focusedTextColor": "#eed5d9",
+      "selectedBackgroundColor": "#6a9eb5",
+      "selectedTextColor": "#241b26",
+      "descriptionColor": "#7e5f83",
+      "selectedDescriptionColor": "#241b26"
+    },
+    "tabSelect": {
+      "backgroundColor": "#241b26",
+      "textColor": "#7e5f83",
+      "focusedBackgroundColor": "#2f2a3f",
+      "focusedTextColor": "#eed5d9",
+      "selectedBackgroundColor": "#6a9eb5",
+      "selectedTextColor": "#241b26",
+      "selectedDescriptionColor": "#241b26"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#2f2a3f",
+        "foregroundColor": "#6c3cb2"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#7e5f83",
+        "backgroundColor": "#2f2a3f"
+      }
+    },
+    "markdown": {
+      "fg": "#eed5d9",
+      "bg": "#241b26",
+      "borderColor": "#6c3cb2"
+    },
+    "code": {
+      "fg": "#eed5d9",
+      "bg": "#241b26",
+      "selectionBg": "#46354a",
+      "selectionFg": "#eed5d9"
+    }
+  }
+}

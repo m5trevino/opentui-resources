@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Atelier Lakeside Light",
+  "slug": "atelier-lakeside-light",
+  "system": "base16",
+  "author": "Bram de Haan (http://atelierbramdehaan.nl)",
+  "palette": {
+    "base00": "#ebf8ff",
+    "base01": "#c1e4f6",
+    "base02": "#7ea2b4",
+    "base03": "#7195a8",
+    "base04": "#5a7b8c",
+    "base05": "#516d7b",
+    "base06": "#1f292e",
+    "base07": "#161b1d",
+    "base08": "#d22d72",
+    "base09": "#935c25",
+    "base0A": "#8a8a0f",
+    "base0B": "#568c3b",
+    "base0C": "#2d8f6f",
+    "base0D": "#257fad",
+    "base0E": "#6b6bb8",
+    "base0F": "#b72dd2"
+  },
+  "tokens": {
+    "background": "#ebf8ff",
+    "surface": "#c1e4f6",
+    "surfaceAlt": "#7ea2b4",
+    "surfaceRaised": "#7ea2b4",
+    "border": "#7195a8",
+    "borderFocused": "#257fad",
+    "text": "#516d7b",
+    "textMuted": "#5a7b8c",
+    "textSubtle": "#7195a8",
+    "textInverse": "#ebf8ff",
+    "accent": "#257fad",
+    "accentText": "#ebf8ff",
+    "success": "#568c3b",
+    "warning": "#8a8a0f",
+    "danger": "#d22d72",
+    "info": "#2d8f6f",
+    "selectionBg": "#7ea2b4",
+    "selectionFg": "#516d7b",
+    "cursor": "#257fad",
+    "scrollbarTrack": "#c1e4f6",
+    "scrollbarThumb": "#7195a8"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#ebf8ff",
+      "cursorColor": "#257fad"
+    },
+    "box": {
+      "backgroundColor": "#ebf8ff",
+      "borderColor": "#7195a8",
+      "focusedBorderColor": "#257fad"
+    },
+    "text": {
+      "fg": "#516d7b",
+      "bg": "#ebf8ff",
+      "selectionBg": "#7ea2b4",
+      "selectionFg": "#516d7b"
+    },
+    "input": {
+      "backgroundColor": "#c1e4f6",
+      "textColor": "#516d7b",
+      "focusedBackgroundColor": "#7ea2b4",
+      "focusedTextColor": "#516d7b",
+      "placeholderColor": "#5a7b8c",
+      "selectionBg": "#7195a8",
+      "selectionFg": "#516d7b",
+      "cursorColor": "#257fad"
+    },
+    "textarea": {
+      "backgroundColor": "#c1e4f6",
+      "textColor": "#516d7b",
+      "focusedBackgroundColor": "#7ea2b4",
+      "focusedTextColor": "#516d7b",
+      "placeholderColor": "#5a7b8c",
+      "selectionBg": "#7195a8",
+      "selectionFg": "#516d7b",
+      "cursorColor": "#257fad"
+    },
+    "select": {
+      "backgroundColor": "#ebf8ff",
+      "textColor": "#516d7b",
+      "focusedBackgroundColor": "#c1e4f6",
+      "focusedTextColor": "#516d7b",
+      "selectedBackgroundColor": "#257fad",
+      "selectedTextColor": "#ebf8ff",
+      "descriptionColor": "#5a7b8c",
+      "selectedDescriptionColor": "#ebf8ff"
+    },
+    "tabSelect": {
+      "backgroundColor": "#ebf8ff",
+      "textColor": "#5a7b8c",
+      "focusedBackgroundColor": "#c1e4f6",
+      "focusedTextColor": "#516d7b",
+      "selectedBackgroundColor": "#257fad",
+      "selectedTextColor": "#ebf8ff",
+      "selectedDescriptionColor": "#ebf8ff"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#c1e4f6",
+        "foregroundColor": "#7195a8"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#5a7b8c",
+        "backgroundColor": "#c1e4f6"
+      }
+    },
+    "markdown": {
+      "fg": "#516d7b",
+      "bg": "#ebf8ff",
+      "borderColor": "#7195a8"
+    },
+    "code": {
+      "fg": "#516d7b",
+      "bg": "#ebf8ff",
+      "selectionBg": "#7ea2b4",
+      "selectionFg": "#516d7b"
+    }
+  }
+}

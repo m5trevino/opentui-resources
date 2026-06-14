@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Qualia",
+  "slug": "qualia",
+  "system": "base16",
+  "author": "isaacwhanson",
+  "palette": {
+    "base00": "#101010",
+    "base01": "#454545",
+    "base02": "#454545",
+    "base03": "#454545",
+    "base04": "#808080",
+    "base05": "#c0c0c0",
+    "base06": "#c0c0c0",
+    "base07": "#454545",
+    "base08": "#efa6a2",
+    "base09": "#a3b8ef",
+    "base0A": "#e6a3dc",
+    "base0B": "#80c990",
+    "base0C": "#c8c874",
+    "base0D": "#50cacd",
+    "base0E": "#e0af85",
+    "base0F": "#808080"
+  },
+  "tokens": {
+    "background": "#101010",
+    "surface": "#454545",
+    "surfaceAlt": "#454545",
+    "surfaceRaised": "#454545",
+    "border": "#454545",
+    "borderFocused": "#50cacd",
+    "text": "#c0c0c0",
+    "textMuted": "#808080",
+    "textSubtle": "#454545",
+    "textInverse": "#101010",
+    "accent": "#50cacd",
+    "accentText": "#101010",
+    "success": "#80c990",
+    "warning": "#e6a3dc",
+    "danger": "#efa6a2",
+    "info": "#c8c874",
+    "selectionBg": "#454545",
+    "selectionFg": "#c0c0c0",
+    "cursor": "#50cacd",
+    "scrollbarTrack": "#454545",
+    "scrollbarThumb": "#454545"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#101010",
+      "cursorColor": "#50cacd"
+    },
+    "box": {
+      "backgroundColor": "#101010",
+      "borderColor": "#454545",
+      "focusedBorderColor": "#50cacd"
+    },
+    "text": {
+      "fg": "#c0c0c0",
+      "bg": "#101010",
+      "selectionBg": "#454545",
+      "selectionFg": "#c0c0c0"
+    },
+    "input": {
+      "backgroundColor": "#454545",
+      "textColor": "#c0c0c0",
+      "focusedBackgroundColor": "#454545",
+      "focusedTextColor": "#c0c0c0",
+      "placeholderColor": "#808080",
+      "selectionBg": "#454545",
+      "selectionFg": "#c0c0c0",
+      "cursorColor": "#50cacd"
+    },
+    "textarea": {
+      "backgroundColor": "#454545",
+      "textColor": "#c0c0c0",
+      "focusedBackgroundColor": "#454545",
+      "focusedTextColor": "#c0c0c0",
+      "placeholderColor": "#808080",
+      "selectionBg": "#454545",
+      "selectionFg": "#c0c0c0",
+      "cursorColor": "#50cacd"
+    },
+    "select": {
+      "backgroundColor": "#101010",
+      "textColor": "#c0c0c0",
+      "focusedBackgroundColor": "#454545",
+      "focusedTextColor": "#c0c0c0",
+      "selectedBackgroundColor": "#50cacd",
+      "selectedTextColor": "#101010",
+      "descriptionColor": "#808080",
+      "selectedDescriptionColor": "#101010"
+    },
+    "tabSelect": {
+      "backgroundColor": "#101010",
+      "textColor": "#808080",
+      "focusedBackgroundColor": "#454545",
+      "focusedTextColor": "#c0c0c0",
+      "selectedBackgroundColor": "#50cacd",
+      "selectedTextColor": "#101010",
+      "selectedDescriptionColor": "#101010"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#454545",
+        "foregroundColor": "#454545"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#808080",
+        "backgroundColor": "#454545"
+      }
+    },
+    "markdown": {
+      "fg": "#c0c0c0",
+      "bg": "#101010",
+      "borderColor": "#454545"
+    },
+    "code": {
+      "fg": "#c0c0c0",
+      "bg": "#101010",
+      "selectionBg": "#454545",
+      "selectionFg": "#c0c0c0"
+    }
+  }
+}

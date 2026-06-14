@@ -1,0 +1,24 @@
+{
+  "name": "niri-tui",
+  "module": "src/index.tsx",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run src/index.tsx",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.20"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@opencode-ai/sdk": "^1.2.10",
+    "@opentui/core": "0.1.80",
+    "@opentui/react": "0.1.80",
+    "@types/react": "^19.2.14",
+    "opentui-spinner": "^0.0.6",
+    "react": "^19.2.0"
+  }
+}

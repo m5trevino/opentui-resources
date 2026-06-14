@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Tokyo Night Terminal Light",
+  "slug": "tokyo-night-terminal-light",
+  "system": "base16",
+  "author": "Michaël Ball",
+  "palette": {
+    "base00": "#d5d6db",
+    "base01": "#cbccd1",
+    "base02": "#dfe0e5",
+    "base03": "#9699a3",
+    "base04": "#4c505e",
+    "base05": "#4c505e",
+    "base06": "#1a1b26",
+    "base07": "#1a1b26",
+    "base08": "#8c4351",
+    "base09": "#965027",
+    "base0A": "#8f5e15",
+    "base0B": "#33635c",
+    "base0C": "#0f4b6e",
+    "base0D": "#34548a",
+    "base0E": "#5a4a78",
+    "base0F": "#655259"
+  },
+  "tokens": {
+    "background": "#d5d6db",
+    "surface": "#cbccd1",
+    "surfaceAlt": "#dfe0e5",
+    "surfaceRaised": "#dfe0e5",
+    "border": "#9699a3",
+    "borderFocused": "#34548a",
+    "text": "#4c505e",
+    "textMuted": "#4c505e",
+    "textSubtle": "#9699a3",
+    "textInverse": "#d5d6db",
+    "accent": "#34548a",
+    "accentText": "#d5d6db",
+    "success": "#33635c",
+    "warning": "#8f5e15",
+    "danger": "#8c4351",
+    "info": "#0f4b6e",
+    "selectionBg": "#dfe0e5",
+    "selectionFg": "#4c505e",
+    "cursor": "#34548a",
+    "scrollbarTrack": "#cbccd1",
+    "scrollbarThumb": "#9699a3"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#d5d6db",
+      "cursorColor": "#34548a"
+    },
+    "box": {
+      "backgroundColor": "#d5d6db",
+      "borderColor": "#9699a3",
+      "focusedBorderColor": "#34548a"
+    },
+    "text": {
+      "fg": "#4c505e",
+      "bg": "#d5d6db",
+      "selectionBg": "#dfe0e5",
+      "selectionFg": "#4c505e"
+    },
+    "input": {
+      "backgroundColor": "#cbccd1",
+      "textColor": "#4c505e",
+      "focusedBackgroundColor": "#dfe0e5",
+      "focusedTextColor": "#4c505e",
+      "placeholderColor": "#4c505e",
+      "selectionBg": "#9699a3",
+      "selectionFg": "#4c505e",
+      "cursorColor": "#34548a"
+    },
+    "textarea": {
+      "backgroundColor": "#cbccd1",
+      "textColor": "#4c505e",
+      "focusedBackgroundColor": "#dfe0e5",
+      "focusedTextColor": "#4c505e",
+      "placeholderColor": "#4c505e",
+      "selectionBg": "#9699a3",
+      "selectionFg": "#4c505e",
+      "cursorColor": "#34548a"
+    },
+    "select": {
+      "backgroundColor": "#d5d6db",
+      "textColor": "#4c505e",
+      "focusedBackgroundColor": "#cbccd1",
+      "focusedTextColor": "#4c505e",
+      "selectedBackgroundColor": "#34548a",
+      "selectedTextColor": "#d5d6db",
+      "descriptionColor": "#4c505e",
+      "selectedDescriptionColor": "#d5d6db"
+    },
+    "tabSelect": {
+      "backgroundColor": "#d5d6db",
+      "textColor": "#4c505e",
+      "focusedBackgroundColor": "#cbccd1",
+      "focusedTextColor": "#4c505e",
+      "selectedBackgroundColor": "#34548a",
+      "selectedTextColor": "#d5d6db",
+      "selectedDescriptionColor": "#d5d6db"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#cbccd1",
+        "foregroundColor": "#9699a3"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#4c505e",
+        "backgroundColor": "#cbccd1"
+      }
+    },
+    "markdown": {
+      "fg": "#4c505e",
+      "bg": "#d5d6db",
+      "borderColor": "#9699a3"
+    },
+    "code": {
+      "fg": "#4c505e",
+      "bg": "#d5d6db",
+      "selectionBg": "#dfe0e5",
+      "selectionFg": "#4c505e"
+    }
+  }
+}

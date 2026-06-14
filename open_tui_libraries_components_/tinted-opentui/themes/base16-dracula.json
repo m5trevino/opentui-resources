@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Dracula",
+  "slug": "dracula",
+  "system": "base16",
+  "author": "Jamy Golden (http://github.com/JamyGolden), based on Dracula Theme (http://github.com/dracula)",
+  "palette": {
+    "base00": "#282a36",
+    "base01": "#363447",
+    "base02": "#44475a",
+    "base03": "#6272a4",
+    "base04": "#9ea8c7",
+    "base05": "#f8f8f2",
+    "base06": "#f0f1f4",
+    "base07": "#ffffff",
+    "base08": "#ff5555",
+    "base09": "#ffb86c",
+    "base0A": "#f1fa8c",
+    "base0B": "#50fa7b",
+    "base0C": "#8be9fd",
+    "base0D": "#80bfff",
+    "base0E": "#ff79c6",
+    "base0F": "#bd93f9"
+  },
+  "tokens": {
+    "background": "#282a36",
+    "surface": "#363447",
+    "surfaceAlt": "#44475a",
+    "surfaceRaised": "#44475a",
+    "border": "#6272a4",
+    "borderFocused": "#80bfff",
+    "text": "#f8f8f2",
+    "textMuted": "#9ea8c7",
+    "textSubtle": "#6272a4",
+    "textInverse": "#282a36",
+    "accent": "#80bfff",
+    "accentText": "#282a36",
+    "success": "#50fa7b",
+    "warning": "#f1fa8c",
+    "danger": "#ff5555",
+    "info": "#8be9fd",
+    "selectionBg": "#44475a",
+    "selectionFg": "#f8f8f2",
+    "cursor": "#80bfff",
+    "scrollbarTrack": "#363447",
+    "scrollbarThumb": "#6272a4"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#282a36",
+      "cursorColor": "#80bfff"
+    },
+    "box": {
+      "backgroundColor": "#282a36",
+      "borderColor": "#6272a4",
+      "focusedBorderColor": "#80bfff"
+    },
+    "text": {
+      "fg": "#f8f8f2",
+      "bg": "#282a36",
+      "selectionBg": "#44475a",
+      "selectionFg": "#f8f8f2"
+    },
+    "input": {
+      "backgroundColor": "#363447",
+      "textColor": "#f8f8f2",
+      "focusedBackgroundColor": "#44475a",
+      "focusedTextColor": "#f8f8f2",
+      "placeholderColor": "#9ea8c7",
+      "selectionBg": "#6272a4",
+      "selectionFg": "#f8f8f2",
+      "cursorColor": "#80bfff"
+    },
+    "textarea": {
+      "backgroundColor": "#363447",
+      "textColor": "#f8f8f2",
+      "focusedBackgroundColor": "#44475a",
+      "focusedTextColor": "#f8f8f2",
+      "placeholderColor": "#9ea8c7",
+      "selectionBg": "#6272a4",
+      "selectionFg": "#f8f8f2",
+      "cursorColor": "#80bfff"
+    },
+    "select": {
+      "backgroundColor": "#282a36",
+      "textColor": "#f8f8f2",
+      "focusedBackgroundColor": "#363447",
+      "focusedTextColor": "#f8f8f2",
+      "selectedBackgroundColor": "#80bfff",
+      "selectedTextColor": "#282a36",
+      "descriptionColor": "#9ea8c7",
+      "selectedDescriptionColor": "#282a36"
+    },
+    "tabSelect": {
+      "backgroundColor": "#282a36",
+      "textColor": "#9ea8c7",
+      "focusedBackgroundColor": "#363447",
+      "focusedTextColor": "#f8f8f2",
+      "selectedBackgroundColor": "#80bfff",
+      "selectedTextColor": "#282a36",
+      "selectedDescriptionColor": "#282a36"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#363447",
+        "foregroundColor": "#6272a4"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#9ea8c7",
+        "backgroundColor": "#363447"
+      }
+    },
+    "markdown": {
+      "fg": "#f8f8f2",
+      "bg": "#282a36",
+      "borderColor": "#6272a4"
+    },
+    "code": {
+      "fg": "#f8f8f2",
+      "bg": "#282a36",
+      "selectionBg": "#44475a",
+      "selectionFg": "#f8f8f2"
+    }
+  }
+}

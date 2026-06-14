@@ -1,0 +1,17 @@
+{
+  "sessionId": "session_223b79d1-3ece-43d0-b8b4-81c43f3b97a1",
+  "exportedAt": "2026-06-07T01:49:33.697Z",
+  "kimiCodeVersion": "0.11.0",
+  "wireProtocolVersion": "1.3",
+  "os": "linux x64",
+  "nodejsVersion": "24.15.0",
+  "title": "hello",
+  "workspaceDir": "/home/flintx/opentui",
+  "sessionLogPath": "logs/kimi-code.log",
+  "globalLogPath": "logs/global/kimi-code.log",
+  "installSource": "native",
+  "shellEnv": {
+    "term": "xterm-256color",
+    "shell": "/usr/bin/zsh"
+  }
+}

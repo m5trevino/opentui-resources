@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Earthsong",
+  "slug": "earthsong",
+  "system": "base24",
+  "author": "FredHappyface (https://github.com/fredHappyface)",
+  "palette": {
+    "base00": "#282420",
+    "base01": "#111417",
+    "base02": "#665e54",
+    "base03": "#857769",
+    "base04": "#a5917e",
+    "base05": "#c5ab93",
+    "base06": "#e5c5a9",
+    "base07": "#f6f6ec",
+    "base08": "#c84134",
+    "base09": "#f4ae2e",
+    "base0A": "#5ed9ff",
+    "base0B": "#84c44b",
+    "base0C": "#4f9452",
+    "base0D": "#1397b9",
+    "base0E": "#d0623c",
+    "base0F": "#64201a"
+  },
+  "tokens": {
+    "background": "#282420",
+    "surface": "#111417",
+    "surfaceAlt": "#665e54",
+    "surfaceRaised": "#665e54",
+    "border": "#857769",
+    "borderFocused": "#1397b9",
+    "text": "#c5ab93",
+    "textMuted": "#a5917e",
+    "textSubtle": "#857769",
+    "textInverse": "#282420",
+    "accent": "#1397b9",
+    "accentText": "#282420",
+    "success": "#84c44b",
+    "warning": "#5ed9ff",
+    "danger": "#c84134",
+    "info": "#4f9452",
+    "selectionBg": "#665e54",
+    "selectionFg": "#c5ab93",
+    "cursor": "#1397b9",
+    "scrollbarTrack": "#111417",
+    "scrollbarThumb": "#857769"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#282420",
+      "cursorColor": "#1397b9"
+    },
+    "box": {
+      "backgroundColor": "#282420",
+      "borderColor": "#857769",
+      "focusedBorderColor": "#1397b9"
+    },
+    "text": {
+      "fg": "#c5ab93",
+      "bg": "#282420",
+      "selectionBg": "#665e54",
+      "selectionFg": "#c5ab93"
+    },
+    "input": {
+      "backgroundColor": "#111417",
+      "textColor": "#c5ab93",
+      "focusedBackgroundColor": "#665e54",
+      "focusedTextColor": "#c5ab93",
+      "placeholderColor": "#a5917e",
+      "selectionBg": "#857769",
+      "selectionFg": "#c5ab93",
+      "cursorColor": "#1397b9"
+    },
+    "textarea": {
+      "backgroundColor": "#111417",
+      "textColor": "#c5ab93",
+      "focusedBackgroundColor": "#665e54",
+      "focusedTextColor": "#c5ab93",
+      "placeholderColor": "#a5917e",
+      "selectionBg": "#857769",
+      "selectionFg": "#c5ab93",
+      "cursorColor": "#1397b9"
+    },
+    "select": {
+      "backgroundColor": "#282420",
+      "textColor": "#c5ab93",
+      "focusedBackgroundColor": "#111417",
+      "focusedTextColor": "#c5ab93",
+      "selectedBackgroundColor": "#1397b9",
+      "selectedTextColor": "#282420",
+      "descriptionColor": "#a5917e",
+      "selectedDescriptionColor": "#282420"
+    },
+    "tabSelect": {
+      "backgroundColor": "#282420",
+      "textColor": "#a5917e",
+      "focusedBackgroundColor": "#111417",
+      "focusedTextColor": "#c5ab93",
+      "selectedBackgroundColor": "#1397b9",
+      "selectedTextColor": "#282420",
+      "selectedDescriptionColor": "#282420"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#111417",
+        "foregroundColor": "#857769"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#a5917e",
+        "backgroundColor": "#111417"
+      }
+    },
+    "markdown": {
+      "fg": "#c5ab93",
+      "bg": "#282420",
+      "borderColor": "#857769"
+    },
+    "code": {
+      "fg": "#c5ab93",
+      "bg": "#282420",
+      "selectionBg": "#665e54",
+      "selectionFg": "#c5ab93"
+    }
+  }
+}

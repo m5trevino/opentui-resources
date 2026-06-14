@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Piatto Light",
+  "slug": "piatto-light",
+  "system": "base24",
+  "author": "FredHappyface (https://github.com/fredHappyface)",
+  "palette": {
+    "base00": "#ffffff",
+    "base01": "#f1f1f1",
+    "base02": "#e1e1e1",
+    "base03": "#c1c1c1",
+    "base04": "#717171",
+    "base05": "#515151",
+    "base06": "#414141",
+    "base07": "#212121",
+    "base08": "#b23771",
+    "base09": "#cd6f34",
+    "base0A": "#cda434",
+    "base0B": "#66781e",
+    "base0C": "#1e7878",
+    "base0D": "#3c5ea8",
+    "base0E": "#a454b2",
+    "base0F": "#591b38"
+  },
+  "tokens": {
+    "background": "#ffffff",
+    "surface": "#f1f1f1",
+    "surfaceAlt": "#e1e1e1",
+    "surfaceRaised": "#e1e1e1",
+    "border": "#c1c1c1",
+    "borderFocused": "#3c5ea8",
+    "text": "#515151",
+    "textMuted": "#717171",
+    "textSubtle": "#c1c1c1",
+    "textInverse": "#ffffff",
+    "accent": "#3c5ea8",
+    "accentText": "#ffffff",
+    "success": "#66781e",
+    "warning": "#cda434",
+    "danger": "#b23771",
+    "info": "#1e7878",
+    "selectionBg": "#e1e1e1",
+    "selectionFg": "#515151",
+    "cursor": "#3c5ea8",
+    "scrollbarTrack": "#f1f1f1",
+    "scrollbarThumb": "#c1c1c1"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#ffffff",
+      "cursorColor": "#3c5ea8"
+    },
+    "box": {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#c1c1c1",
+      "focusedBorderColor": "#3c5ea8"
+    },
+    "text": {
+      "fg": "#515151",
+      "bg": "#ffffff",
+      "selectionBg": "#e1e1e1",
+      "selectionFg": "#515151"
+    },
+    "input": {
+      "backgroundColor": "#f1f1f1",
+      "textColor": "#515151",
+      "focusedBackgroundColor": "#e1e1e1",
+      "focusedTextColor": "#515151",
+      "placeholderColor": "#717171",
+      "selectionBg": "#c1c1c1",
+      "selectionFg": "#515151",
+      "cursorColor": "#3c5ea8"
+    },
+    "textarea": {
+      "backgroundColor": "#f1f1f1",
+      "textColor": "#515151",
+      "focusedBackgroundColor": "#e1e1e1",
+      "focusedTextColor": "#515151",
+      "placeholderColor": "#717171",
+      "selectionBg": "#c1c1c1",
+      "selectionFg": "#515151",
+      "cursorColor": "#3c5ea8"
+    },
+    "select": {
+      "backgroundColor": "#ffffff",
+      "textColor": "#515151",
+      "focusedBackgroundColor": "#f1f1f1",
+      "focusedTextColor": "#515151",
+      "selectedBackgroundColor": "#3c5ea8",
+      "selectedTextColor": "#ffffff",
+      "descriptionColor": "#717171",
+      "selectedDescriptionColor": "#ffffff"
+    },
+    "tabSelect": {
+      "backgroundColor": "#ffffff",
+      "textColor": "#717171",
+      "focusedBackgroundColor": "#f1f1f1",
+      "focusedTextColor": "#515151",
+      "selectedBackgroundColor": "#3c5ea8",
+      "selectedTextColor": "#ffffff",
+      "selectedDescriptionColor": "#ffffff"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#f1f1f1",
+        "foregroundColor": "#c1c1c1"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#717171",
+        "backgroundColor": "#f1f1f1"
+      }
+    },
+    "markdown": {
+      "fg": "#515151",
+      "bg": "#ffffff",
+      "borderColor": "#c1c1c1"
+    },
+    "code": {
+      "fg": "#515151",
+      "bg": "#ffffff",
+      "selectionBg": "#e1e1e1",
+      "selectionFg": "#515151"
+    }
+  }
+}

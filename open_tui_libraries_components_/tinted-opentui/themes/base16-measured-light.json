@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Measured Light",
+  "slug": "measured-light",
+  "system": "base16",
+  "author": "Measured (https://measured.co)",
+  "palette": {
+    "base00": "#fdf9f5",
+    "base01": "#f9f5f1",
+    "base02": "#ffeada",
+    "base03": "#5a5a5a",
+    "base04": "#404040",
+    "base05": "#292929",
+    "base06": "#181818",
+    "base07": "#000000",
+    "base08": "#ac1f35",
+    "base09": "#ad5601",
+    "base0A": "#645a00",
+    "base0B": "#0c680c",
+    "base0C": "#01716f",
+    "base0D": "#0158ad",
+    "base0E": "#6645c2",
+    "base0F": "#a81a66"
+  },
+  "tokens": {
+    "background": "#fdf9f5",
+    "surface": "#f9f5f1",
+    "surfaceAlt": "#ffeada",
+    "surfaceRaised": "#ffeada",
+    "border": "#5a5a5a",
+    "borderFocused": "#0158ad",
+    "text": "#292929",
+    "textMuted": "#404040",
+    "textSubtle": "#5a5a5a",
+    "textInverse": "#fdf9f5",
+    "accent": "#0158ad",
+    "accentText": "#fdf9f5",
+    "success": "#0c680c",
+    "warning": "#645a00",
+    "danger": "#ac1f35",
+    "info": "#01716f",
+    "selectionBg": "#ffeada",
+    "selectionFg": "#292929",
+    "cursor": "#0158ad",
+    "scrollbarTrack": "#f9f5f1",
+    "scrollbarThumb": "#5a5a5a"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#fdf9f5",
+      "cursorColor": "#0158ad"
+    },
+    "box": {
+      "backgroundColor": "#fdf9f5",
+      "borderColor": "#5a5a5a",
+      "focusedBorderColor": "#0158ad"
+    },
+    "text": {
+      "fg": "#292929",
+      "bg": "#fdf9f5",
+      "selectionBg": "#ffeada",
+      "selectionFg": "#292929"
+    },
+    "input": {
+      "backgroundColor": "#f9f5f1",
+      "textColor": "#292929",
+      "focusedBackgroundColor": "#ffeada",
+      "focusedTextColor": "#292929",
+      "placeholderColor": "#404040",
+      "selectionBg": "#5a5a5a",
+      "selectionFg": "#292929",
+      "cursorColor": "#0158ad"
+    },
+    "textarea": {
+      "backgroundColor": "#f9f5f1",
+      "textColor": "#292929",
+      "focusedBackgroundColor": "#ffeada",
+      "focusedTextColor": "#292929",
+      "placeholderColor": "#404040",
+      "selectionBg": "#5a5a5a",
+      "selectionFg": "#292929",
+      "cursorColor": "#0158ad"
+    },
+    "select": {
+      "backgroundColor": "#fdf9f5",
+      "textColor": "#292929",
+      "focusedBackgroundColor": "#f9f5f1",
+      "focusedTextColor": "#292929",
+      "selectedBackgroundColor": "#0158ad",
+      "selectedTextColor": "#fdf9f5",
+      "descriptionColor": "#404040",
+      "selectedDescriptionColor": "#fdf9f5"
+    },
+    "tabSelect": {
+      "backgroundColor": "#fdf9f5",
+      "textColor": "#404040",
+      "focusedBackgroundColor": "#f9f5f1",
+      "focusedTextColor": "#292929",
+      "selectedBackgroundColor": "#0158ad",
+      "selectedTextColor": "#fdf9f5",
+      "selectedDescriptionColor": "#fdf9f5"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#f9f5f1",
+        "foregroundColor": "#5a5a5a"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#404040",
+        "backgroundColor": "#f9f5f1"
+      }
+    },
+    "markdown": {
+      "fg": "#292929",
+      "bg": "#fdf9f5",
+      "borderColor": "#5a5a5a"
+    },
+    "code": {
+      "fg": "#292929",
+      "bg": "#fdf9f5",
+      "selectionBg": "#ffeada",
+      "selectionFg": "#292929"
+    }
+  }
+}

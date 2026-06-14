@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Gruvbox Material Light, Hard",
+  "slug": "gruvbox-material-light-hard",
+  "system": "base16",
+  "author": "Mayush Kumar (https://github.com/MayushKumar), sainnhe (https://github.com/sainnhe/gruvbox-material-vscode)",
+  "palette": {
+    "base00": "#f9f5d7",
+    "base01": "#fbf1c7",
+    "base02": "#e0cfa9",
+    "base03": "#a89984",
+    "base04": "#c9b99a",
+    "base05": "#654735",
+    "base06": "#3c3836",
+    "base07": "#282828",
+    "base08": "#c14a4a",
+    "base09": "#c35e0a",
+    "base0A": "#b47109",
+    "base0B": "#6c782e",
+    "base0C": "#4c7a5d",
+    "base0D": "#45707a",
+    "base0E": "#945e80",
+    "base0F": "#e78a4e"
+  },
+  "tokens": {
+    "background": "#f9f5d7",
+    "surface": "#fbf1c7",
+    "surfaceAlt": "#e0cfa9",
+    "surfaceRaised": "#e0cfa9",
+    "border": "#a89984",
+    "borderFocused": "#45707a",
+    "text": "#654735",
+    "textMuted": "#c9b99a",
+    "textSubtle": "#a89984",
+    "textInverse": "#f9f5d7",
+    "accent": "#45707a",
+    "accentText": "#f9f5d7",
+    "success": "#6c782e",
+    "warning": "#b47109",
+    "danger": "#c14a4a",
+    "info": "#4c7a5d",
+    "selectionBg": "#e0cfa9",
+    "selectionFg": "#654735",
+    "cursor": "#45707a",
+    "scrollbarTrack": "#fbf1c7",
+    "scrollbarThumb": "#a89984"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#f9f5d7",
+      "cursorColor": "#45707a"
+    },
+    "box": {
+      "backgroundColor": "#f9f5d7",
+      "borderColor": "#a89984",
+      "focusedBorderColor": "#45707a"
+    },
+    "text": {
+      "fg": "#654735",
+      "bg": "#f9f5d7",
+      "selectionBg": "#e0cfa9",
+      "selectionFg": "#654735"
+    },
+    "input": {
+      "backgroundColor": "#fbf1c7",
+      "textColor": "#654735",
+      "focusedBackgroundColor": "#e0cfa9",
+      "focusedTextColor": "#654735",
+      "placeholderColor": "#c9b99a",
+      "selectionBg": "#a89984",
+      "selectionFg": "#654735",
+      "cursorColor": "#45707a"
+    },
+    "textarea": {
+      "backgroundColor": "#fbf1c7",
+      "textColor": "#654735",
+      "focusedBackgroundColor": "#e0cfa9",
+      "focusedTextColor": "#654735",
+      "placeholderColor": "#c9b99a",
+      "selectionBg": "#a89984",
+      "selectionFg": "#654735",
+      "cursorColor": "#45707a"
+    },
+    "select": {
+      "backgroundColor": "#f9f5d7",
+      "textColor": "#654735",
+      "focusedBackgroundColor": "#fbf1c7",
+      "focusedTextColor": "#654735",
+      "selectedBackgroundColor": "#45707a",
+      "selectedTextColor": "#f9f5d7",
+      "descriptionColor": "#c9b99a",
+      "selectedDescriptionColor": "#f9f5d7"
+    },
+    "tabSelect": {
+      "backgroundColor": "#f9f5d7",
+      "textColor": "#c9b99a",
+      "focusedBackgroundColor": "#fbf1c7",
+      "focusedTextColor": "#654735",
+      "selectedBackgroundColor": "#45707a",
+      "selectedTextColor": "#f9f5d7",
+      "selectedDescriptionColor": "#f9f5d7"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#fbf1c7",
+        "foregroundColor": "#a89984"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#c9b99a",
+        "backgroundColor": "#fbf1c7"
+      }
+    },
+    "markdown": {
+      "fg": "#654735",
+      "bg": "#f9f5d7",
+      "borderColor": "#a89984"
+    },
+    "code": {
+      "fg": "#654735",
+      "bg": "#f9f5d7",
+      "selectionBg": "#e0cfa9",
+      "selectionFg": "#654735"
+    }
+  }
+}

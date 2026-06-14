@@ -1,0 +1,63 @@
+import fs from "node:fs";
+import { createUnsupportedVcsOperationError, getVcsAdapter, operationFromInput } from "./vcs";
+import type { CliInput } from "./types";
+
+/** Return whether the current input can be rebuilt from files or VCS state without rereading stdin. */
+export function canReloadInput(input: CliInput) {
+  if (input.options.agentContext === "-") {
+    return false;
+  }
+
+  return input.kind !== "patch" || Boolean(input.file && input.file !== "-");
+}
+
+/** Format one file stat into a stable signature fragment, or mark the path missing. */
+function statSignature(path: string) {
+  if (!fs.existsSync(path)) {
+    return `${path}:missing`;
+  }
+
+  const stat = fs.statSync(path);
+  return `${path}:${stat.size}:${stat.mtimeMs}:${stat.ino}`;
+}
+
+/** Build one exact patch signature for adapter-backed review inputs. */
+function vcsPatchSignature(input: Extract<CliInput, { kind: "vcs" | "show" | "stash-show" }>) {
+  const adapter = getVcsAdapter(input.options.vcs ?? "git");
+  if (!adapter.watchSignature) {
+    throw new Error(`${adapter.name} does not support watch signatures.`);
+  }
+  const operation = operationFromInput(input);
+  if (!adapter.capabilities.reviewOperations.has(operation.kind)) {
+    throw createUnsupportedVcsOperationError(adapter, operation);
+  }
+  return adapter.watchSignature(operation, { cwd: process.cwd() });
+}
+/** Compute a change-detection signature for one watchable input. */
+export function computeWatchSignature(input: CliInput) {
+  const parts: string[] = [input.kind];
+
+  switch (input.kind) {
+    case "vcs":
+    case "show":
+    case "stash-show":
+      parts.push(vcsPatchSignature(input));
+      break;
+    case "diff":
+    case "difftool":
+      parts.push(statSignature(input.left), statSignature(input.right));
+      break;
+    case "patch":
+      if (!input.file || input.file === "-") {
+        throw new Error("Watch mode requires a patch file path instead of stdin.");
+      }
+      parts.push(statSignature(input.file));
+      break;
+  }
+
+  if (input.options.agentContext && input.options.agentContext !== "-") {
+    parts.push(`agent:${statSignature(input.options.agentContext)}`);
+  }
+
+  return parts.join("\n---\n");
+}

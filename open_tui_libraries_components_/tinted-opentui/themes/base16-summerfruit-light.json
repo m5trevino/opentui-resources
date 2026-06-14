@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Summerfruit Light",
+  "slug": "summerfruit-light",
+  "system": "base16",
+  "author": "Christopher Corley (http://christop.club/)",
+  "palette": {
+    "base00": "#ffffff",
+    "base01": "#e0e0e0",
+    "base02": "#d0d0d0",
+    "base03": "#b0b0b0",
+    "base04": "#000000",
+    "base05": "#101010",
+    "base06": "#151515",
+    "base07": "#202020",
+    "base08": "#ff0086",
+    "base09": "#fd8900",
+    "base0A": "#aba800",
+    "base0B": "#00c918",
+    "base0C": "#1faaaa",
+    "base0D": "#3777e6",
+    "base0E": "#ad00a1",
+    "base0F": "#cc6633"
+  },
+  "tokens": {
+    "background": "#ffffff",
+    "surface": "#e0e0e0",
+    "surfaceAlt": "#d0d0d0",
+    "surfaceRaised": "#d0d0d0",
+    "border": "#b0b0b0",
+    "borderFocused": "#3777e6",
+    "text": "#101010",
+    "textMuted": "#000000",
+    "textSubtle": "#b0b0b0",
+    "textInverse": "#ffffff",
+    "accent": "#3777e6",
+    "accentText": "#ffffff",
+    "success": "#00c918",
+    "warning": "#aba800",
+    "danger": "#ff0086",
+    "info": "#1faaaa",
+    "selectionBg": "#d0d0d0",
+    "selectionFg": "#101010",
+    "cursor": "#3777e6",
+    "scrollbarTrack": "#e0e0e0",
+    "scrollbarThumb": "#b0b0b0"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#ffffff",
+      "cursorColor": "#3777e6"
+    },
+    "box": {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#b0b0b0",
+      "focusedBorderColor": "#3777e6"
+    },
+    "text": {
+      "fg": "#101010",
+      "bg": "#ffffff",
+      "selectionBg": "#d0d0d0",
+      "selectionFg": "#101010"
+    },
+    "input": {
+      "backgroundColor": "#e0e0e0",
+      "textColor": "#101010",
+      "focusedBackgroundColor": "#d0d0d0",
+      "focusedTextColor": "#101010",
+      "placeholderColor": "#000000",
+      "selectionBg": "#b0b0b0",
+      "selectionFg": "#101010",
+      "cursorColor": "#3777e6"
+    },
+    "textarea": {
+      "backgroundColor": "#e0e0e0",
+      "textColor": "#101010",
+      "focusedBackgroundColor": "#d0d0d0",
+      "focusedTextColor": "#101010",
+      "placeholderColor": "#000000",
+      "selectionBg": "#b0b0b0",
+      "selectionFg": "#101010",
+      "cursorColor": "#3777e6"
+    },
+    "select": {
+      "backgroundColor": "#ffffff",
+      "textColor": "#101010",
+      "focusedBackgroundColor": "#e0e0e0",
+      "focusedTextColor": "#101010",
+      "selectedBackgroundColor": "#3777e6",
+      "selectedTextColor": "#ffffff",
+      "descriptionColor": "#000000",
+      "selectedDescriptionColor": "#ffffff"
+    },
+    "tabSelect": {
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000",
+      "focusedBackgroundColor": "#e0e0e0",
+      "focusedTextColor": "#101010",
+      "selectedBackgroundColor": "#3777e6",
+      "selectedTextColor": "#ffffff",
+      "selectedDescriptionColor": "#ffffff"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#e0e0e0",
+        "foregroundColor": "#b0b0b0"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#000000",
+        "backgroundColor": "#e0e0e0"
+      }
+    },
+    "markdown": {
+      "fg": "#101010",
+      "bg": "#ffffff",
+      "borderColor": "#b0b0b0"
+    },
+    "code": {
+      "fg": "#101010",
+      "bg": "#ffffff",
+      "selectionBg": "#d0d0d0",
+      "selectionFg": "#101010"
+    }
+  }
+}

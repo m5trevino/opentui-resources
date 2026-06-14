@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Chinoiserie Night",
+  "slug": "chinoiserie-night",
+  "system": "base16",
+  "author": "Di Wang (https://cs.cmu.edu/~diw3)",
+  "palette": {
+    "base00": "#1d1d1d",
+    "base01": "#282828",
+    "base02": "#373737",
+    "base03": "#918072",
+    "base04": "#bdaead",
+    "base05": "#c4cbcf",
+    "base06": "#eee7f2",
+    "base07": "#fffef9",
+    "base08": "#f07c82",
+    "base09": "#f4a83a",
+    "base0A": "#f4ce69",
+    "base0B": "#b2cf87",
+    "base0C": "#b0d5df",
+    "base0D": "#8fb2c9",
+    "base0E": "#be9db9",
+    "base0F": "#b89485"
+  },
+  "tokens": {
+    "background": "#1d1d1d",
+    "surface": "#282828",
+    "surfaceAlt": "#373737",
+    "surfaceRaised": "#373737",
+    "border": "#918072",
+    "borderFocused": "#8fb2c9",
+    "text": "#c4cbcf",
+    "textMuted": "#bdaead",
+    "textSubtle": "#918072",
+    "textInverse": "#1d1d1d",
+    "accent": "#8fb2c9",
+    "accentText": "#1d1d1d",
+    "success": "#b2cf87",
+    "warning": "#f4ce69",
+    "danger": "#f07c82",
+    "info": "#b0d5df",
+    "selectionBg": "#373737",
+    "selectionFg": "#c4cbcf",
+    "cursor": "#8fb2c9",
+    "scrollbarTrack": "#282828",
+    "scrollbarThumb": "#918072"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#1d1d1d",
+      "cursorColor": "#8fb2c9"
+    },
+    "box": {
+      "backgroundColor": "#1d1d1d",
+      "borderColor": "#918072",
+      "focusedBorderColor": "#8fb2c9"
+    },
+    "text": {
+      "fg": "#c4cbcf",
+      "bg": "#1d1d1d",
+      "selectionBg": "#373737",
+      "selectionFg": "#c4cbcf"
+    },
+    "input": {
+      "backgroundColor": "#282828",
+      "textColor": "#c4cbcf",
+      "focusedBackgroundColor": "#373737",
+      "focusedTextColor": "#c4cbcf",
+      "placeholderColor": "#bdaead",
+      "selectionBg": "#918072",
+      "selectionFg": "#c4cbcf",
+      "cursorColor": "#8fb2c9"
+    },
+    "textarea": {
+      "backgroundColor": "#282828",
+      "textColor": "#c4cbcf",
+      "focusedBackgroundColor": "#373737",
+      "focusedTextColor": "#c4cbcf",
+      "placeholderColor": "#bdaead",
+      "selectionBg": "#918072",
+      "selectionFg": "#c4cbcf",
+      "cursorColor": "#8fb2c9"
+    },
+    "select": {
+      "backgroundColor": "#1d1d1d",
+      "textColor": "#c4cbcf",
+      "focusedBackgroundColor": "#282828",
+      "focusedTextColor": "#c4cbcf",
+      "selectedBackgroundColor": "#8fb2c9",
+      "selectedTextColor": "#1d1d1d",
+      "descriptionColor": "#bdaead",
+      "selectedDescriptionColor": "#1d1d1d"
+    },
+    "tabSelect": {
+      "backgroundColor": "#1d1d1d",
+      "textColor": "#bdaead",
+      "focusedBackgroundColor": "#282828",
+      "focusedTextColor": "#c4cbcf",
+      "selectedBackgroundColor": "#8fb2c9",
+      "selectedTextColor": "#1d1d1d",
+      "selectedDescriptionColor": "#1d1d1d"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#282828",
+        "foregroundColor": "#918072"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#bdaead",
+        "backgroundColor": "#282828"
+      }
+    },
+    "markdown": {
+      "fg": "#c4cbcf",
+      "bg": "#1d1d1d",
+      "borderColor": "#918072"
+    },
+    "code": {
+      "fg": "#c4cbcf",
+      "bg": "#1d1d1d",
+      "selectionBg": "#373737",
+      "selectionFg": "#c4cbcf"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "playground-opentui",
+  "version": "1.0.0",
+  "description": "Comprehensive collection of TUI examples demonstrating OpenTUI's capabilities",
+  "type": "module",
+  "scripts": {
+    "launcher": "bun run launcher/index.ts",
+    "example:01": "bun run examples/01-hello-world/index.ts",
+    "example:02": "bun run examples/02-styled-text/index.ts",
+    "example:03": "bun run examples/03-layout-flexbox/index.ts",
+    "example:04": "bun run examples/04-input-forms/index.ts",
+    "example:05": "bun run examples/05-scrolling/index.ts",
+    "example:06": "bun run examples/06-code-viewer/index.ts",
+    "example:07": "bun run examples/07-diff-viewer/index.ts",
+    "example:08": "bun run examples/08-markdown-renderer/index.ts",
+    "example:09": "bun run examples/09-ascii-art-fonts/index.ts",
+    "example:10": "bun run examples/10-hyperlinks/index.ts",
+    "example:11": "bun run examples/11-timeline-animations/index.ts",
+    "example:12": "bun run examples/12-mouse-interactions/index.ts",
+    "example:13": "bun run examples/13-framebuffer-graphics/index.ts",
+    "example:14": "bun run examples/14-3d-cube-shaders/index.ts",
+    "example:15": "bun run examples/15-physics-2d/index.ts",
+    "example:16": "bun run examples/16-sprite-animations/index.ts",
+    "example:17": "bun run examples/17-image-viewer/index.ts",
+    "example:18": "bun run examples/18-dashboard/index.ts",
+    "example:19": "bun run examples/19-file-explorer/index.ts",
+    "example:20": "bun run examples/20-chat-interface/index.ts",
+    "example:21": "bun run examples/21-music-player/index.ts",
+    "example:22": "bun run examples/22-kanban-board/index.ts",
+    "example:23": "bun run examples/23-terminal-game/index.ts",
+    "example:24": "bun run examples/24-full-app/index.ts"
+  },
+  "dependencies": {
+    "@opentui/core": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Rebecca",
+  "slug": "rebecca",
+  "system": "base16",
+  "author": "Victor Borja (http://github.com/vic) based on Rebecca Theme (http://github.com/vic/rebecca-theme)",
+  "palette": {
+    "base00": "#292a44",
+    "base01": "#663399",
+    "base02": "#383a62",
+    "base03": "#666699",
+    "base04": "#a0a0c5",
+    "base05": "#f1eff8",
+    "base06": "#ccccff",
+    "base07": "#53495d",
+    "base08": "#a0a0c5",
+    "base09": "#efe4a1",
+    "base0A": "#ae81ff",
+    "base0B": "#6dfedf",
+    "base0C": "#8eaee0",
+    "base0D": "#2de0a7",
+    "base0E": "#7aa5ff",
+    "base0F": "#ff79c6"
+  },
+  "tokens": {
+    "background": "#292a44",
+    "surface": "#663399",
+    "surfaceAlt": "#383a62",
+    "surfaceRaised": "#383a62",
+    "border": "#666699",
+    "borderFocused": "#2de0a7",
+    "text": "#f1eff8",
+    "textMuted": "#a0a0c5",
+    "textSubtle": "#666699",
+    "textInverse": "#292a44",
+    "accent": "#2de0a7",
+    "accentText": "#292a44",
+    "success": "#6dfedf",
+    "warning": "#ae81ff",
+    "danger": "#a0a0c5",
+    "info": "#8eaee0",
+    "selectionBg": "#383a62",
+    "selectionFg": "#f1eff8",
+    "cursor": "#2de0a7",
+    "scrollbarTrack": "#663399",
+    "scrollbarThumb": "#666699"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#292a44",
+      "cursorColor": "#2de0a7"
+    },
+    "box": {
+      "backgroundColor": "#292a44",
+      "borderColor": "#666699",
+      "focusedBorderColor": "#2de0a7"
+    },
+    "text": {
+      "fg": "#f1eff8",
+      "bg": "#292a44",
+      "selectionBg": "#383a62",
+      "selectionFg": "#f1eff8"
+    },
+    "input": {
+      "backgroundColor": "#663399",
+      "textColor": "#f1eff8",
+      "focusedBackgroundColor": "#383a62",
+      "focusedTextColor": "#f1eff8",
+      "placeholderColor": "#a0a0c5",
+      "selectionBg": "#666699",
+      "selectionFg": "#f1eff8",
+      "cursorColor": "#2de0a7"
+    },
+    "textarea": {
+      "backgroundColor": "#663399",
+      "textColor": "#f1eff8",
+      "focusedBackgroundColor": "#383a62",
+      "focusedTextColor": "#f1eff8",
+      "placeholderColor": "#a0a0c5",
+      "selectionBg": "#666699",
+      "selectionFg": "#f1eff8",
+      "cursorColor": "#2de0a7"
+    },
+    "select": {
+      "backgroundColor": "#292a44",
+      "textColor": "#f1eff8",
+      "focusedBackgroundColor": "#663399",
+      "focusedTextColor": "#f1eff8",
+      "selectedBackgroundColor": "#2de0a7",
+      "selectedTextColor": "#292a44",
+      "descriptionColor": "#a0a0c5",
+      "selectedDescriptionColor": "#292a44"
+    },
+    "tabSelect": {
+      "backgroundColor": "#292a44",
+      "textColor": "#a0a0c5",
+      "focusedBackgroundColor": "#663399",
+      "focusedTextColor": "#f1eff8",
+      "selectedBackgroundColor": "#2de0a7",
+      "selectedTextColor": "#292a44",
+      "selectedDescriptionColor": "#292a44"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#663399",
+        "foregroundColor": "#666699"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#a0a0c5",
+        "backgroundColor": "#663399"
+      }
+    },
+    "markdown": {
+      "fg": "#f1eff8",
+      "bg": "#292a44",
+      "borderColor": "#666699"
+    },
+    "code": {
+      "fg": "#f1eff8",
+      "bg": "#292a44",
+      "selectionBg": "#383a62",
+      "selectionFg": "#f1eff8"
+    }
+  }
+}

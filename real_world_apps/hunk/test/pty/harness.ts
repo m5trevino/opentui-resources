@@ -1,0 +1,740 @@
+import { spawnSync } from "node:child_process";
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { dirname, join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import type { Session } from "tuistory";
+
+const integrationDir = dirname(fileURLToPath(import.meta.url));
+const repoRoot = resolve(integrationDir, "../..");
+const sourceEntrypoint = join(repoRoot, "src/main.tsx");
+
+function resolveBunExecutable() {
+  const envCandidate = process.env.BUN_BIN ?? process.env.BUN;
+  if (envCandidate) {
+    return envCandidate;
+  }
+
+  if (process.versions.bun && process.execPath) {
+    return process.execPath;
+  }
+
+  const lookupCommand = process.platform === "win32" ? "where" : "which";
+  const lookup = spawnSync(lookupCommand, ["bun"], {
+    encoding: "utf8",
+    env: process.env,
+  });
+  if (lookup.status === 0) {
+    const resolvedPath = lookup.stdout
+      .split(/\r?\n/)
+      .map((entry) => entry.trim())
+      .find(Boolean);
+    if (resolvedPath) {
+      return resolvedPath;
+    }
+  }
+
+  return "bun";
+}
+
+const bunExecutable = resolveBunExecutable();
+
+async function loadTuistory() {
+  if (!process.versions.bun) {
+    throw new Error(
+      "Tuistory integration tests must run with Bun so tuistory can use its Bun PTY backend. Run `bun run test:integration`.",
+    );
+  }
+
+  return import("tuistory");
+}
+
+interface ChangedFileSpec {
+  path: string;
+  before: string;
+  after: string;
+}
+
+export function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/** Send an SGR mouse motion event at zero-based terminal coordinates. */
+export async function moveMouse(session: Session, x: number, y: number) {
+  session.writeRaw(`\x1b[<35;${x + 1};${y + 1}M`);
+  await session.waitIdle();
+}
+
+/** Reveal the hover-only add-note badge across fixture-specific row offsets. */
+export async function revealAddNoteAffordance(session: Session, x: number, yCandidates: number[]) {
+  for (const y of yCandidates) {
+    await moveMouse(session, x, y);
+    try {
+      return await session.waitForText(/\[\+\]/, { timeout: 1_000 });
+    } catch {
+      // Keep trying nearby rows; hunk header visibility changes the diff row offset.
+    }
+  }
+
+  throw new Error(`Failed to reveal add-note affordance at x=${x}.`);
+}
+
+/** Drag with the left mouse button using zero-based terminal coordinates. */
+export async function dragMouse(
+  session: Session,
+  startX: number,
+  startY: number,
+  endX: number,
+  endY: number,
+) {
+  session.writeRaw(`\x1b[<0;${startX + 1};${startY + 1}M`);
+  await sleep(10);
+  const steps = 5;
+  for (let step = 1; step <= steps; step += 1) {
+    const x = Math.round(startX + ((endX - startX) * step) / steps);
+    const y = Math.round(startY + ((endY - startY) * step) / steps);
+    session.writeRaw(`\x1b[<32;${x + 1};${y + 1}M`);
+    await sleep(10);
+  }
+  session.writeRaw(`\x1b[<0;${endX + 1};${endY + 1}m`);
+  await session.waitIdle();
+}
+
+/** Find the rightmost visible column for text in a terminal snapshot. */
+export function rightmostColumnOf(text: string, needle: string) {
+  return Math.max(
+    ...text
+      .split("\n")
+      .map((line) => line.lastIndexOf(needle))
+      .filter((column) => column >= 0),
+    -1,
+  );
+}
+
+/** Locate a visible terminal row containing text so mouse tests can target rendered content. */
+export function lineIndexOf(text: string, needle: string) {
+  return text.split("\n").findIndex((line) => line.includes(needle));
+}
+
+/** Move near a rendered row until the hover-only add-note control appears. */
+export async function revealAddNoteNear(session: Session, row: number) {
+  for (const y of [row, row - 1, row + 1]) {
+    if (y < 0) {
+      continue;
+    }
+
+    for (const x of [8, 20, 60]) {
+      await moveMouse(session, x, y);
+      try {
+        await session.waitForText(/\[\+\]/, { timeout: 200 });
+        return;
+      } catch {
+        // Try nearby cells; PTY snapshots and wrapped rows can differ by a column or row.
+      }
+    }
+  }
+
+  throw new Error("Could not reveal add-note affordance near target row.");
+}
+
+/** Reveal the add-note control without falling back to adjacent rows. */
+export async function revealAddNoteOnRow(session: Session, row: number) {
+  for (const x of [8, 20, 60]) {
+    await moveMouse(session, x, row);
+    try {
+      await session.waitForText(/\[\+\]/, { timeout: 200 });
+      return;
+    } catch {
+      // Try nearby columns on the same rendered row, but do not mask row-target regressions.
+    }
+  }
+
+  throw new Error("Could not reveal add-note affordance on target row.");
+}
+
+function writeText(path: string, content: string) {
+  mkdirSync(dirname(path), { recursive: true });
+  writeFileSync(path, content);
+}
+
+/** Quote shell arguments so PTY helpers can safely launch piped commands through Bash. */
+function shellQuote(value: string) {
+  return `'${value.replaceAll("'", `'\\''`)}'`;
+}
+
+/** Build numbered export lines so PTY fixtures can assert on stable visible content. */
+function createNumberedExportLines(start: number, count: number, valueOffset = 0) {
+  return Array.from({ length: count }, (_, index) => {
+    const lineNumber = start + index;
+    return `export const line${String(lineNumber).padStart(2, "0")} = ${lineNumber + valueOffset};`;
+  }).join("\n");
+}
+
+function runGit(args: string[], cwd: string, allowExitCodeOne = false) {
+  const proc = spawnSync("git", args, {
+    cwd,
+    encoding: "utf8",
+    env: process.env,
+  });
+
+  const expected = allowExitCodeOne ? [0, 1] : [0];
+  if (!expected.includes(proc.status ?? -1)) {
+    throw new Error(proc.stderr.trim() || `git ${args.join(" ")} failed with exit ${proc.status}`);
+  }
+
+  return proc.stdout;
+}
+
+/** Build a fresh PTY test helper that tracks its own temp directories for one integration test file. */
+export function createPtyHarness() {
+  const tempDirs: string[] = [];
+
+  function makeTempDir(prefix: string) {
+    const dir = mkdtempSync(join(tmpdir(), prefix));
+    tempDirs.push(dir);
+    return dir;
+  }
+
+  function cleanup() {
+    while (tempDirs.length > 0) {
+      const dir = tempDirs.pop();
+      if (dir) {
+        rmSync(dir, { recursive: true, force: true });
+      }
+    }
+  }
+
+  function createLongWrapFilePair() {
+    const dir = makeTempDir("hunk-tuistory-wrap-");
+    const before = join(dir, "before.ts");
+    const after = join(dir, "after.ts");
+
+    writeText(before, "export const message = 'short';\n");
+    writeText(
+      after,
+      "export const message = 'this is a very long wrapped line for tuistory integration coverage';\n",
+    );
+
+    return { dir, before, after };
+  }
+
+  function createWideCharacterFilePair() {
+    const dir = makeTempDir("hunk-tuistory-wide-");
+    const before = join(dir, "before.ts");
+    const after = join(dir, "after.ts");
+
+    writeText(before, "export const wide = '日本語';\nexport const plain = 'before';\n");
+    writeText(after, "export const wide = '한국어';\nexport const plain = 'after';\n");
+
+    return { dir, before, after };
+  }
+
+  function createDeletionOnlyFilePair() {
+    const dir = makeTempDir("hunk-tuistory-deletion-");
+    const before = join(dir, "before.ts");
+    const after = join(dir, "after.ts");
+
+    writeText(before, "export const keep = true;\nexport const removeMe = true;\n");
+    writeText(after, "export const keep = true;\n");
+
+    return { dir, before, after };
+  }
+
+  function createAgentFilePair() {
+    const dir = makeTempDir("hunk-tuistory-agent-");
+    const before = join(dir, "before.ts");
+    const after = join(dir, "after.ts");
+    const agentContext = join(dir, "agent.json");
+
+    writeText(before, "export const answer = 41;\n");
+    writeText(after, "export const answer = 42;\nexport const added = true;\n");
+    writeText(
+      agentContext,
+      JSON.stringify({
+        version: 1,
+        files: [
+          {
+            path: "after.ts",
+            annotations: [
+              {
+                newRange: [2, 2],
+                summary: "Adds bonus export.",
+                rationale: "Highlights the follow-up addition for review.",
+              },
+            ],
+          },
+        ],
+      }),
+    );
+
+    return { dir, before, after, agentContext };
+  }
+
+  function createAgentNavigationRepoFixture() {
+    const alphaBeforeLines = createNumberedExportLines(1, 80).split("\n");
+    const alphaAfterLines = [...alphaBeforeLines];
+    alphaAfterLines[0] = "export const line01 = 1001;";
+    alphaAfterLines[59] = "export const line60 = 6000;";
+
+    const betaBeforeLines = createNumberedExportLines(81, 20).split("\n");
+    const betaAfterLines = [...betaBeforeLines];
+    betaAfterLines[0] = "export const line81 = 8100;";
+
+    const gammaBeforeLines = createNumberedExportLines(101, 80).split("\n");
+    const gammaAfterLines = [...gammaBeforeLines];
+    gammaAfterLines[0] = "export const line101 = 10100;";
+    gammaAfterLines[59] = "export const line160 = 16000;";
+
+    const fixture = createGitRepoFixture([
+      {
+        path: "alpha.ts",
+        before: `${alphaBeforeLines.join("\n")}\n`,
+        after: `${alphaAfterLines.join("\n")}\n`,
+      },
+      {
+        path: "beta.ts",
+        before: `${betaBeforeLines.join("\n")}\n`,
+        after: `${betaAfterLines.join("\n")}\n`,
+      },
+      {
+        path: "gamma.ts",
+        before: `${gammaBeforeLines.join("\n")}\n`,
+        after: `${gammaAfterLines.join("\n")}\n`,
+      },
+    ]);
+    const agentContext = join(fixture.dir, "agent-context.json");
+
+    writeText(
+      agentContext,
+      JSON.stringify({
+        version: 1,
+        summary: "Agent navigation notes",
+        files: [
+          {
+            path: "alpha.ts",
+            annotations: [
+              {
+                newRange: [60, 60],
+                summary: "Alpha note for navigation.",
+                rationale: "Used to prove comment navigation can leave an earlier note.",
+              },
+            ],
+          },
+          {
+            path: "gamma.ts",
+            annotations: [
+              {
+                newRange: [60, 60],
+                summary: "Gamma note for navigation.",
+                rationale: "Used to prove comment navigation resumes after an unannotated hunk.",
+              },
+            ],
+          },
+        ],
+      }),
+    );
+
+    return { ...fixture, agentContext };
+  }
+
+  function createMultiHunkFilePair() {
+    const dir = makeTempDir("hunk-tuistory-hunks-");
+    const before = join(dir, "before.ts");
+    const after = join(dir, "after.ts");
+
+    const beforeLines = Array.from(
+      { length: 80 },
+      (_, index) => `export const line${index + 1} = ${index + 1};`,
+    );
+    const afterLines = [...beforeLines];
+    afterLines[0] = "export const line1 = 100;";
+    afterLines[59] = "export const line60 = 6000;";
+    afterLines[60] = "export const line61 = 6100;";
+    afterLines[61] = "export const line62 = 6200;";
+    afterLines[62] = "export const line63 = 6300;";
+    afterLines[63] = "export const line64 = 6400;";
+    afterLines[64] = "export const line65 = 6500;";
+
+    writeText(before, `${beforeLines.join("\n")}\n`);
+    writeText(after, `${afterLines.join("\n")}\n`);
+
+    return { dir, before, after };
+  }
+
+  function createExpandableContextFilePair() {
+    const dir = makeTempDir("hunk-tuistory-expand-");
+    const before = join(dir, "before.ts");
+    const after = join(dir, "after.ts");
+
+    const beforeLines = Array.from({ length: 30 }, (_, index) =>
+      index === 0
+        ? "export const hiddenLine01 = 1;"
+        : `export const line${String(index + 1).padStart(2, "0")} = ${index + 1};`,
+    );
+    const afterLines = [...beforeLines];
+    afterLines[4] = "export const line05 = 500;";
+
+    writeText(before, `${beforeLines.join("\n")}\n`);
+    writeText(after, `${afterLines.join("\n")}\n`);
+
+    return { dir, before, after };
+  }
+
+  function createScrollableFilePair() {
+    const dir = makeTempDir("hunk-tuistory-scroll-");
+    const before = join(dir, "before.ts");
+    const after = join(dir, "after.ts");
+
+    const beforeText =
+      Array.from(
+        { length: 18 },
+        (_, index) => `export const line${String(index + 1).padStart(2, "0")} = ${index + 1};`,
+      ).join("\n") + "\n";
+    const afterText =
+      Array.from(
+        { length: 18 },
+        (_, index) => `export const line${String(index + 1).padStart(2, "0")} = ${index + 101};`,
+      ).join("\n") + "\n";
+
+    writeText(before, beforeText);
+    writeText(after, afterText);
+
+    return { dir, before, after };
+  }
+
+  function createGitRepoFixture(files: ChangedFileSpec[]) {
+    const dir = makeTempDir("hunk-tuistory-repo-");
+
+    runGit(["init"], dir);
+    runGit(["config", "user.name", "Pi"], dir);
+    runGit(["config", "user.email", "pi@example.com"], dir);
+
+    for (const file of files) {
+      writeText(join(dir, file.path), file.before);
+    }
+
+    runGit(["add", "."], dir);
+    runGit(["commit", "-m", "initial"], dir);
+
+    for (const file of files) {
+      writeText(join(dir, file.path), file.after);
+    }
+
+    return { dir };
+  }
+
+  function createTwoFileRepoFixture() {
+    return createGitRepoFixture([
+      {
+        path: "alpha.ts",
+        before: "export const alpha = 1;\n",
+        after: "export const alpha = 2;\nexport const add = true;\n",
+      },
+      {
+        path: "beta.ts",
+        before: "export const beta = 1;\n",
+        after: "export const betaValue = 1;\n",
+      },
+    ]);
+  }
+
+  function createPinnedHeaderRepoFixture() {
+    return createGitRepoFixture([
+      {
+        path: "first.ts",
+        before: `${createNumberedExportLines(1, 16)}\n`,
+        after: `${createNumberedExportLines(1, 16, 100)}\n`,
+      },
+      {
+        path: "second.ts",
+        before: `${createNumberedExportLines(17, 16)}\n`,
+        after: `${createNumberedExportLines(17, 16, 100)}\n`,
+      },
+    ]);
+  }
+
+  function createCollapsedTopRepoFixture() {
+    const longBefore =
+      Array.from(
+        { length: 400 },
+        (_, index) => `export const line${String(index + 1).padStart(3, "0")} = ${index + 1};`,
+      ).join("\n") + "\n";
+    const longAfterLines = longBefore.trimEnd().split("\n");
+    longAfterLines[365] = "export const line366 = 9999;";
+    const longAfter = `${longAfterLines.join("\n")}\n`;
+
+    return createGitRepoFixture([
+      {
+        path: "aaa-collapsed.ts",
+        before: longBefore,
+        after: longAfter,
+      },
+      {
+        path: "zzz-other.ts",
+        before: "export const other = 1;\n",
+        after: "export const other = 2;\n",
+      },
+    ]);
+  }
+
+  function createSidebarJumpRepoFixture() {
+    return createGitRepoFixture([
+      {
+        path: "alpha.ts",
+        before: "export const alpha = 1;\n",
+        after: "export const alphaValue = 2;\nexport const alphaOnly = true;\n",
+      },
+      {
+        path: "beta.ts",
+        before: "export const beta = 1;\n",
+        after: "export const betaValue = 2;\nexport const betaOnly = true;\n",
+      },
+      {
+        path: "gamma.ts",
+        before: "export const gamma = 1;\n",
+        after: "export const gammaValue = 2;\nexport const gammaOnly = true;\n",
+      },
+      {
+        path: "delta.ts",
+        before: "export const delta = 1;\n",
+        after: "export const deltaValue = 2;\nexport const deltaOnly = true;\n",
+      },
+      {
+        path: "epsilon.ts",
+        before: "export const epsilon = 1;\n",
+        after: "export const epsilonValue = 2;\nexport const epsilonOnly = true;\n",
+      },
+    ]);
+  }
+
+  /** Build a repo whose final short file can only align to the reachable bottom edge. */
+  function createBottomClampedRepoFixture() {
+    return createGitRepoFixture([
+      {
+        path: "first.ts",
+        before: `${createNumberedExportLines(1, 30)}\n`,
+        after: `${createNumberedExportLines(1, 30, 100)}\n`,
+      },
+      {
+        path: "second.ts",
+        before:
+          [
+            "export const shortLine1 = 1;",
+            "export const shortLine2 = 2;",
+            "export const shortLine3 = 3;",
+          ].join("\n") + "\n",
+        after:
+          [
+            "export const shortLine1 = 10;",
+            "export const shortLine2 = 20;",
+            "export const shortLine3 = 30;",
+          ].join("\n") + "\n",
+      },
+    ]);
+  }
+
+  /** Build the cross-file hunk-navigation shape that used to jump backward to the file top. */
+  function createCrossFileHunkNavigationRepoFixture() {
+    const longBeforeLines = Array.from(
+      { length: 342 },
+      (_, index) => `line ${String(index + 1).padStart(3, "0")}`,
+    );
+    const longAfterLines = [...longBeforeLines];
+    for (const lineNumber of [
+      2, 21, 41, 61, 81, 101, 121, 141, 161, 181, 201, 221, 241, 261, 281, 301, 321, 341,
+    ]) {
+      longAfterLines[lineNumber - 1] = `line ${String(lineNumber).padStart(3, "0")} changed`;
+    }
+
+    const shortBeforeLines = [
+      "// hunk 0 - at the very top of the file",
+      "export const top = 1;",
+      "",
+      "",
+      ...Array.from({ length: 25 }, (_, index) => `// filler ${index + 1}`),
+      "// hunk 1 - mid-file",
+      "export const mid = 3;",
+    ];
+    const shortAfterLines = [...shortBeforeLines];
+    shortAfterLines[1] = "export const top = 2;";
+    shortAfterLines[30] = "export const mid = 4;";
+
+    return createGitRepoFixture([
+      {
+        path: "long-file.txt",
+        before: `${longBeforeLines.join("\n")}\n`,
+        after: `${longAfterLines.join("\n")}\n`,
+      },
+      {
+        path: "short-file.ts",
+        before: `${shortBeforeLines.join("\n")}\n`,
+        after: `${shortAfterLines.join("\n")}\n`,
+      },
+    ]);
+  }
+
+  function createPagerPatchFixture(lines = 40) {
+    const dir = makeTempDir("hunk-tuistory-pager-");
+    const beforeDir = join(dir, "before");
+    const afterDir = join(dir, "after");
+    const patchFile = join(dir, "input.patch");
+
+    const beforeText =
+      Array.from(
+        { length: lines },
+        (_, index) => `export const before_${String(index + 1).padStart(2, "0")} = ${index + 1};`,
+      ).join("\n") + "\n";
+    const afterText =
+      Array.from(
+        { length: lines },
+        (_, index) => `export const after_${String(index + 1).padStart(2, "0")} = ${index + 101};`,
+      ).join("\n") + "\n";
+
+    writeText(join(beforeDir, "scroll.ts"), beforeText);
+    writeText(join(afterDir, "scroll.ts"), afterText);
+
+    const patch = runGit(
+      ["diff", "--no-index", "--no-color", "--", beforeDir, afterDir],
+      dir,
+      true,
+    );
+    writeText(patchFile, patch);
+
+    return { dir, patchFile };
+  }
+
+  /** Build the source-run Hunk command so PTY tests can reuse it inside shell pipelines. */
+  function buildHunkCommand(args: string[]) {
+    return [
+      shellQuote(bunExecutable),
+      "run",
+      shellQuote(sourceEntrypoint),
+      "--",
+      ...args.map(shellQuote),
+    ].join(" ");
+  }
+
+  async function launchHunk(options: {
+    args: string[];
+    cwd?: string;
+    cols?: number;
+    rows?: number;
+    env?: Record<string, string | undefined>;
+  }) {
+    const { launchTerminal } = await loadTuistory();
+
+    return launchTerminal({
+      command: bunExecutable,
+      args: ["run", sourceEntrypoint, "--", ...options.args],
+      cwd: options.cwd ?? repoRoot,
+      cols: options.cols ?? 140,
+      rows: options.rows ?? 24,
+      env: {
+        ...process.env,
+        HUNK_MCP_DISABLE: "1",
+        HUNK_DISABLE_UPDATE_NOTICE: "1",
+        ...options.env,
+      },
+    });
+  }
+
+  /** Launch an arbitrary shell command inside the PTY for pipeline-style integration tests. */
+  async function launchShellCommand(options: {
+    command: string;
+    cwd?: string;
+    cols?: number;
+    rows?: number;
+    env?: Record<string, string | undefined>;
+  }) {
+    const { launchTerminal } = await loadTuistory();
+
+    return launchTerminal({
+      command: "/bin/bash",
+      args: ["-c", options.command],
+      cwd: options.cwd ?? repoRoot,
+      cols: options.cols ?? 140,
+      rows: options.rows ?? 24,
+      env: {
+        ...process.env,
+        HUNK_MCP_DISABLE: "1",
+        HUNK_DISABLE_UPDATE_NOTICE: "1",
+        ...options.env,
+      },
+    });
+  }
+
+  /**
+   * Launch Hunk with a file-backed stdin while keeping stdout/stderr attached to the PTY.
+   * Uses `exec cmd < file` so bash replaces itself with Hunk, preserving the PTY on stdout/stderr
+   * and the controlling terminal while giving the child a non-TTY stdin.
+   */
+  async function launchHunkWithFileBackedStdin(options: {
+    stdinFile: string;
+    args: string[];
+    cwd?: string;
+    cols?: number;
+    rows?: number;
+    env?: Record<string, string | undefined>;
+  }) {
+    return launchShellCommand({
+      command: `exec ${buildHunkCommand(options.args)} < ${shellQuote(options.stdinFile)}`,
+      cwd: options.cwd,
+      cols: options.cols,
+      rows: options.rows,
+      env: options.env,
+    });
+  }
+
+  async function waitForSnapshot(
+    session: Session,
+    predicate: (text: string) => boolean,
+    timeoutMs = 5_000,
+  ) {
+    const start = Date.now();
+    let snapshot = await session.text({ immediate: true });
+
+    while (Date.now() - start < timeoutMs) {
+      if (predicate(snapshot)) {
+        return snapshot;
+      }
+
+      await session.waitIdle({ timeout: 50 });
+      await sleep(30);
+      snapshot = await session.text({ immediate: true });
+    }
+
+    throw new Error(
+      `Timed out after ${timeoutMs}ms waiting for snapshot. Last snapshot:\n${snapshot}`,
+    );
+  }
+
+  function countMatches(text: string, pattern: RegExp) {
+    return (text.match(pattern) ?? []).length;
+  }
+
+  return {
+    cleanup,
+    countMatches,
+    createAgentFilePair,
+    createAgentNavigationRepoFixture,
+    createBottomClampedRepoFixture,
+    createCollapsedTopRepoFixture,
+    createExpandableContextFilePair,
+    createCrossFileHunkNavigationRepoFixture,
+    createDeletionOnlyFilePair,
+    createLongWrapFilePair,
+    createMultiHunkFilePair,
+    createPagerPatchFixture,
+    createPinnedHeaderRepoFixture,
+    createScrollableFilePair,
+    createSidebarJumpRepoFixture,
+    createTwoFileRepoFixture,
+    createWideCharacterFilePair,
+    launchHunk,
+    launchHunkWithFileBackedStdin,
+    launchShellCommand,
+    buildHunkCommand,
+    shellQuote,
+    waitForSnapshot,
+  };
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Atelier Plateau Light",
+  "slug": "atelier-plateau-light",
+  "system": "base16",
+  "author": "Bram de Haan (http://atelierbramdehaan.nl)",
+  "palette": {
+    "base00": "#f4ecec",
+    "base01": "#e7dfdf",
+    "base02": "#8a8585",
+    "base03": "#7e7777",
+    "base04": "#655d5d",
+    "base05": "#585050",
+    "base06": "#292424",
+    "base07": "#1b1818",
+    "base08": "#ca4949",
+    "base09": "#b45a3c",
+    "base0A": "#a06e3b",
+    "base0B": "#4b8b8b",
+    "base0C": "#5485b6",
+    "base0D": "#7272ca",
+    "base0E": "#8464c4",
+    "base0F": "#bd5187"
+  },
+  "tokens": {
+    "background": "#f4ecec",
+    "surface": "#e7dfdf",
+    "surfaceAlt": "#8a8585",
+    "surfaceRaised": "#8a8585",
+    "border": "#7e7777",
+    "borderFocused": "#7272ca",
+    "text": "#585050",
+    "textMuted": "#655d5d",
+    "textSubtle": "#7e7777",
+    "textInverse": "#f4ecec",
+    "accent": "#7272ca",
+    "accentText": "#f4ecec",
+    "success": "#4b8b8b",
+    "warning": "#a06e3b",
+    "danger": "#ca4949",
+    "info": "#5485b6",
+    "selectionBg": "#8a8585",
+    "selectionFg": "#585050",
+    "cursor": "#7272ca",
+    "scrollbarTrack": "#e7dfdf",
+    "scrollbarThumb": "#7e7777"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#f4ecec",
+      "cursorColor": "#7272ca"
+    },
+    "box": {
+      "backgroundColor": "#f4ecec",
+      "borderColor": "#7e7777",
+      "focusedBorderColor": "#7272ca"
+    },
+    "text": {
+      "fg": "#585050",
+      "bg": "#f4ecec",
+      "selectionBg": "#8a8585",
+      "selectionFg": "#585050"
+    },
+    "input": {
+      "backgroundColor": "#e7dfdf",
+      "textColor": "#585050",
+      "focusedBackgroundColor": "#8a8585",
+      "focusedTextColor": "#585050",
+      "placeholderColor": "#655d5d",
+      "selectionBg": "#7e7777",
+      "selectionFg": "#585050",
+      "cursorColor": "#7272ca"
+    },
+    "textarea": {
+      "backgroundColor": "#e7dfdf",
+      "textColor": "#585050",
+      "focusedBackgroundColor": "#8a8585",
+      "focusedTextColor": "#585050",
+      "placeholderColor": "#655d5d",
+      "selectionBg": "#7e7777",
+      "selectionFg": "#585050",
+      "cursorColor": "#7272ca"
+    },
+    "select": {
+      "backgroundColor": "#f4ecec",
+      "textColor": "#585050",
+      "focusedBackgroundColor": "#e7dfdf",
+      "focusedTextColor": "#585050",
+      "selectedBackgroundColor": "#7272ca",
+      "selectedTextColor": "#f4ecec",
+      "descriptionColor": "#655d5d",
+      "selectedDescriptionColor": "#f4ecec"
+    },
+    "tabSelect": {
+      "backgroundColor": "#f4ecec",
+      "textColor": "#655d5d",
+      "focusedBackgroundColor": "#e7dfdf",
+      "focusedTextColor": "#585050",
+      "selectedBackgroundColor": "#7272ca",
+      "selectedTextColor": "#f4ecec",
+      "selectedDescriptionColor": "#f4ecec"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#e7dfdf",
+        "foregroundColor": "#7e7777"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#655d5d",
+        "backgroundColor": "#e7dfdf"
+      }
+    },
+    "markdown": {
+      "fg": "#585050",
+      "bg": "#f4ecec",
+      "borderColor": "#7e7777"
+    },
+    "code": {
+      "fg": "#585050",
+      "bg": "#f4ecec",
+      "selectionBg": "#8a8585",
+      "selectionFg": "#585050"
+    }
+  }
+}

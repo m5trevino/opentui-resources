@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Sparky",
+  "slug": "sparky",
+  "system": "base24",
+  "author": "Leila Sother (https://github.com/mixcoac)",
+  "palette": {
+    "base00": "#072b31",
+    "base01": "#00313c",
+    "base02": "#003c46",
+    "base03": "#003b49",
+    "base04": "#00778b",
+    "base05": "#f4f5f0",
+    "base06": "#f5f5f1",
+    "base07": "#ffffff",
+    "base08": "#ff585d",
+    "base09": "#ff8f1c",
+    "base0A": "#fbdd40",
+    "base0B": "#78d64b",
+    "base0C": "#2dccd3",
+    "base0D": "#4698cb",
+    "base0E": "#d59ed7",
+    "base0F": "#9b704d"
+  },
+  "tokens": {
+    "background": "#072b31",
+    "surface": "#00313c",
+    "surfaceAlt": "#003c46",
+    "surfaceRaised": "#003c46",
+    "border": "#003b49",
+    "borderFocused": "#4698cb",
+    "text": "#f4f5f0",
+    "textMuted": "#00778b",
+    "textSubtle": "#003b49",
+    "textInverse": "#072b31",
+    "accent": "#4698cb",
+    "accentText": "#072b31",
+    "success": "#78d64b",
+    "warning": "#fbdd40",
+    "danger": "#ff585d",
+    "info": "#2dccd3",
+    "selectionBg": "#003c46",
+    "selectionFg": "#f4f5f0",
+    "cursor": "#4698cb",
+    "scrollbarTrack": "#00313c",
+    "scrollbarThumb": "#003b49"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#072b31",
+      "cursorColor": "#4698cb"
+    },
+    "box": {
+      "backgroundColor": "#072b31",
+      "borderColor": "#003b49",
+      "focusedBorderColor": "#4698cb"
+    },
+    "text": {
+      "fg": "#f4f5f0",
+      "bg": "#072b31",
+      "selectionBg": "#003c46",
+      "selectionFg": "#f4f5f0"
+    },
+    "input": {
+      "backgroundColor": "#00313c",
+      "textColor": "#f4f5f0",
+      "focusedBackgroundColor": "#003c46",
+      "focusedTextColor": "#f4f5f0",
+      "placeholderColor": "#00778b",
+      "selectionBg": "#003b49",
+      "selectionFg": "#f4f5f0",
+      "cursorColor": "#4698cb"
+    },
+    "textarea": {
+      "backgroundColor": "#00313c",
+      "textColor": "#f4f5f0",
+      "focusedBackgroundColor": "#003c46",
+      "focusedTextColor": "#f4f5f0",
+      "placeholderColor": "#00778b",
+      "selectionBg": "#003b49",
+      "selectionFg": "#f4f5f0",
+      "cursorColor": "#4698cb"
+    },
+    "select": {
+      "backgroundColor": "#072b31",
+      "textColor": "#f4f5f0",
+      "focusedBackgroundColor": "#00313c",
+      "focusedTextColor": "#f4f5f0",
+      "selectedBackgroundColor": "#4698cb",
+      "selectedTextColor": "#072b31",
+      "descriptionColor": "#00778b",
+      "selectedDescriptionColor": "#072b31"
+    },
+    "tabSelect": {
+      "backgroundColor": "#072b31",
+      "textColor": "#00778b",
+      "focusedBackgroundColor": "#00313c",
+      "focusedTextColor": "#f4f5f0",
+      "selectedBackgroundColor": "#4698cb",
+      "selectedTextColor": "#072b31",
+      "selectedDescriptionColor": "#072b31"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#00313c",
+        "foregroundColor": "#003b49"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#00778b",
+        "backgroundColor": "#00313c"
+      }
+    },
+    "markdown": {
+      "fg": "#f4f5f0",
+      "bg": "#072b31",
+      "borderColor": "#003b49"
+    },
+    "code": {
+      "fg": "#f4f5f0",
+      "bg": "#072b31",
+      "selectionBg": "#003c46",
+      "selectionFg": "#f4f5f0"
+    }
+  }
+}

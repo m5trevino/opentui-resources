@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+*.tsbuildinfo
+
+# Bun lockfiles
+bun.lockb
+bun.lock
+
+# Embedded git repositories
+OpenTUI/opentui/
+
+# Test outputs (generated during skill testing)
+test/*/node_modules/
+test/*/dist/
+test/*/bun.lockb
+test/*/bun.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+*.temp
+.cache/

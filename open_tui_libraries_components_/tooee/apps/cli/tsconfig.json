@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["./src"],
+  "references": [
+    { "path": "../../packages/themes" },
+    { "path": "../../packages/overlays" },
+    { "path": "../../packages/clipboard" },
+    { "path": "../../packages/layout" },
+    { "path": "../../packages/renderers" },
+    { "path": "../../packages/commands" },
+    { "path": "../../packages/shell" },
+    { "path": "../../packages/view" },
+    { "path": "../../packages/ask" },
+
+    { "path": "../../packages/choose" }
+  ]
+}

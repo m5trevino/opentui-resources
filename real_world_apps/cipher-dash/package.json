@@ -1,0 +1,41 @@
+{
+  "name": "tui-system-monitor",
+  "version": "1.0.0",
+  "description": "Real-time system monitoring dashboard built with OpenTUI",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "npx tsx src/main.tsx",
+    "test": "npx tsx src/test-basic.tsx",
+    "simple": "npx tsx src/simple-dashboard.tsx",
+    "test-metrics": "npx tsx src/test-metrics.tsx",
+    "dashboard": "npx tsx src/static-dashboard.tsx",
+    "live": "npx tsx src/live-dashboard.tsx",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@opentui/core": "latest",
+    "@opentui/react": "latest",
+    "react": "^18.0.0",
+    "systeminformation": "^5.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^18.0.0",
+    "bun": "latest",
+    "tsx": "^4.21.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "tui",
+    "terminal",
+    "system-monitor",
+    "dashboard",
+    "opentui",
+    "react"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

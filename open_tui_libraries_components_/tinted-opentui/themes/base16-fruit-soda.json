@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Fruit Soda",
+  "slug": "fruit-soda",
+  "system": "base16",
+  "author": "jozip",
+  "palette": {
+    "base00": "#f1ecf1",
+    "base01": "#e0dee0",
+    "base02": "#d8d5d5",
+    "base03": "#b5b4b6",
+    "base04": "#979598",
+    "base05": "#515151",
+    "base06": "#474545",
+    "base07": "#2d2c2c",
+    "base08": "#fe3e31",
+    "base09": "#fe6d08",
+    "base0A": "#f7e203",
+    "base0B": "#47f74c",
+    "base0C": "#0f9cfd",
+    "base0D": "#2931df",
+    "base0E": "#611fce",
+    "base0F": "#b16f40"
+  },
+  "tokens": {
+    "background": "#f1ecf1",
+    "surface": "#e0dee0",
+    "surfaceAlt": "#d8d5d5",
+    "surfaceRaised": "#d8d5d5",
+    "border": "#b5b4b6",
+    "borderFocused": "#2931df",
+    "text": "#515151",
+    "textMuted": "#979598",
+    "textSubtle": "#b5b4b6",
+    "textInverse": "#f1ecf1",
+    "accent": "#2931df",
+    "accentText": "#f1ecf1",
+    "success": "#47f74c",
+    "warning": "#f7e203",
+    "danger": "#fe3e31",
+    "info": "#0f9cfd",
+    "selectionBg": "#d8d5d5",
+    "selectionFg": "#515151",
+    "cursor": "#2931df",
+    "scrollbarTrack": "#e0dee0",
+    "scrollbarThumb": "#b5b4b6"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#f1ecf1",
+      "cursorColor": "#2931df"
+    },
+    "box": {
+      "backgroundColor": "#f1ecf1",
+      "borderColor": "#b5b4b6",
+      "focusedBorderColor": "#2931df"
+    },
+    "text": {
+      "fg": "#515151",
+      "bg": "#f1ecf1",
+      "selectionBg": "#d8d5d5",
+      "selectionFg": "#515151"
+    },
+    "input": {
+      "backgroundColor": "#e0dee0",
+      "textColor": "#515151",
+      "focusedBackgroundColor": "#d8d5d5",
+      "focusedTextColor": "#515151",
+      "placeholderColor": "#979598",
+      "selectionBg": "#b5b4b6",
+      "selectionFg": "#515151",
+      "cursorColor": "#2931df"
+    },
+    "textarea": {
+      "backgroundColor": "#e0dee0",
+      "textColor": "#515151",
+      "focusedBackgroundColor": "#d8d5d5",
+      "focusedTextColor": "#515151",
+      "placeholderColor": "#979598",
+      "selectionBg": "#b5b4b6",
+      "selectionFg": "#515151",
+      "cursorColor": "#2931df"
+    },
+    "select": {
+      "backgroundColor": "#f1ecf1",
+      "textColor": "#515151",
+      "focusedBackgroundColor": "#e0dee0",
+      "focusedTextColor": "#515151",
+      "selectedBackgroundColor": "#2931df",
+      "selectedTextColor": "#f1ecf1",
+      "descriptionColor": "#979598",
+      "selectedDescriptionColor": "#f1ecf1"
+    },
+    "tabSelect": {
+      "backgroundColor": "#f1ecf1",
+      "textColor": "#979598",
+      "focusedBackgroundColor": "#e0dee0",
+      "focusedTextColor": "#515151",
+      "selectedBackgroundColor": "#2931df",
+      "selectedTextColor": "#f1ecf1",
+      "selectedDescriptionColor": "#f1ecf1"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#e0dee0",
+        "foregroundColor": "#b5b4b6"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#979598",
+        "backgroundColor": "#e0dee0"
+      }
+    },
+    "markdown": {
+      "fg": "#515151",
+      "bg": "#f1ecf1",
+      "borderColor": "#b5b4b6"
+    },
+    "code": {
+      "fg": "#515151",
+      "bg": "#f1ecf1",
+      "selectionBg": "#d8d5d5",
+      "selectionFg": "#515151"
+    }
+  }
+}

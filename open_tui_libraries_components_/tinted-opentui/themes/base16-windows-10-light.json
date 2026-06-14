@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Windows 10 Light",
+  "slug": "windows-10-light",
+  "system": "base16",
+  "author": "Fergus Collins (https://github.com/ferguscollins)",
+  "palette": {
+    "base00": "#f2f2f2",
+    "base01": "#e5e5e5",
+    "base02": "#d9d9d9",
+    "base03": "#cccccc",
+    "base04": "#ababab",
+    "base05": "#767676",
+    "base06": "#414141",
+    "base07": "#0c0c0c",
+    "base08": "#c50f1f",
+    "base09": "#f9f1a5",
+    "base0A": "#c19c00",
+    "base0B": "#13a10e",
+    "base0C": "#3a96dd",
+    "base0D": "#0037da",
+    "base0E": "#881798",
+    "base0F": "#16c60c"
+  },
+  "tokens": {
+    "background": "#f2f2f2",
+    "surface": "#e5e5e5",
+    "surfaceAlt": "#d9d9d9",
+    "surfaceRaised": "#d9d9d9",
+    "border": "#cccccc",
+    "borderFocused": "#0037da",
+    "text": "#767676",
+    "textMuted": "#ababab",
+    "textSubtle": "#cccccc",
+    "textInverse": "#f2f2f2",
+    "accent": "#0037da",
+    "accentText": "#f2f2f2",
+    "success": "#13a10e",
+    "warning": "#c19c00",
+    "danger": "#c50f1f",
+    "info": "#3a96dd",
+    "selectionBg": "#d9d9d9",
+    "selectionFg": "#767676",
+    "cursor": "#0037da",
+    "scrollbarTrack": "#e5e5e5",
+    "scrollbarThumb": "#cccccc"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#f2f2f2",
+      "cursorColor": "#0037da"
+    },
+    "box": {
+      "backgroundColor": "#f2f2f2",
+      "borderColor": "#cccccc",
+      "focusedBorderColor": "#0037da"
+    },
+    "text": {
+      "fg": "#767676",
+      "bg": "#f2f2f2",
+      "selectionBg": "#d9d9d9",
+      "selectionFg": "#767676"
+    },
+    "input": {
+      "backgroundColor": "#e5e5e5",
+      "textColor": "#767676",
+      "focusedBackgroundColor": "#d9d9d9",
+      "focusedTextColor": "#767676",
+      "placeholderColor": "#ababab",
+      "selectionBg": "#cccccc",
+      "selectionFg": "#767676",
+      "cursorColor": "#0037da"
+    },
+    "textarea": {
+      "backgroundColor": "#e5e5e5",
+      "textColor": "#767676",
+      "focusedBackgroundColor": "#d9d9d9",
+      "focusedTextColor": "#767676",
+      "placeholderColor": "#ababab",
+      "selectionBg": "#cccccc",
+      "selectionFg": "#767676",
+      "cursorColor": "#0037da"
+    },
+    "select": {
+      "backgroundColor": "#f2f2f2",
+      "textColor": "#767676",
+      "focusedBackgroundColor": "#e5e5e5",
+      "focusedTextColor": "#767676",
+      "selectedBackgroundColor": "#0037da",
+      "selectedTextColor": "#f2f2f2",
+      "descriptionColor": "#ababab",
+      "selectedDescriptionColor": "#f2f2f2"
+    },
+    "tabSelect": {
+      "backgroundColor": "#f2f2f2",
+      "textColor": "#ababab",
+      "focusedBackgroundColor": "#e5e5e5",
+      "focusedTextColor": "#767676",
+      "selectedBackgroundColor": "#0037da",
+      "selectedTextColor": "#f2f2f2",
+      "selectedDescriptionColor": "#f2f2f2"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#e5e5e5",
+        "foregroundColor": "#cccccc"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#ababab",
+        "backgroundColor": "#e5e5e5"
+      }
+    },
+    "markdown": {
+      "fg": "#767676",
+      "bg": "#f2f2f2",
+      "borderColor": "#cccccc"
+    },
+    "code": {
+      "fg": "#767676",
+      "bg": "#f2f2f2",
+      "selectionBg": "#d9d9d9",
+      "selectionFg": "#767676"
+    }
+  }
+}

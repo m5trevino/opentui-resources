@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Sandcastle",
+  "slug": "sandcastle",
+  "system": "base16",
+  "author": "George Essig (https://github.com/gessig)",
+  "palette": {
+    "base00": "#282c34",
+    "base01": "#2c323b",
+    "base02": "#3e4451",
+    "base03": "#665c54",
+    "base04": "#928374",
+    "base05": "#a89984",
+    "base06": "#d5c4a1",
+    "base07": "#fdf4c1",
+    "base08": "#83a598",
+    "base09": "#a07e3b",
+    "base0A": "#a07e3b",
+    "base0B": "#528b8b",
+    "base0C": "#83a598",
+    "base0D": "#83a598",
+    "base0E": "#d75f5f",
+    "base0F": "#a87322"
+  },
+  "tokens": {
+    "background": "#282c34",
+    "surface": "#2c323b",
+    "surfaceAlt": "#3e4451",
+    "surfaceRaised": "#3e4451",
+    "border": "#665c54",
+    "borderFocused": "#83a598",
+    "text": "#a89984",
+    "textMuted": "#928374",
+    "textSubtle": "#665c54",
+    "textInverse": "#282c34",
+    "accent": "#83a598",
+    "accentText": "#282c34",
+    "success": "#528b8b",
+    "warning": "#a07e3b",
+    "danger": "#83a598",
+    "info": "#83a598",
+    "selectionBg": "#3e4451",
+    "selectionFg": "#a89984",
+    "cursor": "#83a598",
+    "scrollbarTrack": "#2c323b",
+    "scrollbarThumb": "#665c54"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#282c34",
+      "cursorColor": "#83a598"
+    },
+    "box": {
+      "backgroundColor": "#282c34",
+      "borderColor": "#665c54",
+      "focusedBorderColor": "#83a598"
+    },
+    "text": {
+      "fg": "#a89984",
+      "bg": "#282c34",
+      "selectionBg": "#3e4451",
+      "selectionFg": "#a89984"
+    },
+    "input": {
+      "backgroundColor": "#2c323b",
+      "textColor": "#a89984",
+      "focusedBackgroundColor": "#3e4451",
+      "focusedTextColor": "#a89984",
+      "placeholderColor": "#928374",
+      "selectionBg": "#665c54",
+      "selectionFg": "#a89984",
+      "cursorColor": "#83a598"
+    },
+    "textarea": {
+      "backgroundColor": "#2c323b",
+      "textColor": "#a89984",
+      "focusedBackgroundColor": "#3e4451",
+      "focusedTextColor": "#a89984",
+      "placeholderColor": "#928374",
+      "selectionBg": "#665c54",
+      "selectionFg": "#a89984",
+      "cursorColor": "#83a598"
+    },
+    "select": {
+      "backgroundColor": "#282c34",
+      "textColor": "#a89984",
+      "focusedBackgroundColor": "#2c323b",
+      "focusedTextColor": "#a89984",
+      "selectedBackgroundColor": "#83a598",
+      "selectedTextColor": "#282c34",
+      "descriptionColor": "#928374",
+      "selectedDescriptionColor": "#282c34"
+    },
+    "tabSelect": {
+      "backgroundColor": "#282c34",
+      "textColor": "#928374",
+      "focusedBackgroundColor": "#2c323b",
+      "focusedTextColor": "#a89984",
+      "selectedBackgroundColor": "#83a598",
+      "selectedTextColor": "#282c34",
+      "selectedDescriptionColor": "#282c34"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#2c323b",
+        "foregroundColor": "#665c54"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#928374",
+        "backgroundColor": "#2c323b"
+      }
+    },
+    "markdown": {
+      "fg": "#a89984",
+      "bg": "#282c34",
+      "borderColor": "#665c54"
+    },
+    "code": {
+      "fg": "#a89984",
+      "bg": "#282c34",
+      "selectionBg": "#3e4451",
+      "selectionFg": "#a89984"
+    }
+  }
+}

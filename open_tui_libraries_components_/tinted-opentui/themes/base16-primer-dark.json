@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Primer Dark",
+  "slug": "primer-dark",
+  "system": "base16",
+  "author": "Jimmy Lin",
+  "palette": {
+    "base00": "#010409",
+    "base01": "#21262d",
+    "base02": "#30363d",
+    "base03": "#484f58",
+    "base04": "#8b949e",
+    "base05": "#b1bac4",
+    "base06": "#c9d1d9",
+    "base07": "#f0f6fc",
+    "base08": "#ff7b72",
+    "base09": "#f0883e",
+    "base0A": "#d29922",
+    "base0B": "#3fb950",
+    "base0C": "#a5d6ff",
+    "base0D": "#58a6ff",
+    "base0E": "#f778ba",
+    "base0F": "#bd561d"
+  },
+  "tokens": {
+    "background": "#010409",
+    "surface": "#21262d",
+    "surfaceAlt": "#30363d",
+    "surfaceRaised": "#30363d",
+    "border": "#484f58",
+    "borderFocused": "#58a6ff",
+    "text": "#b1bac4",
+    "textMuted": "#8b949e",
+    "textSubtle": "#484f58",
+    "textInverse": "#010409",
+    "accent": "#58a6ff",
+    "accentText": "#010409",
+    "success": "#3fb950",
+    "warning": "#d29922",
+    "danger": "#ff7b72",
+    "info": "#a5d6ff",
+    "selectionBg": "#30363d",
+    "selectionFg": "#b1bac4",
+    "cursor": "#58a6ff",
+    "scrollbarTrack": "#21262d",
+    "scrollbarThumb": "#484f58"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#010409",
+      "cursorColor": "#58a6ff"
+    },
+    "box": {
+      "backgroundColor": "#010409",
+      "borderColor": "#484f58",
+      "focusedBorderColor": "#58a6ff"
+    },
+    "text": {
+      "fg": "#b1bac4",
+      "bg": "#010409",
+      "selectionBg": "#30363d",
+      "selectionFg": "#b1bac4"
+    },
+    "input": {
+      "backgroundColor": "#21262d",
+      "textColor": "#b1bac4",
+      "focusedBackgroundColor": "#30363d",
+      "focusedTextColor": "#b1bac4",
+      "placeholderColor": "#8b949e",
+      "selectionBg": "#484f58",
+      "selectionFg": "#b1bac4",
+      "cursorColor": "#58a6ff"
+    },
+    "textarea": {
+      "backgroundColor": "#21262d",
+      "textColor": "#b1bac4",
+      "focusedBackgroundColor": "#30363d",
+      "focusedTextColor": "#b1bac4",
+      "placeholderColor": "#8b949e",
+      "selectionBg": "#484f58",
+      "selectionFg": "#b1bac4",
+      "cursorColor": "#58a6ff"
+    },
+    "select": {
+      "backgroundColor": "#010409",
+      "textColor": "#b1bac4",
+      "focusedBackgroundColor": "#21262d",
+      "focusedTextColor": "#b1bac4",
+      "selectedBackgroundColor": "#58a6ff",
+      "selectedTextColor": "#010409",
+      "descriptionColor": "#8b949e",
+      "selectedDescriptionColor": "#010409"
+    },
+    "tabSelect": {
+      "backgroundColor": "#010409",
+      "textColor": "#8b949e",
+      "focusedBackgroundColor": "#21262d",
+      "focusedTextColor": "#b1bac4",
+      "selectedBackgroundColor": "#58a6ff",
+      "selectedTextColor": "#010409",
+      "selectedDescriptionColor": "#010409"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#21262d",
+        "foregroundColor": "#484f58"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#8b949e",
+        "backgroundColor": "#21262d"
+      }
+    },
+    "markdown": {
+      "fg": "#b1bac4",
+      "bg": "#010409",
+      "borderColor": "#484f58"
+    },
+    "code": {
+      "fg": "#b1bac4",
+      "bg": "#010409",
+      "selectionBg": "#30363d",
+      "selectionFg": "#b1bac4"
+    }
+  }
+}

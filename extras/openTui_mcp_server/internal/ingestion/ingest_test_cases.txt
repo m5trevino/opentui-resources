@@ -1,0 +1,201 @@
+Casos de Teste para a função Ingest
+
+================================================================================
+ESTRUTURA ESPERADA
+================================================================================
+
+Input:
+- ctx context.Context
+- urls []string (lista de URLs)
+- store *bleve.Store (índice já aberto)
+
+Output:
+- IngestReport{Total int, Indexed int, Errors []string}
+
+================================================================================
+CASO 1: Sucesso completo -Uma URL válida
+================================================================================
+
+Input:
+- urls = ["https://example.com"]
+- Store aberto e vazio
+
+Esperado:
+- Total = 1
+- Indexed = N (quantidade de chunks gerados)
+- Errors = []
+
+Pipeline executado:
+1. Fetch → retorna HTML válido
+2. Parser → retorna Page{Title, Content}
+3. Chunk → retorna []Chunk
+4. Add → sucesso para cada chunk
+
+================================================================================
+CASO 2: Sucesso completo - Múltiplas URLs válidas
+================================================================================
+
+Input:
+- urls = ["https://example.com", "https://example.org", "https://example.net"]
+- Store aberto e vazio
+
+Esperado:
+- Total = 3
+- Indexed = soma dos chunks de todas as URLs
+- Errors = []
+
+Pipeline executado para cada URL:
+
+================================================================================
+CASO 3: Fetch falha - URL inválida ou inacessível
+================================================================================
+
+Input:
+- urls = ["https://invalid-domain-that-does-not-exist.com"]
+- Store aberto
+
+Esperado:
+- Total = 1
+- Indexed = 0
+- Errors contém: "fetch failed for https://invalid-domain-that-does-not-exist.com: ..."
+
+Comportamento:
+- context timeout de 30s aplicado
+- erro registrado e próximo passo continúan
+
+================================================================================
+CASO 4: Parser falha - HTML malformado
+================================================================================
+
+Input:
+- urls = ["https://example.com"]
+- HTML retornado é inválido/malformado
+
+Esperado:
+- Total = 1
+- Indexed = 0
+- Errors contém: "parse failed for https://example.com: ..."
+
+================================================================================
+CASO 5: Chunk retorna vazio - Página sem conteúdo processável
+================================================================================
+
+Input:
+- urls = ["https://example.com"]
+- HTML retorna Page com Content vazio
+
+Esperado:
+- Total = 1
+- Indexed = 0
+- Errors contém: "no chunks generated for https://example.com"
+
+================================================================================
+CASO 6: Store.Add falha - Erro ao indexar chunk
+================================================================================
+
+Input:
+- Store com problema (índice corrompido ou 읽-only)
+- URLs válida
+
+Esperado:
+- Total = N
+- Indexed = menor que total de chunks (parcial)
+- Errors contém: "index failed for chunk X of URL: ..."
+
+Comportamento:
+- Continua processando próximos chunks mesmo se um falhar
+
+================================================================================
+CASO 7: URL duplicada - Re-ingestão da mesma URL
+================================================================================
+
+Input:
+- Primeira execução: urls = ["https://example.com"]
+- Segunda execução: urls = ["https://example.com"]
+
+Esperado:
+- Indexed = mesmo número em ambas (idempotente)
+- IDs calculados: sha256(url+chunk.Title+chunk.Text) são iguais
+- Não cria duplicatas no índice
+
+================================================================================
+CASO 8: Lista vazia de URLs
+================================================================================
+
+Input:
+- urls = []
+
+Esperado:
+- Total = 0
+- Indexed = 0
+- Errors = []
+
+================================================================================
+CASO 9: Timeout aplicado corretamente
+================================================================================
+
+Input:
+- URL que demora mais de 30s para responder
+- context com timeout
+
+Esperado:
+- Error contém timeout-related message
+- Não blocking indefinidamente
+
+================================================================================
+CASO 10: Context cancelado durante processamento
+================================================================================
+
+Input:
+- context.cancel() chamado no meio do loop
+- URLs parcialmente processadas
+
+Esperado:
+- indexed = chunks processados antes do cancel
+- Errors pode incluir contexto cancelado
+
+================================================================================
+CASO 11: Verificação de logs com log.Printf
+================================================================================
+
+Verificar que NUNCA usa fmt.Println:
+- Apenas log.Printf para stderr
+- Formato esperado: "[1/3] Processing: https://..."
+- "[1/3] Indexed N chunks from: https://..."
+- "Ingest complete. Total: N, Indexed: N, Errors: N"
+- "ERROR: ..."
+- "WARNING: ..."
+
+================================================================================
+CASO 12: Verificação de ID único com SHA256
+================================================================================
+
+Input:
+- URL = "https://example.com"
+- Chunk1 = {Title: "Intro", Text: "..."}
+- Chunk2 = {Title: "Intro", Text: "..."} (mesmo conteúdo)
+
+Verificar que IDs são iguais (mesma URL + mesmo title + mesmo text)
+para evitar duplicatas na re-ingestão.
+
+================================================================================
+CASO 13: Verificação de timeout por URL
+================================================================================
+
+Cada URL deve ter seu próprio context com timeout:
+- urlCtx, cancel := context.WithTimeout(ctx, 30*time.Second)
+- defer cancel()
+
+Isso evita que uma URL lenta bloqueie todo o processo.
+
+================================================================================
+CASO 14: Store aberto uma única vez
+================================================================================
+
+O Store deve ser:
+- Passado como parâmetro para Ingest
+- Aberto ANTES de chamar Ingest (no main)
+- Fechado DEPOIS (defer store.Close())
+- NÃO aberto dentro do loop
+
+================================================================================

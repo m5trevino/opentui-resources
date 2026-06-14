@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Circus",
+  "slug": "circus",
+  "system": "base16",
+  "author": "Stephan Boyer (https://github.com/stepchowfun) and Esther Wang (https://github.com/ewang12)",
+  "palette": {
+    "base00": "#191919",
+    "base01": "#202020",
+    "base02": "#303030",
+    "base03": "#5f5a60",
+    "base04": "#505050",
+    "base05": "#a7a7a7",
+    "base06": "#808080",
+    "base07": "#ffffff",
+    "base08": "#dc657d",
+    "base09": "#4bb1a7",
+    "base0A": "#c3ba63",
+    "base0B": "#84b97c",
+    "base0C": "#4bb1a7",
+    "base0D": "#639ee4",
+    "base0E": "#b888e2",
+    "base0F": "#b888e2"
+  },
+  "tokens": {
+    "background": "#191919",
+    "surface": "#202020",
+    "surfaceAlt": "#303030",
+    "surfaceRaised": "#303030",
+    "border": "#5f5a60",
+    "borderFocused": "#639ee4",
+    "text": "#a7a7a7",
+    "textMuted": "#505050",
+    "textSubtle": "#5f5a60",
+    "textInverse": "#191919",
+    "accent": "#639ee4",
+    "accentText": "#191919",
+    "success": "#84b97c",
+    "warning": "#c3ba63",
+    "danger": "#dc657d",
+    "info": "#4bb1a7",
+    "selectionBg": "#303030",
+    "selectionFg": "#a7a7a7",
+    "cursor": "#639ee4",
+    "scrollbarTrack": "#202020",
+    "scrollbarThumb": "#5f5a60"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#191919",
+      "cursorColor": "#639ee4"
+    },
+    "box": {
+      "backgroundColor": "#191919",
+      "borderColor": "#5f5a60",
+      "focusedBorderColor": "#639ee4"
+    },
+    "text": {
+      "fg": "#a7a7a7",
+      "bg": "#191919",
+      "selectionBg": "#303030",
+      "selectionFg": "#a7a7a7"
+    },
+    "input": {
+      "backgroundColor": "#202020",
+      "textColor": "#a7a7a7",
+      "focusedBackgroundColor": "#303030",
+      "focusedTextColor": "#a7a7a7",
+      "placeholderColor": "#505050",
+      "selectionBg": "#5f5a60",
+      "selectionFg": "#a7a7a7",
+      "cursorColor": "#639ee4"
+    },
+    "textarea": {
+      "backgroundColor": "#202020",
+      "textColor": "#a7a7a7",
+      "focusedBackgroundColor": "#303030",
+      "focusedTextColor": "#a7a7a7",
+      "placeholderColor": "#505050",
+      "selectionBg": "#5f5a60",
+      "selectionFg": "#a7a7a7",
+      "cursorColor": "#639ee4"
+    },
+    "select": {
+      "backgroundColor": "#191919",
+      "textColor": "#a7a7a7",
+      "focusedBackgroundColor": "#202020",
+      "focusedTextColor": "#a7a7a7",
+      "selectedBackgroundColor": "#639ee4",
+      "selectedTextColor": "#191919",
+      "descriptionColor": "#505050",
+      "selectedDescriptionColor": "#191919"
+    },
+    "tabSelect": {
+      "backgroundColor": "#191919",
+      "textColor": "#505050",
+      "focusedBackgroundColor": "#202020",
+      "focusedTextColor": "#a7a7a7",
+      "selectedBackgroundColor": "#639ee4",
+      "selectedTextColor": "#191919",
+      "selectedDescriptionColor": "#191919"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#202020",
+        "foregroundColor": "#5f5a60"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#505050",
+        "backgroundColor": "#202020"
+      }
+    },
+    "markdown": {
+      "fg": "#a7a7a7",
+      "bg": "#191919",
+      "borderColor": "#5f5a60"
+    },
+    "code": {
+      "fg": "#a7a7a7",
+      "bg": "#191919",
+      "selectionBg": "#303030",
+      "selectionFg": "#a7a7a7"
+    }
+  }
+}

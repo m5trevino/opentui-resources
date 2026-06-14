@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "tender",
+  "slug": "tender",
+  "system": "base16",
+  "author": "Jacobo Tabernero (https://github/com/jacoborus/tender.vim)",
+  "palette": {
+    "base00": "#282828",
+    "base01": "#383838",
+    "base02": "#484848",
+    "base03": "#4c4c4c",
+    "base04": "#b8b8b8",
+    "base05": "#eeeeee",
+    "base06": "#e8e8e8",
+    "base07": "#feffff",
+    "base08": "#f43753",
+    "base09": "#dc9656",
+    "base0A": "#ffc24b",
+    "base0B": "#c9d05c",
+    "base0C": "#73cef4",
+    "base0D": "#b3deef",
+    "base0E": "#d3b987",
+    "base0F": "#a16946"
+  },
+  "tokens": {
+    "background": "#282828",
+    "surface": "#383838",
+    "surfaceAlt": "#484848",
+    "surfaceRaised": "#484848",
+    "border": "#4c4c4c",
+    "borderFocused": "#b3deef",
+    "text": "#eeeeee",
+    "textMuted": "#b8b8b8",
+    "textSubtle": "#4c4c4c",
+    "textInverse": "#282828",
+    "accent": "#b3deef",
+    "accentText": "#282828",
+    "success": "#c9d05c",
+    "warning": "#ffc24b",
+    "danger": "#f43753",
+    "info": "#73cef4",
+    "selectionBg": "#484848",
+    "selectionFg": "#eeeeee",
+    "cursor": "#b3deef",
+    "scrollbarTrack": "#383838",
+    "scrollbarThumb": "#4c4c4c"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#282828",
+      "cursorColor": "#b3deef"
+    },
+    "box": {
+      "backgroundColor": "#282828",
+      "borderColor": "#4c4c4c",
+      "focusedBorderColor": "#b3deef"
+    },
+    "text": {
+      "fg": "#eeeeee",
+      "bg": "#282828",
+      "selectionBg": "#484848",
+      "selectionFg": "#eeeeee"
+    },
+    "input": {
+      "backgroundColor": "#383838",
+      "textColor": "#eeeeee",
+      "focusedBackgroundColor": "#484848",
+      "focusedTextColor": "#eeeeee",
+      "placeholderColor": "#b8b8b8",
+      "selectionBg": "#4c4c4c",
+      "selectionFg": "#eeeeee",
+      "cursorColor": "#b3deef"
+    },
+    "textarea": {
+      "backgroundColor": "#383838",
+      "textColor": "#eeeeee",
+      "focusedBackgroundColor": "#484848",
+      "focusedTextColor": "#eeeeee",
+      "placeholderColor": "#b8b8b8",
+      "selectionBg": "#4c4c4c",
+      "selectionFg": "#eeeeee",
+      "cursorColor": "#b3deef"
+    },
+    "select": {
+      "backgroundColor": "#282828",
+      "textColor": "#eeeeee",
+      "focusedBackgroundColor": "#383838",
+      "focusedTextColor": "#eeeeee",
+      "selectedBackgroundColor": "#b3deef",
+      "selectedTextColor": "#282828",
+      "descriptionColor": "#b8b8b8",
+      "selectedDescriptionColor": "#282828"
+    },
+    "tabSelect": {
+      "backgroundColor": "#282828",
+      "textColor": "#b8b8b8",
+      "focusedBackgroundColor": "#383838",
+      "focusedTextColor": "#eeeeee",
+      "selectedBackgroundColor": "#b3deef",
+      "selectedTextColor": "#282828",
+      "selectedDescriptionColor": "#282828"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#383838",
+        "foregroundColor": "#4c4c4c"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#b8b8b8",
+        "backgroundColor": "#383838"
+      }
+    },
+    "markdown": {
+      "fg": "#eeeeee",
+      "bg": "#282828",
+      "borderColor": "#4c4c4c"
+    },
+    "code": {
+      "fg": "#eeeeee",
+      "bg": "#282828",
+      "selectionBg": "#484848",
+      "selectionFg": "#eeeeee"
+    }
+  }
+}

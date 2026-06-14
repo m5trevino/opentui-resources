@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Spaceduck",
+  "slug": "spaceduck",
+  "system": "base16",
+  "author": "Guillermo Rodriguez (https://github.com/pineapplegiant), packaged by Gabriel Fontes (https://github.com/Misterio77)",
+  "palette": {
+    "base00": "#16172d",
+    "base01": "#1b1c36",
+    "base02": "#30365f",
+    "base03": "#686f9a",
+    "base04": "#818596",
+    "base05": "#ecf0c1",
+    "base06": "#c1c3cc",
+    "base07": "#ffffff",
+    "base08": "#e33400",
+    "base09": "#e39400",
+    "base0A": "#f2ce00",
+    "base0B": "#5ccc96",
+    "base0C": "#00a3cc",
+    "base0D": "#7a5ccc",
+    "base0E": "#b3a1e6",
+    "base0F": "#ce6f8f"
+  },
+  "tokens": {
+    "background": "#16172d",
+    "surface": "#1b1c36",
+    "surfaceAlt": "#30365f",
+    "surfaceRaised": "#30365f",
+    "border": "#686f9a",
+    "borderFocused": "#7a5ccc",
+    "text": "#ecf0c1",
+    "textMuted": "#818596",
+    "textSubtle": "#686f9a",
+    "textInverse": "#16172d",
+    "accent": "#7a5ccc",
+    "accentText": "#16172d",
+    "success": "#5ccc96",
+    "warning": "#f2ce00",
+    "danger": "#e33400",
+    "info": "#00a3cc",
+    "selectionBg": "#30365f",
+    "selectionFg": "#ecf0c1",
+    "cursor": "#7a5ccc",
+    "scrollbarTrack": "#1b1c36",
+    "scrollbarThumb": "#686f9a"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#16172d",
+      "cursorColor": "#7a5ccc"
+    },
+    "box": {
+      "backgroundColor": "#16172d",
+      "borderColor": "#686f9a",
+      "focusedBorderColor": "#7a5ccc"
+    },
+    "text": {
+      "fg": "#ecf0c1",
+      "bg": "#16172d",
+      "selectionBg": "#30365f",
+      "selectionFg": "#ecf0c1"
+    },
+    "input": {
+      "backgroundColor": "#1b1c36",
+      "textColor": "#ecf0c1",
+      "focusedBackgroundColor": "#30365f",
+      "focusedTextColor": "#ecf0c1",
+      "placeholderColor": "#818596",
+      "selectionBg": "#686f9a",
+      "selectionFg": "#ecf0c1",
+      "cursorColor": "#7a5ccc"
+    },
+    "textarea": {
+      "backgroundColor": "#1b1c36",
+      "textColor": "#ecf0c1",
+      "focusedBackgroundColor": "#30365f",
+      "focusedTextColor": "#ecf0c1",
+      "placeholderColor": "#818596",
+      "selectionBg": "#686f9a",
+      "selectionFg": "#ecf0c1",
+      "cursorColor": "#7a5ccc"
+    },
+    "select": {
+      "backgroundColor": "#16172d",
+      "textColor": "#ecf0c1",
+      "focusedBackgroundColor": "#1b1c36",
+      "focusedTextColor": "#ecf0c1",
+      "selectedBackgroundColor": "#7a5ccc",
+      "selectedTextColor": "#16172d",
+      "descriptionColor": "#818596",
+      "selectedDescriptionColor": "#16172d"
+    },
+    "tabSelect": {
+      "backgroundColor": "#16172d",
+      "textColor": "#818596",
+      "focusedBackgroundColor": "#1b1c36",
+      "focusedTextColor": "#ecf0c1",
+      "selectedBackgroundColor": "#7a5ccc",
+      "selectedTextColor": "#16172d",
+      "selectedDescriptionColor": "#16172d"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#1b1c36",
+        "foregroundColor": "#686f9a"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#818596",
+        "backgroundColor": "#1b1c36"
+      }
+    },
+    "markdown": {
+      "fg": "#ecf0c1",
+      "bg": "#16172d",
+      "borderColor": "#686f9a"
+    },
+    "code": {
+      "fg": "#ecf0c1",
+      "bg": "#16172d",
+      "selectionBg": "#30365f",
+      "selectionFg": "#ecf0c1"
+    }
+  }
+}

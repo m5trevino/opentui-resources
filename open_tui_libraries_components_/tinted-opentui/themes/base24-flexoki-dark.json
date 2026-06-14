@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Flexoki Dark",
+  "slug": "flexoki-dark",
+  "system": "base24",
+  "author": "Steph Ango (https://github.com/kepano/flexoki)",
+  "palette": {
+    "base00": "#100f0f",
+    "base01": "#1c1b1a",
+    "base02": "#282726",
+    "base03": "#575653",
+    "base04": "#878580",
+    "base05": "#cecdc3",
+    "base06": "#e6e4d9",
+    "base07": "#fffcf0",
+    "base08": "#d14d41",
+    "base09": "#da702c",
+    "base0A": "#d0a215",
+    "base0B": "#879a39",
+    "base0C": "#3aa99f",
+    "base0D": "#4385be",
+    "base0E": "#8b7ec8",
+    "base0F": "#ce5d97"
+  },
+  "tokens": {
+    "background": "#100f0f",
+    "surface": "#1c1b1a",
+    "surfaceAlt": "#282726",
+    "surfaceRaised": "#282726",
+    "border": "#575653",
+    "borderFocused": "#4385be",
+    "text": "#cecdc3",
+    "textMuted": "#878580",
+    "textSubtle": "#575653",
+    "textInverse": "#100f0f",
+    "accent": "#4385be",
+    "accentText": "#100f0f",
+    "success": "#879a39",
+    "warning": "#d0a215",
+    "danger": "#d14d41",
+    "info": "#3aa99f",
+    "selectionBg": "#282726",
+    "selectionFg": "#cecdc3",
+    "cursor": "#4385be",
+    "scrollbarTrack": "#1c1b1a",
+    "scrollbarThumb": "#575653"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#100f0f",
+      "cursorColor": "#4385be"
+    },
+    "box": {
+      "backgroundColor": "#100f0f",
+      "borderColor": "#575653",
+      "focusedBorderColor": "#4385be"
+    },
+    "text": {
+      "fg": "#cecdc3",
+      "bg": "#100f0f",
+      "selectionBg": "#282726",
+      "selectionFg": "#cecdc3"
+    },
+    "input": {
+      "backgroundColor": "#1c1b1a",
+      "textColor": "#cecdc3",
+      "focusedBackgroundColor": "#282726",
+      "focusedTextColor": "#cecdc3",
+      "placeholderColor": "#878580",
+      "selectionBg": "#575653",
+      "selectionFg": "#cecdc3",
+      "cursorColor": "#4385be"
+    },
+    "textarea": {
+      "backgroundColor": "#1c1b1a",
+      "textColor": "#cecdc3",
+      "focusedBackgroundColor": "#282726",
+      "focusedTextColor": "#cecdc3",
+      "placeholderColor": "#878580",
+      "selectionBg": "#575653",
+      "selectionFg": "#cecdc3",
+      "cursorColor": "#4385be"
+    },
+    "select": {
+      "backgroundColor": "#100f0f",
+      "textColor": "#cecdc3",
+      "focusedBackgroundColor": "#1c1b1a",
+      "focusedTextColor": "#cecdc3",
+      "selectedBackgroundColor": "#4385be",
+      "selectedTextColor": "#100f0f",
+      "descriptionColor": "#878580",
+      "selectedDescriptionColor": "#100f0f"
+    },
+    "tabSelect": {
+      "backgroundColor": "#100f0f",
+      "textColor": "#878580",
+      "focusedBackgroundColor": "#1c1b1a",
+      "focusedTextColor": "#cecdc3",
+      "selectedBackgroundColor": "#4385be",
+      "selectedTextColor": "#100f0f",
+      "selectedDescriptionColor": "#100f0f"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#1c1b1a",
+        "foregroundColor": "#575653"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#878580",
+        "backgroundColor": "#1c1b1a"
+      }
+    },
+    "markdown": {
+      "fg": "#cecdc3",
+      "bg": "#100f0f",
+      "borderColor": "#575653"
+    },
+    "code": {
+      "fg": "#cecdc3",
+      "bg": "#100f0f",
+      "selectionBg": "#282726",
+      "selectionFg": "#cecdc3"
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Atelier Lakeside",
+  "slug": "atelier-lakeside",
+  "system": "base16",
+  "author": "Bram de Haan (http://atelierbramdehaan.nl)",
+  "palette": {
+    "base00": "#161b1d",
+    "base01": "#1f292e",
+    "base02": "#516d7b",
+    "base03": "#5a7b8c",
+    "base04": "#7195a8",
+    "base05": "#7ea2b4",
+    "base06": "#c1e4f6",
+    "base07": "#ebf8ff",
+    "base08": "#d22d72",
+    "base09": "#935c25",
+    "base0A": "#8a8a0f",
+    "base0B": "#568c3b",
+    "base0C": "#2d8f6f",
+    "base0D": "#257fad",
+    "base0E": "#6b6bb8",
+    "base0F": "#b72dd2"
+  },
+  "tokens": {
+    "background": "#161b1d",
+    "surface": "#1f292e",
+    "surfaceAlt": "#516d7b",
+    "surfaceRaised": "#516d7b",
+    "border": "#5a7b8c",
+    "borderFocused": "#257fad",
+    "text": "#7ea2b4",
+    "textMuted": "#7195a8",
+    "textSubtle": "#5a7b8c",
+    "textInverse": "#161b1d",
+    "accent": "#257fad",
+    "accentText": "#161b1d",
+    "success": "#568c3b",
+    "warning": "#8a8a0f",
+    "danger": "#d22d72",
+    "info": "#2d8f6f",
+    "selectionBg": "#516d7b",
+    "selectionFg": "#7ea2b4",
+    "cursor": "#257fad",
+    "scrollbarTrack": "#1f292e",
+    "scrollbarThumb": "#5a7b8c"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#161b1d",
+      "cursorColor": "#257fad"
+    },
+    "box": {
+      "backgroundColor": "#161b1d",
+      "borderColor": "#5a7b8c",
+      "focusedBorderColor": "#257fad"
+    },
+    "text": {
+      "fg": "#7ea2b4",
+      "bg": "#161b1d",
+      "selectionBg": "#516d7b",
+      "selectionFg": "#7ea2b4"
+    },
+    "input": {
+      "backgroundColor": "#1f292e",
+      "textColor": "#7ea2b4",
+      "focusedBackgroundColor": "#516d7b",
+      "focusedTextColor": "#7ea2b4",
+      "placeholderColor": "#7195a8",
+      "selectionBg": "#5a7b8c",
+      "selectionFg": "#7ea2b4",
+      "cursorColor": "#257fad"
+    },
+    "textarea": {
+      "backgroundColor": "#1f292e",
+      "textColor": "#7ea2b4",
+      "focusedBackgroundColor": "#516d7b",
+      "focusedTextColor": "#7ea2b4",
+      "placeholderColor": "#7195a8",
+      "selectionBg": "#5a7b8c",
+      "selectionFg": "#7ea2b4",
+      "cursorColor": "#257fad"
+    },
+    "select": {
+      "backgroundColor": "#161b1d",
+      "textColor": "#7ea2b4",
+      "focusedBackgroundColor": "#1f292e",
+      "focusedTextColor": "#7ea2b4",
+      "selectedBackgroundColor": "#257fad",
+      "selectedTextColor": "#161b1d",
+      "descriptionColor": "#7195a8",
+      "selectedDescriptionColor": "#161b1d"
+    },
+    "tabSelect": {
+      "backgroundColor": "#161b1d",
+      "textColor": "#7195a8",
+      "focusedBackgroundColor": "#1f292e",
+      "focusedTextColor": "#7ea2b4",
+      "selectedBackgroundColor": "#257fad",
+      "selectedTextColor": "#161b1d",
+      "selectedDescriptionColor": "#161b1d"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#1f292e",
+        "foregroundColor": "#5a7b8c"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#7195a8",
+        "backgroundColor": "#1f292e"
+      }
+    },
+    "markdown": {
+      "fg": "#7ea2b4",
+      "bg": "#161b1d",
+      "borderColor": "#5a7b8c"
+    },
+    "code": {
+      "fg": "#7ea2b4",
+      "bg": "#161b1d",
+      "selectionBg": "#516d7b",
+      "selectionFg": "#7ea2b4"
+    }
+  }
+}

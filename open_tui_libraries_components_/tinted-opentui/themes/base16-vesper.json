@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Vesper",
+  "slug": "vesper",
+  "system": "base16",
+  "author": "FormalSnake (https://github.com/formalsnake)",
+  "palette": {
+    "base00": "#101010",
+    "base01": "#232323",
+    "base02": "#222222",
+    "base03": "#333333",
+    "base04": "#999999",
+    "base05": "#b7b7b7",
+    "base06": "#c1c1c1",
+    "base07": "#d5d5d5",
+    "base08": "#de6e6e",
+    "base09": "#dab083",
+    "base0A": "#ffc799",
+    "base0B": "#5f8787",
+    "base0C": "#60a592",
+    "base0D": "#8eaaaa",
+    "base0E": "#d69094",
+    "base0F": "#876c4f"
+  },
+  "tokens": {
+    "background": "#101010",
+    "surface": "#232323",
+    "surfaceAlt": "#222222",
+    "surfaceRaised": "#222222",
+    "border": "#333333",
+    "borderFocused": "#8eaaaa",
+    "text": "#b7b7b7",
+    "textMuted": "#999999",
+    "textSubtle": "#333333",
+    "textInverse": "#101010",
+    "accent": "#8eaaaa",
+    "accentText": "#101010",
+    "success": "#5f8787",
+    "warning": "#ffc799",
+    "danger": "#de6e6e",
+    "info": "#60a592",
+    "selectionBg": "#222222",
+    "selectionFg": "#b7b7b7",
+    "cursor": "#8eaaaa",
+    "scrollbarTrack": "#232323",
+    "scrollbarThumb": "#333333"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#101010",
+      "cursorColor": "#8eaaaa"
+    },
+    "box": {
+      "backgroundColor": "#101010",
+      "borderColor": "#333333",
+      "focusedBorderColor": "#8eaaaa"
+    },
+    "text": {
+      "fg": "#b7b7b7",
+      "bg": "#101010",
+      "selectionBg": "#222222",
+      "selectionFg": "#b7b7b7"
+    },
+    "input": {
+      "backgroundColor": "#232323",
+      "textColor": "#b7b7b7",
+      "focusedBackgroundColor": "#222222",
+      "focusedTextColor": "#b7b7b7",
+      "placeholderColor": "#999999",
+      "selectionBg": "#333333",
+      "selectionFg": "#b7b7b7",
+      "cursorColor": "#8eaaaa"
+    },
+    "textarea": {
+      "backgroundColor": "#232323",
+      "textColor": "#b7b7b7",
+      "focusedBackgroundColor": "#222222",
+      "focusedTextColor": "#b7b7b7",
+      "placeholderColor": "#999999",
+      "selectionBg": "#333333",
+      "selectionFg": "#b7b7b7",
+      "cursorColor": "#8eaaaa"
+    },
+    "select": {
+      "backgroundColor": "#101010",
+      "textColor": "#b7b7b7",
+      "focusedBackgroundColor": "#232323",
+      "focusedTextColor": "#b7b7b7",
+      "selectedBackgroundColor": "#8eaaaa",
+      "selectedTextColor": "#101010",
+      "descriptionColor": "#999999",
+      "selectedDescriptionColor": "#101010"
+    },
+    "tabSelect": {
+      "backgroundColor": "#101010",
+      "textColor": "#999999",
+      "focusedBackgroundColor": "#232323",
+      "focusedTextColor": "#b7b7b7",
+      "selectedBackgroundColor": "#8eaaaa",
+      "selectedTextColor": "#101010",
+      "selectedDescriptionColor": "#101010"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#232323",
+        "foregroundColor": "#333333"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#999999",
+        "backgroundColor": "#232323"
+      }
+    },
+    "markdown": {
+      "fg": "#b7b7b7",
+      "bg": "#101010",
+      "borderColor": "#333333"
+    },
+    "code": {
+      "fg": "#b7b7b7",
+      "bg": "#101010",
+      "selectionBg": "#222222",
+      "selectionFg": "#b7b7b7"
+    }
+  }
+}

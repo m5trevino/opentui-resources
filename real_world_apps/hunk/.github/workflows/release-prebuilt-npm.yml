@@ -1,0 +1,266 @@
+name: Release prebuilt npm packages
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish the staged prebuilt packages to npm
+        required: true
+        default: false
+        type: boolean
+      npm_tag:
+        description: npm dist-tag to publish under (for example latest or beta)
+        required: true
+        default: latest
+        type: string
+  push:
+    tags:
+      - "v*"
+
+env:
+  SKIP_INSTALL_SIMPLE_GIT_HOOKS: "1"
+
+concurrency:
+  group: release-prebuilt-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-binaries:
+    name: Build ${{ matrix.package_name }}
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - package_name: hunkdiff-linux-arm64
+            runner: ubuntu-24.04-arm
+          - package_name: hunkdiff-linux-x64
+            runner: ubuntu-latest
+          - package_name: hunkdiff-windows-x64
+            runner: windows-latest
+          - package_name: hunkdiff-darwin-x64
+            runner: macos-15-intel
+          - package_name: hunkdiff-darwin-arm64
+            runner: macos-14
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: 1.3.10
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build host artifact
+        run: |
+          bun run build:bin
+          bun run ./scripts/build-prebuilt-artifact.ts --expect-package "${{ matrix.package_name }}"
+
+      - name: Upload binary artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: ${{ matrix.package_name }}
+          path: dist/release/artifacts/${{ matrix.package_name }}
+          if-no-files-found: error
+
+  stage-release:
+    name: Stage prebuilt npm release
+    runs-on: ubuntu-latest
+    needs:
+      - build-binaries
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: 1.3.10
+
+      - name: Set up Node
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Verify tag matches package version
+        if: github.event_name == 'push'
+        run: bun run ./scripts/check-release-version.ts "${{ github.ref_name }}"
+
+      - name: Download platform artifacts
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          path: dist/release/artifacts
+
+      - name: Show downloaded artifacts
+        run: find dist/release/artifacts -maxdepth 3 -type f | sort
+
+      - name: Stage npm release directories
+        run: bun run stage:prebuilt:release
+
+      - name: Verify staged packages
+        run: bun run check:prebuilt-pack
+
+      - name: Smoke test staged install
+        run: bun run smoke:prebuilt-install
+
+      - name: Dry-run npm publish order
+        run: bun run publish:prebuilt:npm -- --dry-run --tag "${{ github.event_name == 'workflow_dispatch' && inputs.npm_tag || ((contains(github.ref_name, '-alpha') || contains(github.ref_name, '-beta') || contains(github.ref_name, '-rc')) && 'beta' || 'latest') }}"
+
+      - name: Upload staged npm release
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: staged-prebuilt-npm-release
+          path: dist/release/npm
+          if-no-files-found: error
+
+  publish:
+    name: Publish prebuilt npm release
+    runs-on: ubuntu-latest
+    needs:
+      - stage-release
+    if: github.event_name == 'push' || inputs.publish == true
+    environment: npm
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: 1.3.10
+
+      - name: Set up Node
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Download staged npm release
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: staged-prebuilt-npm-release
+          path: dist/release/npm
+
+      - name: Show staged packages
+        run: find dist/release/npm -maxdepth 3 -type f | sort
+
+      - name: Verify npm auth
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm whoami
+
+      - name: Publish packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: bun run publish:prebuilt:npm -- --tag "${{ github.event_name == 'workflow_dispatch' && inputs.npm_tag || ((contains(github.ref_name, '-alpha') || contains(github.ref_name, '-beta') || contains(github.ref_name, '-rc')) && 'beta' || 'latest') }}"
+
+  create-github-release:
+    name: Create GitHub release
+    runs-on: ubuntu-latest
+    needs:
+      - build-binaries
+      - publish
+    if: github.event_name == 'push'
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: 1.3.10
+
+      - name: Download platform artifacts
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: hunkdiff-*
+          path: dist/release/artifacts
+
+      - name: Archive release assets
+        run: |
+          mkdir -p dist/release/github
+          while IFS= read -r -d '' directory; do
+            package_name="$(basename "$directory")"
+            binary="$directory/hunk"
+            if [ ! -f "$binary" ] && [ -f "$directory/hunk.exe" ]; then
+              binary="$directory/hunk.exe"
+            fi
+            if [ ! -f "$binary" ]; then
+              echo "Missing release binary in $directory" >&2
+              exit 1
+            fi
+            if [ ! -f "$directory/skills/hunk-review/SKILL.md" ]; then
+              echo "Missing bundled Hunk review skill in $directory" >&2
+              exit 1
+            fi
+            chmod 0755 "$binary"
+            tar -C "$(dirname "$directory")" -czf "dist/release/github/${package_name}.tar.gz" "$package_name"
+          done < <(find dist/release/artifacts -mindepth 1 -maxdepth 1 -type d -name 'hunkdiff-*' -print0 | sort -z)
+          find dist/release/github -maxdepth 1 -type f | sort
+
+      - name: Create or update GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          prerelease_args=()
+          case "$TAG_NAME" in
+            *-alpha*|*-beta*|*-rc*)
+              prerelease_args+=(--prerelease)
+              ;;
+          esac
+
+          if gh release view "$TAG_NAME" >/dev/null 2>&1; then
+            gh release upload "$TAG_NAME" dist/release/github/* --clobber
+          else
+            gh release create "$TAG_NAME" \
+              --title "$TAG_NAME" \
+              --generate-notes \
+              "${prerelease_args[@]}" \
+              dist/release/github/*
+          fi
+
+      - name: Check out Homebrew tap
+        if: ${{ !contains(github.ref_name, '-alpha') && !contains(github.ref_name, '-beta') && !contains(github.ref_name, '-rc') }}
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          repository: modem-dev/homebrew-tap
+          path: dist/release/homebrew-tap
+          token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+
+      - name: Update Homebrew formula
+        if: ${{ !contains(github.ref_name, '-alpha') && !contains(github.ref_name, '-beta') && !contains(github.ref_name, '-rc') }}
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          bun run update:homebrew-formula -- \
+            --tag "$TAG_NAME" \
+            --asset-root dist/release/github \
+            --output-root dist/release/homebrew-tap
+
+      - name: Commit Homebrew formula update
+        if: ${{ !contains(github.ref_name, '-alpha') && !contains(github.ref_name, '-beta') && !contains(github.ref_name, '-rc') }}
+        working-directory: dist/release/homebrew-tap
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Formula/hunk.rb
+          if git diff --cached --quiet; then
+            echo "Homebrew formula already up to date."
+          else
+            git commit -m "hunk $TAG_NAME"
+            git push
+          fi

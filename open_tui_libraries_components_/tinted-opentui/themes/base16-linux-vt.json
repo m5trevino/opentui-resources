@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Linux VT",
+  "slug": "linux-vt",
+  "system": "base16",
+  "author": "j-c-m (https://github.com/j-c-m/)",
+  "palette": {
+    "base00": "#000000",
+    "base01": "#333333",
+    "base02": "#444444",
+    "base03": "#555555",
+    "base04": "#888888",
+    "base05": "#aaaaaa",
+    "base06": "#cccccc",
+    "base07": "#ffffff",
+    "base08": "#aa0000",
+    "base09": "#ff5555",
+    "base0A": "#ffff55",
+    "base0B": "#00aa00",
+    "base0C": "#00aaaa",
+    "base0D": "#5555ff",
+    "base0E": "#ff55ff",
+    "base0F": "#aa5500"
+  },
+  "tokens": {
+    "background": "#000000",
+    "surface": "#333333",
+    "surfaceAlt": "#444444",
+    "surfaceRaised": "#444444",
+    "border": "#555555",
+    "borderFocused": "#5555ff",
+    "text": "#aaaaaa",
+    "textMuted": "#888888",
+    "textSubtle": "#555555",
+    "textInverse": "#000000",
+    "accent": "#5555ff",
+    "accentText": "#000000",
+    "success": "#00aa00",
+    "warning": "#ffff55",
+    "danger": "#aa0000",
+    "info": "#00aaaa",
+    "selectionBg": "#444444",
+    "selectionFg": "#aaaaaa",
+    "cursor": "#5555ff",
+    "scrollbarTrack": "#333333",
+    "scrollbarThumb": "#555555"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#000000",
+      "cursorColor": "#5555ff"
+    },
+    "box": {
+      "backgroundColor": "#000000",
+      "borderColor": "#555555",
+      "focusedBorderColor": "#5555ff"
+    },
+    "text": {
+      "fg": "#aaaaaa",
+      "bg": "#000000",
+      "selectionBg": "#444444",
+      "selectionFg": "#aaaaaa"
+    },
+    "input": {
+      "backgroundColor": "#333333",
+      "textColor": "#aaaaaa",
+      "focusedBackgroundColor": "#444444",
+      "focusedTextColor": "#aaaaaa",
+      "placeholderColor": "#888888",
+      "selectionBg": "#555555",
+      "selectionFg": "#aaaaaa",
+      "cursorColor": "#5555ff"
+    },
+    "textarea": {
+      "backgroundColor": "#333333",
+      "textColor": "#aaaaaa",
+      "focusedBackgroundColor": "#444444",
+      "focusedTextColor": "#aaaaaa",
+      "placeholderColor": "#888888",
+      "selectionBg": "#555555",
+      "selectionFg": "#aaaaaa",
+      "cursorColor": "#5555ff"
+    },
+    "select": {
+      "backgroundColor": "#000000",
+      "textColor": "#aaaaaa",
+      "focusedBackgroundColor": "#333333",
+      "focusedTextColor": "#aaaaaa",
+      "selectedBackgroundColor": "#5555ff",
+      "selectedTextColor": "#000000",
+      "descriptionColor": "#888888",
+      "selectedDescriptionColor": "#000000"
+    },
+    "tabSelect": {
+      "backgroundColor": "#000000",
+      "textColor": "#888888",
+      "focusedBackgroundColor": "#333333",
+      "focusedTextColor": "#aaaaaa",
+      "selectedBackgroundColor": "#5555ff",
+      "selectedTextColor": "#000000",
+      "selectedDescriptionColor": "#000000"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#333333",
+        "foregroundColor": "#555555"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#888888",
+        "backgroundColor": "#333333"
+      }
+    },
+    "markdown": {
+      "fg": "#aaaaaa",
+      "bg": "#000000",
+      "borderColor": "#555555"
+    },
+    "code": {
+      "fg": "#aaaaaa",
+      "bg": "#000000",
+      "selectionBg": "#444444",
+      "selectionFg": "#aaaaaa"
+    }
+  }
+}

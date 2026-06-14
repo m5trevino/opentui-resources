@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Everforest Dark Medium",
+  "slug": "everforest-dark-medium",
+  "system": "base16",
+  "author": "Sainnhe Park (https://github.com/sainnhe)",
+  "palette": {
+    "base00": "#2d353b",
+    "base01": "#343f44",
+    "base02": "#3d484d",
+    "base03": "#475258",
+    "base04": "#7a8478",
+    "base05": "#859289",
+    "base06": "#9da9a0",
+    "base07": "#d3c6aa",
+    "base08": "#e67e80",
+    "base09": "#e69875",
+    "base0A": "#dbbc7f",
+    "base0B": "#a7c080",
+    "base0C": "#83c092",
+    "base0D": "#7fbbb3",
+    "base0E": "#d699b6",
+    "base0F": "#514045"
+  },
+  "tokens": {
+    "background": "#2d353b",
+    "surface": "#343f44",
+    "surfaceAlt": "#3d484d",
+    "surfaceRaised": "#3d484d",
+    "border": "#475258",
+    "borderFocused": "#7fbbb3",
+    "text": "#859289",
+    "textMuted": "#7a8478",
+    "textSubtle": "#475258",
+    "textInverse": "#2d353b",
+    "accent": "#7fbbb3",
+    "accentText": "#2d353b",
+    "success": "#a7c080",
+    "warning": "#dbbc7f",
+    "danger": "#e67e80",
+    "info": "#83c092",
+    "selectionBg": "#3d484d",
+    "selectionFg": "#859289",
+    "cursor": "#7fbbb3",
+    "scrollbarTrack": "#343f44",
+    "scrollbarThumb": "#475258"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#2d353b",
+      "cursorColor": "#7fbbb3"
+    },
+    "box": {
+      "backgroundColor": "#2d353b",
+      "borderColor": "#475258",
+      "focusedBorderColor": "#7fbbb3"
+    },
+    "text": {
+      "fg": "#859289",
+      "bg": "#2d353b",
+      "selectionBg": "#3d484d",
+      "selectionFg": "#859289"
+    },
+    "input": {
+      "backgroundColor": "#343f44",
+      "textColor": "#859289",
+      "focusedBackgroundColor": "#3d484d",
+      "focusedTextColor": "#859289",
+      "placeholderColor": "#7a8478",
+      "selectionBg": "#475258",
+      "selectionFg": "#859289",
+      "cursorColor": "#7fbbb3"
+    },
+    "textarea": {
+      "backgroundColor": "#343f44",
+      "textColor": "#859289",
+      "focusedBackgroundColor": "#3d484d",
+      "focusedTextColor": "#859289",
+      "placeholderColor": "#7a8478",
+      "selectionBg": "#475258",
+      "selectionFg": "#859289",
+      "cursorColor": "#7fbbb3"
+    },
+    "select": {
+      "backgroundColor": "#2d353b",
+      "textColor": "#859289",
+      "focusedBackgroundColor": "#343f44",
+      "focusedTextColor": "#859289",
+      "selectedBackgroundColor": "#7fbbb3",
+      "selectedTextColor": "#2d353b",
+      "descriptionColor": "#7a8478",
+      "selectedDescriptionColor": "#2d353b"
+    },
+    "tabSelect": {
+      "backgroundColor": "#2d353b",
+      "textColor": "#7a8478",
+      "focusedBackgroundColor": "#343f44",
+      "focusedTextColor": "#859289",
+      "selectedBackgroundColor": "#7fbbb3",
+      "selectedTextColor": "#2d353b",
+      "selectedDescriptionColor": "#2d353b"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#343f44",
+        "foregroundColor": "#475258"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#7a8478",
+        "backgroundColor": "#343f44"
+      }
+    },
+    "markdown": {
+      "fg": "#859289",
+      "bg": "#2d353b",
+      "borderColor": "#475258"
+    },
+    "code": {
+      "fg": "#859289",
+      "bg": "#2d353b",
+      "selectionBg": "#3d484d",
+      "selectionFg": "#859289"
+    }
+  }
+}

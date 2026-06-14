@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Chinoiserie Morandi",
+  "slug": "chinoiserie-morandi",
+  "system": "base16",
+  "author": "Di Wang (https://cs.cmu.edu/~diw3)",
+  "palette": {
+    "base00": "#1d1d1d",
+    "base01": "#282828",
+    "base02": "#373737",
+    "base03": "#918072",
+    "base04": "#bdaead",
+    "base05": "#c4cbcf",
+    "base06": "#eee7f2",
+    "base07": "#fffef9",
+    "base08": "#c06061",
+    "base09": "#ff937f",
+    "base0A": "#e5bc84",
+    "base0B": "#8ca07b",
+    "base0C": "#5e8c9b",
+    "base0D": "#839ec9",
+    "base0E": "#98a1d8",
+    "base0F": "#d9cdb4"
+  },
+  "tokens": {
+    "background": "#1d1d1d",
+    "surface": "#282828",
+    "surfaceAlt": "#373737",
+    "surfaceRaised": "#373737",
+    "border": "#918072",
+    "borderFocused": "#839ec9",
+    "text": "#c4cbcf",
+    "textMuted": "#bdaead",
+    "textSubtle": "#918072",
+    "textInverse": "#1d1d1d",
+    "accent": "#839ec9",
+    "accentText": "#1d1d1d",
+    "success": "#8ca07b",
+    "warning": "#e5bc84",
+    "danger": "#c06061",
+    "info": "#5e8c9b",
+    "selectionBg": "#373737",
+    "selectionFg": "#c4cbcf",
+    "cursor": "#839ec9",
+    "scrollbarTrack": "#282828",
+    "scrollbarThumb": "#918072"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#1d1d1d",
+      "cursorColor": "#839ec9"
+    },
+    "box": {
+      "backgroundColor": "#1d1d1d",
+      "borderColor": "#918072",
+      "focusedBorderColor": "#839ec9"
+    },
+    "text": {
+      "fg": "#c4cbcf",
+      "bg": "#1d1d1d",
+      "selectionBg": "#373737",
+      "selectionFg": "#c4cbcf"
+    },
+    "input": {
+      "backgroundColor": "#282828",
+      "textColor": "#c4cbcf",
+      "focusedBackgroundColor": "#373737",
+      "focusedTextColor": "#c4cbcf",
+      "placeholderColor": "#bdaead",
+      "selectionBg": "#918072",
+      "selectionFg": "#c4cbcf",
+      "cursorColor": "#839ec9"
+    },
+    "textarea": {
+      "backgroundColor": "#282828",
+      "textColor": "#c4cbcf",
+      "focusedBackgroundColor": "#373737",
+      "focusedTextColor": "#c4cbcf",
+      "placeholderColor": "#bdaead",
+      "selectionBg": "#918072",
+      "selectionFg": "#c4cbcf",
+      "cursorColor": "#839ec9"
+    },
+    "select": {
+      "backgroundColor": "#1d1d1d",
+      "textColor": "#c4cbcf",
+      "focusedBackgroundColor": "#282828",
+      "focusedTextColor": "#c4cbcf",
+      "selectedBackgroundColor": "#839ec9",
+      "selectedTextColor": "#1d1d1d",
+      "descriptionColor": "#bdaead",
+      "selectedDescriptionColor": "#1d1d1d"
+    },
+    "tabSelect": {
+      "backgroundColor": "#1d1d1d",
+      "textColor": "#bdaead",
+      "focusedBackgroundColor": "#282828",
+      "focusedTextColor": "#c4cbcf",
+      "selectedBackgroundColor": "#839ec9",
+      "selectedTextColor": "#1d1d1d",
+      "selectedDescriptionColor": "#1d1d1d"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#282828",
+        "foregroundColor": "#918072"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#bdaead",
+        "backgroundColor": "#282828"
+      }
+    },
+    "markdown": {
+      "fg": "#c4cbcf",
+      "bg": "#1d1d1d",
+      "borderColor": "#918072"
+    },
+    "code": {
+      "fg": "#c4cbcf",
+      "bg": "#1d1d1d",
+      "selectionBg": "#373737",
+      "selectionFg": "#c4cbcf"
+    }
+  }
+}

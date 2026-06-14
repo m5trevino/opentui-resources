@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Solar Flare Light",
+  "slug": "solarflare-light",
+  "system": "base16",
+  "author": "Chuck Harmston (https://chuck.harmston.ch)",
+  "palette": {
+    "base00": "#f5f7fa",
+    "base01": "#e8e9ed",
+    "base02": "#a6afb8",
+    "base03": "#85939e",
+    "base04": "#667581",
+    "base05": "#586875",
+    "base06": "#222e38",
+    "base07": "#18262f",
+    "base08": "#ef5253",
+    "base09": "#e66b2b",
+    "base0A": "#e4b51c",
+    "base0B": "#7cc844",
+    "base0C": "#52cbb0",
+    "base0D": "#33b5e1",
+    "base0E": "#a363d5",
+    "base0F": "#d73c9a"
+  },
+  "tokens": {
+    "background": "#f5f7fa",
+    "surface": "#e8e9ed",
+    "surfaceAlt": "#a6afb8",
+    "surfaceRaised": "#a6afb8",
+    "border": "#85939e",
+    "borderFocused": "#33b5e1",
+    "text": "#586875",
+    "textMuted": "#667581",
+    "textSubtle": "#85939e",
+    "textInverse": "#f5f7fa",
+    "accent": "#33b5e1",
+    "accentText": "#f5f7fa",
+    "success": "#7cc844",
+    "warning": "#e4b51c",
+    "danger": "#ef5253",
+    "info": "#52cbb0",
+    "selectionBg": "#a6afb8",
+    "selectionFg": "#586875",
+    "cursor": "#33b5e1",
+    "scrollbarTrack": "#e8e9ed",
+    "scrollbarThumb": "#85939e"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#f5f7fa",
+      "cursorColor": "#33b5e1"
+    },
+    "box": {
+      "backgroundColor": "#f5f7fa",
+      "borderColor": "#85939e",
+      "focusedBorderColor": "#33b5e1"
+    },
+    "text": {
+      "fg": "#586875",
+      "bg": "#f5f7fa",
+      "selectionBg": "#a6afb8",
+      "selectionFg": "#586875"
+    },
+    "input": {
+      "backgroundColor": "#e8e9ed",
+      "textColor": "#586875",
+      "focusedBackgroundColor": "#a6afb8",
+      "focusedTextColor": "#586875",
+      "placeholderColor": "#667581",
+      "selectionBg": "#85939e",
+      "selectionFg": "#586875",
+      "cursorColor": "#33b5e1"
+    },
+    "textarea": {
+      "backgroundColor": "#e8e9ed",
+      "textColor": "#586875",
+      "focusedBackgroundColor": "#a6afb8",
+      "focusedTextColor": "#586875",
+      "placeholderColor": "#667581",
+      "selectionBg": "#85939e",
+      "selectionFg": "#586875",
+      "cursorColor": "#33b5e1"
+    },
+    "select": {
+      "backgroundColor": "#f5f7fa",
+      "textColor": "#586875",
+      "focusedBackgroundColor": "#e8e9ed",
+      "focusedTextColor": "#586875",
+      "selectedBackgroundColor": "#33b5e1",
+      "selectedTextColor": "#f5f7fa",
+      "descriptionColor": "#667581",
+      "selectedDescriptionColor": "#f5f7fa"
+    },
+    "tabSelect": {
+      "backgroundColor": "#f5f7fa",
+      "textColor": "#667581",
+      "focusedBackgroundColor": "#e8e9ed",
+      "focusedTextColor": "#586875",
+      "selectedBackgroundColor": "#33b5e1",
+      "selectedTextColor": "#f5f7fa",
+      "selectedDescriptionColor": "#f5f7fa"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#e8e9ed",
+        "foregroundColor": "#85939e"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#667581",
+        "backgroundColor": "#e8e9ed"
+      }
+    },
+    "markdown": {
+      "fg": "#586875",
+      "bg": "#f5f7fa",
+      "borderColor": "#85939e"
+    },
+    "code": {
+      "fg": "#586875",
+      "bg": "#f5f7fa",
+      "selectionBg": "#a6afb8",
+      "selectionFg": "#586875"
+    }
+  }
+}

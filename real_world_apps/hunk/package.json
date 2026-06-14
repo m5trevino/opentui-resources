@@ -1,0 +1,128 @@
+{
+  "name": "hunkdiff",
+  "version": "0.15.0",
+  "description": "Desktop-inspired terminal diff viewer for understanding agent-authored changesets.",
+  "keywords": [
+    "ai",
+    "code-review",
+    "diff",
+    "git",
+    "terminal",
+    "tui"
+  ],
+  "homepage": "https://github.com/modem-dev/hunk#readme",
+  "bugs": {
+    "url": "https://github.com/modem-dev/hunk/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modem-dev/hunk.git"
+  },
+  "bin": {
+    "hunk": "./bin/hunk.cjs",
+    "hunkdiff": "./bin/hunk.cjs"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "files": [
+    "bin",
+    "dist/npm",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "exports": {
+    "./opentui": {
+      "types": "./dist/npm/opentui/index.d.ts",
+      "import": "./dist/npm/opentui/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "bun run src/main.tsx",
+    "dev": "bun --watch src/main.tsx",
+    "build:npm": "bun run ./scripts/build-npm.ts",
+    "build:bin": "bun run ./scripts/build-bin.ts",
+    "build:prebuilt:npm": "bun run build:npm && bun run build:bin && bun run ./scripts/stage-prebuilt-npm.ts",
+    "build:prebuilt:artifact": "bun run build:bin && bun run ./scripts/build-prebuilt-artifact.ts",
+    "stage:prebuilt:release": "bun run build:npm && bun run ./scripts/stage-prebuilt-npm.ts --artifact-root ./dist/release/artifacts",
+    "install:bin": "bun run ./scripts/install-bin.ts",
+    "typecheck": "tsc --noEmit",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint . --deny-warnings",
+    "lint:fix": "oxlint . --fix",
+    "prepare": "simple-git-hooks",
+    "test": "\"${npm_execpath:-bun}\" test ./src ./packages ./scripts ./test/cli ./test/session",
+    "test:integration": "\"${npm_execpath:-bun}\" test ./test/pty",
+    "test:tty-smoke": "HUNK_RUN_TTY_SMOKE=1 \"${npm_execpath:-bun}\" test ./test/smoke",
+    "check:pack": "bun run ./scripts/check-pack.ts",
+    "check:prebuilt-pack": "bun run ./scripts/check-prebuilt-pack.ts",
+    "smoke:prebuilt-install": "bun run ./scripts/smoke-prebuilt-install.ts",
+    "publish:prebuilt:npm": "bun run ./scripts/publish-prebuilt-npm.ts",
+    "update:homebrew-formula": "bun run ./scripts/update-homebrew-formula.ts",
+    "prepack": "bun run build:npm",
+    "bench": "bun run benchmarks/run.ts",
+    "bench:bootstrap-load": "bun run benchmarks/bootstrap-load.ts",
+    "bench:working-tree-load": "bun run benchmarks/working-tree-load.ts",
+    "bench:changeset-parse": "bun run benchmarks/changeset-parse.ts",
+    "bench:render-layout": "bun run benchmarks/render-layout.ts",
+    "bench:highlight-prefetch": "bun run benchmarks/highlight-prefetch.ts",
+    "bench:large-stream": "bun run benchmarks/large-stream.ts",
+    "bench:large-stream-profile": "bun run benchmarks/large-stream-profile.ts",
+    "bench:memory": "bun run benchmarks/memory.ts",
+    "bench:competitors": "bun run benchmarks/competitors.ts",
+    "nix:update-lock": "nix run .#update-bun-lock"
+  },
+  "dependencies": {
+    "@pierre/diffs": "1.2.2",
+    "bun": "^1.3.10",
+    "commander": "^14.0.3",
+    "diff": "^8.0.3",
+    "shell-quote": "1.8.3",
+    "string-width": "^8.2.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@hunk/session-broker": "workspace:*",
+    "@hunk/session-broker-bun": "workspace:*",
+    "@hunk/session-broker-core": "workspace:*",
+    "@hunk/session-broker-node": "workspace:*",
+    "@opentui/core": "^0.1.88",
+    "@opentui/react": "^0.1.88",
+    "@types/bun": "1.3.13",
+    "@types/react": "^19.2.14",
+    "@types/shell-quote": "1.7.5",
+    "@types/ws": "^8.18.1",
+    "lint-staged": "^16.4.0",
+    "oxfmt": "^0.41.0",
+    "oxlint": "^1.56.0",
+    "react": "^19.2.4",
+    "simple-git-hooks": "^2.13.1",
+    "tuistory": "^0.0.16",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "@opentui/core": "^0.1.88",
+    "@opentui/react": "^0.1.88",
+    "react": "^19.2.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "bunx lint-staged"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "bun@1.3.10",
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  }
+}

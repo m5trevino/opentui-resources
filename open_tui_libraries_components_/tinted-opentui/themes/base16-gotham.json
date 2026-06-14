@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Gotham",
+  "slug": "gotham",
+  "system": "base16",
+  "author": "Andrea Leopardi (arranged by Brett Jones)",
+  "palette": {
+    "base00": "#0c1014",
+    "base01": "#11151c",
+    "base02": "#091f2e",
+    "base03": "#0a3749",
+    "base04": "#245361",
+    "base05": "#599cab",
+    "base06": "#99d1ce",
+    "base07": "#d3ebe9",
+    "base08": "#c23127",
+    "base09": "#d26937",
+    "base0A": "#edb443",
+    "base0B": "#33859e",
+    "base0C": "#2aa889",
+    "base0D": "#195466",
+    "base0E": "#888ca6",
+    "base0F": "#4e5166"
+  },
+  "tokens": {
+    "background": "#0c1014",
+    "surface": "#11151c",
+    "surfaceAlt": "#091f2e",
+    "surfaceRaised": "#091f2e",
+    "border": "#0a3749",
+    "borderFocused": "#195466",
+    "text": "#599cab",
+    "textMuted": "#245361",
+    "textSubtle": "#0a3749",
+    "textInverse": "#0c1014",
+    "accent": "#195466",
+    "accentText": "#0c1014",
+    "success": "#33859e",
+    "warning": "#edb443",
+    "danger": "#c23127",
+    "info": "#2aa889",
+    "selectionBg": "#091f2e",
+    "selectionFg": "#599cab",
+    "cursor": "#195466",
+    "scrollbarTrack": "#11151c",
+    "scrollbarThumb": "#0a3749"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#0c1014",
+      "cursorColor": "#195466"
+    },
+    "box": {
+      "backgroundColor": "#0c1014",
+      "borderColor": "#0a3749",
+      "focusedBorderColor": "#195466"
+    },
+    "text": {
+      "fg": "#599cab",
+      "bg": "#0c1014",
+      "selectionBg": "#091f2e",
+      "selectionFg": "#599cab"
+    },
+    "input": {
+      "backgroundColor": "#11151c",
+      "textColor": "#599cab",
+      "focusedBackgroundColor": "#091f2e",
+      "focusedTextColor": "#599cab",
+      "placeholderColor": "#245361",
+      "selectionBg": "#0a3749",
+      "selectionFg": "#599cab",
+      "cursorColor": "#195466"
+    },
+    "textarea": {
+      "backgroundColor": "#11151c",
+      "textColor": "#599cab",
+      "focusedBackgroundColor": "#091f2e",
+      "focusedTextColor": "#599cab",
+      "placeholderColor": "#245361",
+      "selectionBg": "#0a3749",
+      "selectionFg": "#599cab",
+      "cursorColor": "#195466"
+    },
+    "select": {
+      "backgroundColor": "#0c1014",
+      "textColor": "#599cab",
+      "focusedBackgroundColor": "#11151c",
+      "focusedTextColor": "#599cab",
+      "selectedBackgroundColor": "#195466",
+      "selectedTextColor": "#0c1014",
+      "descriptionColor": "#245361",
+      "selectedDescriptionColor": "#0c1014"
+    },
+    "tabSelect": {
+      "backgroundColor": "#0c1014",
+      "textColor": "#245361",
+      "focusedBackgroundColor": "#11151c",
+      "focusedTextColor": "#599cab",
+      "selectedBackgroundColor": "#195466",
+      "selectedTextColor": "#0c1014",
+      "selectedDescriptionColor": "#0c1014"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#11151c",
+        "foregroundColor": "#0a3749"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#245361",
+        "backgroundColor": "#11151c"
+      }
+    },
+    "markdown": {
+      "fg": "#599cab",
+      "bg": "#0c1014",
+      "borderColor": "#0a3749"
+    },
+    "code": {
+      "fg": "#599cab",
+      "bg": "#0c1014",
+      "selectionBg": "#091f2e",
+      "selectionFg": "#599cab"
+    }
+  }
+}

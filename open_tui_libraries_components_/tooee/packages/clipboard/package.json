@@ -1,0 +1,41 @@
+{
+  "name": "@tooee/clipboard",
+  "version": "0.1.18",
+  "description": "Cross-platform clipboard operations for Tooee",
+  "keywords": [
+    "cli",
+    "clipboard",
+    "opentui",
+    "terminal",
+    "tui"
+  ],
+  "homepage": "https://github.com/gingerhendrix/tooee",
+  "bugs": "https://github.com/gingerhendrix/tooee/issues",
+  "license": "MIT",
+  "author": "Gareth Andrew",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gingerhendrix/tooee.git",
+    "directory": "packages/clipboard"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "@tooee/source": "./src/index.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.10",
+    "typescript": "^5.9.3"
+  }
+}

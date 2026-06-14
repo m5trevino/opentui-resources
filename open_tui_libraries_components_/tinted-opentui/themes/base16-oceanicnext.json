@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "OceanicNext",
+  "slug": "oceanicnext",
+  "system": "base16",
+  "author": "https://github.com/voronianski/oceanic-next-color-scheme",
+  "palette": {
+    "base00": "#1b2b34",
+    "base01": "#343d46",
+    "base02": "#4f5b66",
+    "base03": "#65737e",
+    "base04": "#a7adba",
+    "base05": "#c0c5ce",
+    "base06": "#cdd3de",
+    "base07": "#d8dee9",
+    "base08": "#ec5f67",
+    "base09": "#f99157",
+    "base0A": "#fac863",
+    "base0B": "#99c794",
+    "base0C": "#5fb3b3",
+    "base0D": "#6699cc",
+    "base0E": "#c594c5",
+    "base0F": "#ab7967"
+  },
+  "tokens": {
+    "background": "#1b2b34",
+    "surface": "#343d46",
+    "surfaceAlt": "#4f5b66",
+    "surfaceRaised": "#4f5b66",
+    "border": "#65737e",
+    "borderFocused": "#6699cc",
+    "text": "#c0c5ce",
+    "textMuted": "#a7adba",
+    "textSubtle": "#65737e",
+    "textInverse": "#1b2b34",
+    "accent": "#6699cc",
+    "accentText": "#1b2b34",
+    "success": "#99c794",
+    "warning": "#fac863",
+    "danger": "#ec5f67",
+    "info": "#5fb3b3",
+    "selectionBg": "#4f5b66",
+    "selectionFg": "#c0c5ce",
+    "cursor": "#6699cc",
+    "scrollbarTrack": "#343d46",
+    "scrollbarThumb": "#65737e"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#1b2b34",
+      "cursorColor": "#6699cc"
+    },
+    "box": {
+      "backgroundColor": "#1b2b34",
+      "borderColor": "#65737e",
+      "focusedBorderColor": "#6699cc"
+    },
+    "text": {
+      "fg": "#c0c5ce",
+      "bg": "#1b2b34",
+      "selectionBg": "#4f5b66",
+      "selectionFg": "#c0c5ce"
+    },
+    "input": {
+      "backgroundColor": "#343d46",
+      "textColor": "#c0c5ce",
+      "focusedBackgroundColor": "#4f5b66",
+      "focusedTextColor": "#c0c5ce",
+      "placeholderColor": "#a7adba",
+      "selectionBg": "#65737e",
+      "selectionFg": "#c0c5ce",
+      "cursorColor": "#6699cc"
+    },
+    "textarea": {
+      "backgroundColor": "#343d46",
+      "textColor": "#c0c5ce",
+      "focusedBackgroundColor": "#4f5b66",
+      "focusedTextColor": "#c0c5ce",
+      "placeholderColor": "#a7adba",
+      "selectionBg": "#65737e",
+      "selectionFg": "#c0c5ce",
+      "cursorColor": "#6699cc"
+    },
+    "select": {
+      "backgroundColor": "#1b2b34",
+      "textColor": "#c0c5ce",
+      "focusedBackgroundColor": "#343d46",
+      "focusedTextColor": "#c0c5ce",
+      "selectedBackgroundColor": "#6699cc",
+      "selectedTextColor": "#1b2b34",
+      "descriptionColor": "#a7adba",
+      "selectedDescriptionColor": "#1b2b34"
+    },
+    "tabSelect": {
+      "backgroundColor": "#1b2b34",
+      "textColor": "#a7adba",
+      "focusedBackgroundColor": "#343d46",
+      "focusedTextColor": "#c0c5ce",
+      "selectedBackgroundColor": "#6699cc",
+      "selectedTextColor": "#1b2b34",
+      "selectedDescriptionColor": "#1b2b34"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#343d46",
+        "foregroundColor": "#65737e"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#a7adba",
+        "backgroundColor": "#343d46"
+      }
+    },
+    "markdown": {
+      "fg": "#c0c5ce",
+      "bg": "#1b2b34",
+      "borderColor": "#65737e"
+    },
+    "code": {
+      "fg": "#c0c5ce",
+      "bg": "#1b2b34",
+      "selectionBg": "#4f5b66",
+      "selectionFg": "#c0c5ce"
+    }
+  }
+}

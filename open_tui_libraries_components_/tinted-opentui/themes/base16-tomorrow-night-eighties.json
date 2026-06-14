@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Tomorrow Night Eighties",
+  "slug": "tomorrow-night-eighties",
+  "system": "base16",
+  "author": "Chris Kempson (http://chriskempson.com)",
+  "palette": {
+    "base00": "#2d2d2d",
+    "base01": "#393939",
+    "base02": "#515151",
+    "base03": "#999999",
+    "base04": "#b4b7b4",
+    "base05": "#cccccc",
+    "base06": "#e0e0e0",
+    "base07": "#ffffff",
+    "base08": "#f2777a",
+    "base09": "#f99157",
+    "base0A": "#ffcc66",
+    "base0B": "#99cc99",
+    "base0C": "#66cccc",
+    "base0D": "#6699cc",
+    "base0E": "#cc99cc",
+    "base0F": "#a3685a"
+  },
+  "tokens": {
+    "background": "#2d2d2d",
+    "surface": "#393939",
+    "surfaceAlt": "#515151",
+    "surfaceRaised": "#515151",
+    "border": "#999999",
+    "borderFocused": "#6699cc",
+    "text": "#cccccc",
+    "textMuted": "#b4b7b4",
+    "textSubtle": "#999999",
+    "textInverse": "#2d2d2d",
+    "accent": "#6699cc",
+    "accentText": "#2d2d2d",
+    "success": "#99cc99",
+    "warning": "#ffcc66",
+    "danger": "#f2777a",
+    "info": "#66cccc",
+    "selectionBg": "#515151",
+    "selectionFg": "#cccccc",
+    "cursor": "#6699cc",
+    "scrollbarTrack": "#393939",
+    "scrollbarThumb": "#999999"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#2d2d2d",
+      "cursorColor": "#6699cc"
+    },
+    "box": {
+      "backgroundColor": "#2d2d2d",
+      "borderColor": "#999999",
+      "focusedBorderColor": "#6699cc"
+    },
+    "text": {
+      "fg": "#cccccc",
+      "bg": "#2d2d2d",
+      "selectionBg": "#515151",
+      "selectionFg": "#cccccc"
+    },
+    "input": {
+      "backgroundColor": "#393939",
+      "textColor": "#cccccc",
+      "focusedBackgroundColor": "#515151",
+      "focusedTextColor": "#cccccc",
+      "placeholderColor": "#b4b7b4",
+      "selectionBg": "#999999",
+      "selectionFg": "#cccccc",
+      "cursorColor": "#6699cc"
+    },
+    "textarea": {
+      "backgroundColor": "#393939",
+      "textColor": "#cccccc",
+      "focusedBackgroundColor": "#515151",
+      "focusedTextColor": "#cccccc",
+      "placeholderColor": "#b4b7b4",
+      "selectionBg": "#999999",
+      "selectionFg": "#cccccc",
+      "cursorColor": "#6699cc"
+    },
+    "select": {
+      "backgroundColor": "#2d2d2d",
+      "textColor": "#cccccc",
+      "focusedBackgroundColor": "#393939",
+      "focusedTextColor": "#cccccc",
+      "selectedBackgroundColor": "#6699cc",
+      "selectedTextColor": "#2d2d2d",
+      "descriptionColor": "#b4b7b4",
+      "selectedDescriptionColor": "#2d2d2d"
+    },
+    "tabSelect": {
+      "backgroundColor": "#2d2d2d",
+      "textColor": "#b4b7b4",
+      "focusedBackgroundColor": "#393939",
+      "focusedTextColor": "#cccccc",
+      "selectedBackgroundColor": "#6699cc",
+      "selectedTextColor": "#2d2d2d",
+      "selectedDescriptionColor": "#2d2d2d"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#393939",
+        "foregroundColor": "#999999"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#b4b7b4",
+        "backgroundColor": "#393939"
+      }
+    },
+    "markdown": {
+      "fg": "#cccccc",
+      "bg": "#2d2d2d",
+      "borderColor": "#999999"
+    },
+    "code": {
+      "fg": "#cccccc",
+      "bg": "#2d2d2d",
+      "selectionBg": "#515151",
+      "selectionFg": "#cccccc"
+    }
+  }
+}

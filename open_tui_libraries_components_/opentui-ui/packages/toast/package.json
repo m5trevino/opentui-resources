@@ -1,0 +1,88 @@
+{
+  "name": "@opentui-ui/toast",
+  "version": "0.0.5",
+  "description": "A beautiful toast library for terminal UIs built on OpenTUI",
+  "author": "Matt Simpson",
+  "license": "MIT",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msmps/opentui-ui.git",
+    "directory": "packages/toast"
+  },
+  "type": "module",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./themes": {
+      "types": "./dist/themes.d.mts",
+      "import": "./dist/themes.mjs"
+    },
+    "./icons": {
+      "types": "./dist/icons.d.mts",
+      "import": "./dist/icons.mjs"
+    },
+    "./react": {
+      "types": "./dist/react.d.mts",
+      "import": "./dist/react.mjs"
+    },
+    "./solid": {
+      "types": "./dist/solid.d.mts",
+      "import": "./dist/solid.mjs"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/msmps/opentui-ui/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/msmps/opentui-ui#readme",
+  "keywords": [
+    "toast",
+    "notification",
+    "tui",
+    "terminal",
+    "cli",
+    "opentui",
+    "sonner"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@opentui/core": "catalog:",
+    "@opentui/react": "catalog:",
+    "@opentui/solid": "catalog:",
+    "@opentui-ui/utils": "workspace:^",
+    "@types/bun": "^1",
+    "@types/react": "^19.2.7",
+    "react": "^19.2.3",
+    "solid-js": "^1.9.9",
+    "tsdown": "^0.18.2",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "@opentui/core": "catalog:",
+    "@opentui/react": "catalog:",
+    "@opentui/solid": "catalog:",
+    "solid-js": "^1.9.9"
+  },
+  "peerDependenciesMeta": {
+    "@opentui/react": {
+      "optional": true
+    },
+    "@opentui/solid": {
+      "optional": true
+    },
+    "solid-js": {
+      "optional": true
+    }
+  }
+}

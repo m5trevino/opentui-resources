@@ -1,0 +1,40 @@
+{
+  "name": "opentui-screenshot-verify",
+  "version": "0.1.0",
+  "type": "skill",
+  "description": "Visual verification tool for OpenTUI applications on macOS",
+  "installation": {
+    "method": "symlink",
+    "target": "~/.claude/skills/opentui-screenshot-verify",
+    "source": ".",
+    "files": [
+      "SKILL.md",
+      "bin/*.sh",
+      "docs/**/*",
+      "examples/**/*"
+    ]
+  },
+  "dependencies": {
+    "system": {
+      "platform": "darwin",
+      "commands": ["screencapture", "bash"]
+    },
+    "optional": {
+      "commands": ["jq", "imagemagick"]
+    }
+  },
+  "permissions": {
+    "required": [
+      "Screen Recording"
+    ],
+    "optional": [
+      "Accessibility"
+    ]
+  },
+  "post_install": {
+    "commands": [
+      "chmod +x bin/*.sh"
+    ],
+    "message": "Grant Screen Recording permissions to your terminal in System Settings"
+  }
+}

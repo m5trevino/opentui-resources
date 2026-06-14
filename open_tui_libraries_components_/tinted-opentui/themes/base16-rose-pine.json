@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Rosé Pine",
+  "slug": "rose-pine",
+  "system": "base16",
+  "author": "Emilia Dunfelt &lt;edun@dunfelt.se&gt;",
+  "palette": {
+    "base00": "#191724",
+    "base01": "#1f1d2e",
+    "base02": "#26233a",
+    "base03": "#6e6a86",
+    "base04": "#908caa",
+    "base05": "#e0def4",
+    "base06": "#e0def4",
+    "base07": "#524f67",
+    "base08": "#eb6f92",
+    "base09": "#f6c177",
+    "base0A": "#ebbcba",
+    "base0B": "#31748f",
+    "base0C": "#9ccfd8",
+    "base0D": "#c4a7e7",
+    "base0E": "#f6c177",
+    "base0F": "#524f67"
+  },
+  "tokens": {
+    "background": "#191724",
+    "surface": "#1f1d2e",
+    "surfaceAlt": "#26233a",
+    "surfaceRaised": "#26233a",
+    "border": "#6e6a86",
+    "borderFocused": "#c4a7e7",
+    "text": "#e0def4",
+    "textMuted": "#908caa",
+    "textSubtle": "#6e6a86",
+    "textInverse": "#191724",
+    "accent": "#c4a7e7",
+    "accentText": "#191724",
+    "success": "#31748f",
+    "warning": "#ebbcba",
+    "danger": "#eb6f92",
+    "info": "#9ccfd8",
+    "selectionBg": "#26233a",
+    "selectionFg": "#e0def4",
+    "cursor": "#c4a7e7",
+    "scrollbarTrack": "#1f1d2e",
+    "scrollbarThumb": "#6e6a86"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#191724",
+      "cursorColor": "#c4a7e7"
+    },
+    "box": {
+      "backgroundColor": "#191724",
+      "borderColor": "#6e6a86",
+      "focusedBorderColor": "#c4a7e7"
+    },
+    "text": {
+      "fg": "#e0def4",
+      "bg": "#191724",
+      "selectionBg": "#26233a",
+      "selectionFg": "#e0def4"
+    },
+    "input": {
+      "backgroundColor": "#1f1d2e",
+      "textColor": "#e0def4",
+      "focusedBackgroundColor": "#26233a",
+      "focusedTextColor": "#e0def4",
+      "placeholderColor": "#908caa",
+      "selectionBg": "#6e6a86",
+      "selectionFg": "#e0def4",
+      "cursorColor": "#c4a7e7"
+    },
+    "textarea": {
+      "backgroundColor": "#1f1d2e",
+      "textColor": "#e0def4",
+      "focusedBackgroundColor": "#26233a",
+      "focusedTextColor": "#e0def4",
+      "placeholderColor": "#908caa",
+      "selectionBg": "#6e6a86",
+      "selectionFg": "#e0def4",
+      "cursorColor": "#c4a7e7"
+    },
+    "select": {
+      "backgroundColor": "#191724",
+      "textColor": "#e0def4",
+      "focusedBackgroundColor": "#1f1d2e",
+      "focusedTextColor": "#e0def4",
+      "selectedBackgroundColor": "#c4a7e7",
+      "selectedTextColor": "#191724",
+      "descriptionColor": "#908caa",
+      "selectedDescriptionColor": "#191724"
+    },
+    "tabSelect": {
+      "backgroundColor": "#191724",
+      "textColor": "#908caa",
+      "focusedBackgroundColor": "#1f1d2e",
+      "focusedTextColor": "#e0def4",
+      "selectedBackgroundColor": "#c4a7e7",
+      "selectedTextColor": "#191724",
+      "selectedDescriptionColor": "#191724"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#1f1d2e",
+        "foregroundColor": "#6e6a86"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#908caa",
+        "backgroundColor": "#1f1d2e"
+      }
+    },
+    "markdown": {
+      "fg": "#e0def4",
+      "bg": "#191724",
+      "borderColor": "#6e6a86"
+    },
+    "code": {
+      "fg": "#e0def4",
+      "bg": "#191724",
+      "selectionBg": "#26233a",
+      "selectionFg": "#e0def4"
+    }
+  }
+}

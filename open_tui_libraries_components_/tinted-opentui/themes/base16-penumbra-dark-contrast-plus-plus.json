@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Penumbra Dark Contrast Plus Plus",
+  "slug": "penumbra-dark-contrast-plus-plus",
+  "system": "base16",
+  "author": "Zachary Weiss (https://github.com/zacharyweiss)",
+  "palette": {
+    "base00": "#0d0f13",
+    "base01": "#181b1f",
+    "base02": "#3e4044",
+    "base03": "#636363",
+    "base04": "#aeaeae",
+    "base05": "#dedede",
+    "base06": "#fff7ed",
+    "base07": "#fffdfb",
+    "base08": "#f58c81",
+    "base09": "#e09f47",
+    "base0A": "#a9b852",
+    "base0B": "#54c794",
+    "base0C": "#00c4d7",
+    "base0D": "#6eb2fd",
+    "base0E": "#b69cf6",
+    "base0F": "#e58cc5"
+  },
+  "tokens": {
+    "background": "#0d0f13",
+    "surface": "#181b1f",
+    "surfaceAlt": "#3e4044",
+    "surfaceRaised": "#3e4044",
+    "border": "#636363",
+    "borderFocused": "#6eb2fd",
+    "text": "#dedede",
+    "textMuted": "#aeaeae",
+    "textSubtle": "#636363",
+    "textInverse": "#0d0f13",
+    "accent": "#6eb2fd",
+    "accentText": "#0d0f13",
+    "success": "#54c794",
+    "warning": "#a9b852",
+    "danger": "#f58c81",
+    "info": "#00c4d7",
+    "selectionBg": "#3e4044",
+    "selectionFg": "#dedede",
+    "cursor": "#6eb2fd",
+    "scrollbarTrack": "#181b1f",
+    "scrollbarThumb": "#636363"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#0d0f13",
+      "cursorColor": "#6eb2fd"
+    },
+    "box": {
+      "backgroundColor": "#0d0f13",
+      "borderColor": "#636363",
+      "focusedBorderColor": "#6eb2fd"
+    },
+    "text": {
+      "fg": "#dedede",
+      "bg": "#0d0f13",
+      "selectionBg": "#3e4044",
+      "selectionFg": "#dedede"
+    },
+    "input": {
+      "backgroundColor": "#181b1f",
+      "textColor": "#dedede",
+      "focusedBackgroundColor": "#3e4044",
+      "focusedTextColor": "#dedede",
+      "placeholderColor": "#aeaeae",
+      "selectionBg": "#636363",
+      "selectionFg": "#dedede",
+      "cursorColor": "#6eb2fd"
+    },
+    "textarea": {
+      "backgroundColor": "#181b1f",
+      "textColor": "#dedede",
+      "focusedBackgroundColor": "#3e4044",
+      "focusedTextColor": "#dedede",
+      "placeholderColor": "#aeaeae",
+      "selectionBg": "#636363",
+      "selectionFg": "#dedede",
+      "cursorColor": "#6eb2fd"
+    },
+    "select": {
+      "backgroundColor": "#0d0f13",
+      "textColor": "#dedede",
+      "focusedBackgroundColor": "#181b1f",
+      "focusedTextColor": "#dedede",
+      "selectedBackgroundColor": "#6eb2fd",
+      "selectedTextColor": "#0d0f13",
+      "descriptionColor": "#aeaeae",
+      "selectedDescriptionColor": "#0d0f13"
+    },
+    "tabSelect": {
+      "backgroundColor": "#0d0f13",
+      "textColor": "#aeaeae",
+      "focusedBackgroundColor": "#181b1f",
+      "focusedTextColor": "#dedede",
+      "selectedBackgroundColor": "#6eb2fd",
+      "selectedTextColor": "#0d0f13",
+      "selectedDescriptionColor": "#0d0f13"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#181b1f",
+        "foregroundColor": "#636363"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#aeaeae",
+        "backgroundColor": "#181b1f"
+      }
+    },
+    "markdown": {
+      "fg": "#dedede",
+      "bg": "#0d0f13",
+      "borderColor": "#636363"
+    },
+    "code": {
+      "fg": "#dedede",
+      "bg": "#0d0f13",
+      "selectionBg": "#3e4044",
+      "selectionFg": "#dedede"
+    }
+  }
+}

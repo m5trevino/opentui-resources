@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Everforest Light (Medium)",
+  "slug": "everforest-light-medium",
+  "system": "base16",
+  "author": "Márcio Sobel (https://github.com/marciosobel)",
+  "palette": {
+    "base00": "#fdf6e3",
+    "base01": "#f4f0d9",
+    "base02": "#e6e2cc",
+    "base03": "#939f91",
+    "base04": "#829181",
+    "base05": "#5c6a72",
+    "base06": "#475258",
+    "base07": "#2d353b",
+    "base08": "#f85552",
+    "base09": "#f57d26",
+    "base0A": "#dfa000",
+    "base0B": "#8da101",
+    "base0C": "#35a77c",
+    "base0D": "#3a94c5",
+    "base0E": "#df69ba",
+    "base0F": "#829181"
+  },
+  "tokens": {
+    "background": "#fdf6e3",
+    "surface": "#f4f0d9",
+    "surfaceAlt": "#e6e2cc",
+    "surfaceRaised": "#e6e2cc",
+    "border": "#939f91",
+    "borderFocused": "#3a94c5",
+    "text": "#5c6a72",
+    "textMuted": "#829181",
+    "textSubtle": "#939f91",
+    "textInverse": "#fdf6e3",
+    "accent": "#3a94c5",
+    "accentText": "#fdf6e3",
+    "success": "#8da101",
+    "warning": "#dfa000",
+    "danger": "#f85552",
+    "info": "#35a77c",
+    "selectionBg": "#e6e2cc",
+    "selectionFg": "#5c6a72",
+    "cursor": "#3a94c5",
+    "scrollbarTrack": "#f4f0d9",
+    "scrollbarThumb": "#939f91"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#fdf6e3",
+      "cursorColor": "#3a94c5"
+    },
+    "box": {
+      "backgroundColor": "#fdf6e3",
+      "borderColor": "#939f91",
+      "focusedBorderColor": "#3a94c5"
+    },
+    "text": {
+      "fg": "#5c6a72",
+      "bg": "#fdf6e3",
+      "selectionBg": "#e6e2cc",
+      "selectionFg": "#5c6a72"
+    },
+    "input": {
+      "backgroundColor": "#f4f0d9",
+      "textColor": "#5c6a72",
+      "focusedBackgroundColor": "#e6e2cc",
+      "focusedTextColor": "#5c6a72",
+      "placeholderColor": "#829181",
+      "selectionBg": "#939f91",
+      "selectionFg": "#5c6a72",
+      "cursorColor": "#3a94c5"
+    },
+    "textarea": {
+      "backgroundColor": "#f4f0d9",
+      "textColor": "#5c6a72",
+      "focusedBackgroundColor": "#e6e2cc",
+      "focusedTextColor": "#5c6a72",
+      "placeholderColor": "#829181",
+      "selectionBg": "#939f91",
+      "selectionFg": "#5c6a72",
+      "cursorColor": "#3a94c5"
+    },
+    "select": {
+      "backgroundColor": "#fdf6e3",
+      "textColor": "#5c6a72",
+      "focusedBackgroundColor": "#f4f0d9",
+      "focusedTextColor": "#5c6a72",
+      "selectedBackgroundColor": "#3a94c5",
+      "selectedTextColor": "#fdf6e3",
+      "descriptionColor": "#829181",
+      "selectedDescriptionColor": "#fdf6e3"
+    },
+    "tabSelect": {
+      "backgroundColor": "#fdf6e3",
+      "textColor": "#829181",
+      "focusedBackgroundColor": "#f4f0d9",
+      "focusedTextColor": "#5c6a72",
+      "selectedBackgroundColor": "#3a94c5",
+      "selectedTextColor": "#fdf6e3",
+      "selectedDescriptionColor": "#fdf6e3"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#f4f0d9",
+        "foregroundColor": "#939f91"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#829181",
+        "backgroundColor": "#f4f0d9"
+      }
+    },
+    "markdown": {
+      "fg": "#5c6a72",
+      "bg": "#fdf6e3",
+      "borderColor": "#939f91"
+    },
+    "code": {
+      "fg": "#5c6a72",
+      "bg": "#fdf6e3",
+      "selectionBg": "#e6e2cc",
+      "selectionFg": "#5c6a72"
+    }
+  }
+}

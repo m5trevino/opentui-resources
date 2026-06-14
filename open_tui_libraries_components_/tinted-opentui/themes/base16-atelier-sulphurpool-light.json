@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Atelier Sulphurpool Light",
+  "slug": "atelier-sulphurpool-light",
+  "system": "base16",
+  "author": "Bram de Haan (http://atelierbramdehaan.nl)",
+  "palette": {
+    "base00": "#f5f7ff",
+    "base01": "#dfe2f1",
+    "base02": "#979db4",
+    "base03": "#898ea4",
+    "base04": "#6b7394",
+    "base05": "#5e6687",
+    "base06": "#293256",
+    "base07": "#202746",
+    "base08": "#c94922",
+    "base09": "#c76b29",
+    "base0A": "#c08b30",
+    "base0B": "#ac9739",
+    "base0C": "#22a2c9",
+    "base0D": "#3d8fd1",
+    "base0E": "#6679cc",
+    "base0F": "#9c637a"
+  },
+  "tokens": {
+    "background": "#f5f7ff",
+    "surface": "#dfe2f1",
+    "surfaceAlt": "#979db4",
+    "surfaceRaised": "#979db4",
+    "border": "#898ea4",
+    "borderFocused": "#3d8fd1",
+    "text": "#5e6687",
+    "textMuted": "#6b7394",
+    "textSubtle": "#898ea4",
+    "textInverse": "#f5f7ff",
+    "accent": "#3d8fd1",
+    "accentText": "#f5f7ff",
+    "success": "#ac9739",
+    "warning": "#c08b30",
+    "danger": "#c94922",
+    "info": "#22a2c9",
+    "selectionBg": "#979db4",
+    "selectionFg": "#5e6687",
+    "cursor": "#3d8fd1",
+    "scrollbarTrack": "#dfe2f1",
+    "scrollbarThumb": "#898ea4"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#f5f7ff",
+      "cursorColor": "#3d8fd1"
+    },
+    "box": {
+      "backgroundColor": "#f5f7ff",
+      "borderColor": "#898ea4",
+      "focusedBorderColor": "#3d8fd1"
+    },
+    "text": {
+      "fg": "#5e6687",
+      "bg": "#f5f7ff",
+      "selectionBg": "#979db4",
+      "selectionFg": "#5e6687"
+    },
+    "input": {
+      "backgroundColor": "#dfe2f1",
+      "textColor": "#5e6687",
+      "focusedBackgroundColor": "#979db4",
+      "focusedTextColor": "#5e6687",
+      "placeholderColor": "#6b7394",
+      "selectionBg": "#898ea4",
+      "selectionFg": "#5e6687",
+      "cursorColor": "#3d8fd1"
+    },
+    "textarea": {
+      "backgroundColor": "#dfe2f1",
+      "textColor": "#5e6687",
+      "focusedBackgroundColor": "#979db4",
+      "focusedTextColor": "#5e6687",
+      "placeholderColor": "#6b7394",
+      "selectionBg": "#898ea4",
+      "selectionFg": "#5e6687",
+      "cursorColor": "#3d8fd1"
+    },
+    "select": {
+      "backgroundColor": "#f5f7ff",
+      "textColor": "#5e6687",
+      "focusedBackgroundColor": "#dfe2f1",
+      "focusedTextColor": "#5e6687",
+      "selectedBackgroundColor": "#3d8fd1",
+      "selectedTextColor": "#f5f7ff",
+      "descriptionColor": "#6b7394",
+      "selectedDescriptionColor": "#f5f7ff"
+    },
+    "tabSelect": {
+      "backgroundColor": "#f5f7ff",
+      "textColor": "#6b7394",
+      "focusedBackgroundColor": "#dfe2f1",
+      "focusedTextColor": "#5e6687",
+      "selectedBackgroundColor": "#3d8fd1",
+      "selectedTextColor": "#f5f7ff",
+      "selectedDescriptionColor": "#f5f7ff"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#dfe2f1",
+        "foregroundColor": "#898ea4"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#6b7394",
+        "backgroundColor": "#dfe2f1"
+      }
+    },
+    "markdown": {
+      "fg": "#5e6687",
+      "bg": "#f5f7ff",
+      "borderColor": "#898ea4"
+    },
+    "code": {
+      "fg": "#5e6687",
+      "bg": "#f5f7ff",
+      "selectionBg": "#979db4",
+      "selectionFg": "#5e6687"
+    }
+  }
+}

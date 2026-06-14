@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Alien Blood",
+  "slug": "alien-blood",
+  "system": "base24",
+  "author": "FredHappyface (https://github.com/fredHappyface)",
+  "palette": {
+    "base00": "#0f160f",
+    "base01": "#112615",
+    "base02": "#3c4711",
+    "base03": "#46542a",
+    "base04": "#506243",
+    "base05": "#5a6f5c",
+    "base06": "#647d75",
+    "base07": "#73f990",
+    "base08": "#7f2b26",
+    "base09": "#707f23",
+    "base0A": "#00a9df",
+    "base0B": "#2f7e25",
+    "base0C": "#317f76",
+    "base0D": "#2f697f",
+    "base0E": "#47577e",
+    "base0F": "#3f1513"
+  },
+  "tokens": {
+    "background": "#0f160f",
+    "surface": "#112615",
+    "surfaceAlt": "#3c4711",
+    "surfaceRaised": "#3c4711",
+    "border": "#46542a",
+    "borderFocused": "#2f697f",
+    "text": "#5a6f5c",
+    "textMuted": "#506243",
+    "textSubtle": "#46542a",
+    "textInverse": "#0f160f",
+    "accent": "#2f697f",
+    "accentText": "#0f160f",
+    "success": "#2f7e25",
+    "warning": "#00a9df",
+    "danger": "#7f2b26",
+    "info": "#317f76",
+    "selectionBg": "#3c4711",
+    "selectionFg": "#5a6f5c",
+    "cursor": "#2f697f",
+    "scrollbarTrack": "#112615",
+    "scrollbarThumb": "#46542a"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#0f160f",
+      "cursorColor": "#2f697f"
+    },
+    "box": {
+      "backgroundColor": "#0f160f",
+      "borderColor": "#46542a",
+      "focusedBorderColor": "#2f697f"
+    },
+    "text": {
+      "fg": "#5a6f5c",
+      "bg": "#0f160f",
+      "selectionBg": "#3c4711",
+      "selectionFg": "#5a6f5c"
+    },
+    "input": {
+      "backgroundColor": "#112615",
+      "textColor": "#5a6f5c",
+      "focusedBackgroundColor": "#3c4711",
+      "focusedTextColor": "#5a6f5c",
+      "placeholderColor": "#506243",
+      "selectionBg": "#46542a",
+      "selectionFg": "#5a6f5c",
+      "cursorColor": "#2f697f"
+    },
+    "textarea": {
+      "backgroundColor": "#112615",
+      "textColor": "#5a6f5c",
+      "focusedBackgroundColor": "#3c4711",
+      "focusedTextColor": "#5a6f5c",
+      "placeholderColor": "#506243",
+      "selectionBg": "#46542a",
+      "selectionFg": "#5a6f5c",
+      "cursorColor": "#2f697f"
+    },
+    "select": {
+      "backgroundColor": "#0f160f",
+      "textColor": "#5a6f5c",
+      "focusedBackgroundColor": "#112615",
+      "focusedTextColor": "#5a6f5c",
+      "selectedBackgroundColor": "#2f697f",
+      "selectedTextColor": "#0f160f",
+      "descriptionColor": "#506243",
+      "selectedDescriptionColor": "#0f160f"
+    },
+    "tabSelect": {
+      "backgroundColor": "#0f160f",
+      "textColor": "#506243",
+      "focusedBackgroundColor": "#112615",
+      "focusedTextColor": "#5a6f5c",
+      "selectedBackgroundColor": "#2f697f",
+      "selectedTextColor": "#0f160f",
+      "selectedDescriptionColor": "#0f160f"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#112615",
+        "foregroundColor": "#46542a"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#506243",
+        "backgroundColor": "#112615"
+      }
+    },
+    "markdown": {
+      "fg": "#5a6f5c",
+      "bg": "#0f160f",
+      "borderColor": "#46542a"
+    },
+    "code": {
+      "fg": "#5a6f5c",
+      "bg": "#0f160f",
+      "selectionBg": "#3c4711",
+      "selectionFg": "#5a6f5c"
+    }
+  }
+}

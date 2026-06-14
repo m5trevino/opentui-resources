@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Ayu Mirage",
+  "slug": "ayu-mirage",
+  "system": "base24",
+  "author": "Tinted Theming (https://github.com/tinted-theming), Ayu Theme (https://github.com/ayu-theme)",
+  "palette": {
+    "base00": "#1f2430",
+    "base01": "#242936",
+    "base02": "#323844",
+    "base03": "#4a5059",
+    "base04": "#707a8c",
+    "base05": "#cccac2",
+    "base06": "#d9d7ce",
+    "base07": "#f3f4f5",
+    "base08": "#f28779",
+    "base09": "#ffad66",
+    "base0A": "#ffd173",
+    "base0B": "#d5ff80",
+    "base0C": "#95e6cb",
+    "base0D": "#73d0ff",
+    "base0E": "#d4bfff",
+    "base0F": "#f27983"
+  },
+  "tokens": {
+    "background": "#1f2430",
+    "surface": "#242936",
+    "surfaceAlt": "#323844",
+    "surfaceRaised": "#323844",
+    "border": "#4a5059",
+    "borderFocused": "#73d0ff",
+    "text": "#cccac2",
+    "textMuted": "#707a8c",
+    "textSubtle": "#4a5059",
+    "textInverse": "#1f2430",
+    "accent": "#73d0ff",
+    "accentText": "#1f2430",
+    "success": "#d5ff80",
+    "warning": "#ffd173",
+    "danger": "#f28779",
+    "info": "#95e6cb",
+    "selectionBg": "#323844",
+    "selectionFg": "#cccac2",
+    "cursor": "#73d0ff",
+    "scrollbarTrack": "#242936",
+    "scrollbarThumb": "#4a5059"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#1f2430",
+      "cursorColor": "#73d0ff"
+    },
+    "box": {
+      "backgroundColor": "#1f2430",
+      "borderColor": "#4a5059",
+      "focusedBorderColor": "#73d0ff"
+    },
+    "text": {
+      "fg": "#cccac2",
+      "bg": "#1f2430",
+      "selectionBg": "#323844",
+      "selectionFg": "#cccac2"
+    },
+    "input": {
+      "backgroundColor": "#242936",
+      "textColor": "#cccac2",
+      "focusedBackgroundColor": "#323844",
+      "focusedTextColor": "#cccac2",
+      "placeholderColor": "#707a8c",
+      "selectionBg": "#4a5059",
+      "selectionFg": "#cccac2",
+      "cursorColor": "#73d0ff"
+    },
+    "textarea": {
+      "backgroundColor": "#242936",
+      "textColor": "#cccac2",
+      "focusedBackgroundColor": "#323844",
+      "focusedTextColor": "#cccac2",
+      "placeholderColor": "#707a8c",
+      "selectionBg": "#4a5059",
+      "selectionFg": "#cccac2",
+      "cursorColor": "#73d0ff"
+    },
+    "select": {
+      "backgroundColor": "#1f2430",
+      "textColor": "#cccac2",
+      "focusedBackgroundColor": "#242936",
+      "focusedTextColor": "#cccac2",
+      "selectedBackgroundColor": "#73d0ff",
+      "selectedTextColor": "#1f2430",
+      "descriptionColor": "#707a8c",
+      "selectedDescriptionColor": "#1f2430"
+    },
+    "tabSelect": {
+      "backgroundColor": "#1f2430",
+      "textColor": "#707a8c",
+      "focusedBackgroundColor": "#242936",
+      "focusedTextColor": "#cccac2",
+      "selectedBackgroundColor": "#73d0ff",
+      "selectedTextColor": "#1f2430",
+      "selectedDescriptionColor": "#1f2430"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#242936",
+        "foregroundColor": "#4a5059"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#707a8c",
+        "backgroundColor": "#242936"
+      }
+    },
+    "markdown": {
+      "fg": "#cccac2",
+      "bg": "#1f2430",
+      "borderColor": "#4a5059"
+    },
+    "code": {
+      "fg": "#cccac2",
+      "bg": "#1f2430",
+      "selectionBg": "#323844",
+      "selectionFg": "#cccac2"
+    }
+  }
+}

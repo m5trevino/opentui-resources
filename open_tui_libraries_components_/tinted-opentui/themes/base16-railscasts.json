@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Railscasts",
+  "slug": "railscasts",
+  "system": "base16",
+  "author": "Ryan Bates (http://railscasts.com)",
+  "palette": {
+    "base00": "#2b2b2b",
+    "base01": "#272935",
+    "base02": "#3a4055",
+    "base03": "#5a647e",
+    "base04": "#d4cfc9",
+    "base05": "#e6e1dc",
+    "base06": "#f4f1ed",
+    "base07": "#f9f7f3",
+    "base08": "#da4939",
+    "base09": "#cc7833",
+    "base0A": "#ffc66d",
+    "base0B": "#a5c261",
+    "base0C": "#519f50",
+    "base0D": "#6d9cbe",
+    "base0E": "#b6b3eb",
+    "base0F": "#bc9458"
+  },
+  "tokens": {
+    "background": "#2b2b2b",
+    "surface": "#272935",
+    "surfaceAlt": "#3a4055",
+    "surfaceRaised": "#3a4055",
+    "border": "#5a647e",
+    "borderFocused": "#6d9cbe",
+    "text": "#e6e1dc",
+    "textMuted": "#d4cfc9",
+    "textSubtle": "#5a647e",
+    "textInverse": "#2b2b2b",
+    "accent": "#6d9cbe",
+    "accentText": "#2b2b2b",
+    "success": "#a5c261",
+    "warning": "#ffc66d",
+    "danger": "#da4939",
+    "info": "#519f50",
+    "selectionBg": "#3a4055",
+    "selectionFg": "#e6e1dc",
+    "cursor": "#6d9cbe",
+    "scrollbarTrack": "#272935",
+    "scrollbarThumb": "#5a647e"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#2b2b2b",
+      "cursorColor": "#6d9cbe"
+    },
+    "box": {
+      "backgroundColor": "#2b2b2b",
+      "borderColor": "#5a647e",
+      "focusedBorderColor": "#6d9cbe"
+    },
+    "text": {
+      "fg": "#e6e1dc",
+      "bg": "#2b2b2b",
+      "selectionBg": "#3a4055",
+      "selectionFg": "#e6e1dc"
+    },
+    "input": {
+      "backgroundColor": "#272935",
+      "textColor": "#e6e1dc",
+      "focusedBackgroundColor": "#3a4055",
+      "focusedTextColor": "#e6e1dc",
+      "placeholderColor": "#d4cfc9",
+      "selectionBg": "#5a647e",
+      "selectionFg": "#e6e1dc",
+      "cursorColor": "#6d9cbe"
+    },
+    "textarea": {
+      "backgroundColor": "#272935",
+      "textColor": "#e6e1dc",
+      "focusedBackgroundColor": "#3a4055",
+      "focusedTextColor": "#e6e1dc",
+      "placeholderColor": "#d4cfc9",
+      "selectionBg": "#5a647e",
+      "selectionFg": "#e6e1dc",
+      "cursorColor": "#6d9cbe"
+    },
+    "select": {
+      "backgroundColor": "#2b2b2b",
+      "textColor": "#e6e1dc",
+      "focusedBackgroundColor": "#272935",
+      "focusedTextColor": "#e6e1dc",
+      "selectedBackgroundColor": "#6d9cbe",
+      "selectedTextColor": "#2b2b2b",
+      "descriptionColor": "#d4cfc9",
+      "selectedDescriptionColor": "#2b2b2b"
+    },
+    "tabSelect": {
+      "backgroundColor": "#2b2b2b",
+      "textColor": "#d4cfc9",
+      "focusedBackgroundColor": "#272935",
+      "focusedTextColor": "#e6e1dc",
+      "selectedBackgroundColor": "#6d9cbe",
+      "selectedTextColor": "#2b2b2b",
+      "selectedDescriptionColor": "#2b2b2b"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#272935",
+        "foregroundColor": "#5a647e"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#d4cfc9",
+        "backgroundColor": "#272935"
+      }
+    },
+    "markdown": {
+      "fg": "#e6e1dc",
+      "bg": "#2b2b2b",
+      "borderColor": "#5a647e"
+    },
+    "code": {
+      "fg": "#e6e1dc",
+      "bg": "#2b2b2b",
+      "selectionBg": "#3a4055",
+      "selectionFg": "#e6e1dc"
+    }
+  }
+}

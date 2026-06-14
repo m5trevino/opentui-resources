@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Nord Light",
+  "slug": "nord-light",
+  "system": "base16",
+  "author": "threddast, based on fuxialexander&#39;s doom-nord-light-theme (Doom Emacs)",
+  "palette": {
+    "base00": "#e5e9f0",
+    "base01": "#c2d0e7",
+    "base02": "#b8c5db",
+    "base03": "#aebacf",
+    "base04": "#60728c",
+    "base05": "#2e3440",
+    "base06": "#3b4252",
+    "base07": "#29838d",
+    "base08": "#99324b",
+    "base09": "#ac4426",
+    "base0A": "#9a7500",
+    "base0B": "#4f894c",
+    "base0C": "#398eac",
+    "base0D": "#3b6ea8",
+    "base0E": "#97365b",
+    "base0F": "#5272af"
+  },
+  "tokens": {
+    "background": "#e5e9f0",
+    "surface": "#c2d0e7",
+    "surfaceAlt": "#b8c5db",
+    "surfaceRaised": "#b8c5db",
+    "border": "#aebacf",
+    "borderFocused": "#3b6ea8",
+    "text": "#2e3440",
+    "textMuted": "#60728c",
+    "textSubtle": "#aebacf",
+    "textInverse": "#e5e9f0",
+    "accent": "#3b6ea8",
+    "accentText": "#e5e9f0",
+    "success": "#4f894c",
+    "warning": "#9a7500",
+    "danger": "#99324b",
+    "info": "#398eac",
+    "selectionBg": "#b8c5db",
+    "selectionFg": "#2e3440",
+    "cursor": "#3b6ea8",
+    "scrollbarTrack": "#c2d0e7",
+    "scrollbarThumb": "#aebacf"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#e5e9f0",
+      "cursorColor": "#3b6ea8"
+    },
+    "box": {
+      "backgroundColor": "#e5e9f0",
+      "borderColor": "#aebacf",
+      "focusedBorderColor": "#3b6ea8"
+    },
+    "text": {
+      "fg": "#2e3440",
+      "bg": "#e5e9f0",
+      "selectionBg": "#b8c5db",
+      "selectionFg": "#2e3440"
+    },
+    "input": {
+      "backgroundColor": "#c2d0e7",
+      "textColor": "#2e3440",
+      "focusedBackgroundColor": "#b8c5db",
+      "focusedTextColor": "#2e3440",
+      "placeholderColor": "#60728c",
+      "selectionBg": "#aebacf",
+      "selectionFg": "#2e3440",
+      "cursorColor": "#3b6ea8"
+    },
+    "textarea": {
+      "backgroundColor": "#c2d0e7",
+      "textColor": "#2e3440",
+      "focusedBackgroundColor": "#b8c5db",
+      "focusedTextColor": "#2e3440",
+      "placeholderColor": "#60728c",
+      "selectionBg": "#aebacf",
+      "selectionFg": "#2e3440",
+      "cursorColor": "#3b6ea8"
+    },
+    "select": {
+      "backgroundColor": "#e5e9f0",
+      "textColor": "#2e3440",
+      "focusedBackgroundColor": "#c2d0e7",
+      "focusedTextColor": "#2e3440",
+      "selectedBackgroundColor": "#3b6ea8",
+      "selectedTextColor": "#e5e9f0",
+      "descriptionColor": "#60728c",
+      "selectedDescriptionColor": "#e5e9f0"
+    },
+    "tabSelect": {
+      "backgroundColor": "#e5e9f0",
+      "textColor": "#60728c",
+      "focusedBackgroundColor": "#c2d0e7",
+      "focusedTextColor": "#2e3440",
+      "selectedBackgroundColor": "#3b6ea8",
+      "selectedTextColor": "#e5e9f0",
+      "selectedDescriptionColor": "#e5e9f0"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#c2d0e7",
+        "foregroundColor": "#aebacf"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#60728c",
+        "backgroundColor": "#c2d0e7"
+      }
+    },
+    "markdown": {
+      "fg": "#2e3440",
+      "bg": "#e5e9f0",
+      "borderColor": "#aebacf"
+    },
+    "code": {
+      "fg": "#2e3440",
+      "bg": "#e5e9f0",
+      "selectionBg": "#b8c5db",
+      "selectionFg": "#2e3440"
+    }
+  }
+}

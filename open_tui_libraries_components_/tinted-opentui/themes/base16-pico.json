@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Pico",
+  "slug": "pico",
+  "system": "base16",
+  "author": "PICO-8 (http://www.lexaloffle.com/pico-8.php)",
+  "palette": {
+    "base00": "#000000",
+    "base01": "#1d2b53",
+    "base02": "#7e2553",
+    "base03": "#008751",
+    "base04": "#ab5236",
+    "base05": "#5f574f",
+    "base06": "#c2c3c7",
+    "base07": "#fff1e8",
+    "base08": "#ff004d",
+    "base09": "#ffa300",
+    "base0A": "#fff024",
+    "base0B": "#00e756",
+    "base0C": "#29adff",
+    "base0D": "#83769c",
+    "base0E": "#ff77a8",
+    "base0F": "#ffccaa"
+  },
+  "tokens": {
+    "background": "#000000",
+    "surface": "#1d2b53",
+    "surfaceAlt": "#7e2553",
+    "surfaceRaised": "#7e2553",
+    "border": "#008751",
+    "borderFocused": "#83769c",
+    "text": "#5f574f",
+    "textMuted": "#ab5236",
+    "textSubtle": "#008751",
+    "textInverse": "#000000",
+    "accent": "#83769c",
+    "accentText": "#000000",
+    "success": "#00e756",
+    "warning": "#fff024",
+    "danger": "#ff004d",
+    "info": "#29adff",
+    "selectionBg": "#7e2553",
+    "selectionFg": "#5f574f",
+    "cursor": "#83769c",
+    "scrollbarTrack": "#1d2b53",
+    "scrollbarThumb": "#008751"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#000000",
+      "cursorColor": "#83769c"
+    },
+    "box": {
+      "backgroundColor": "#000000",
+      "borderColor": "#008751",
+      "focusedBorderColor": "#83769c"
+    },
+    "text": {
+      "fg": "#5f574f",
+      "bg": "#000000",
+      "selectionBg": "#7e2553",
+      "selectionFg": "#5f574f"
+    },
+    "input": {
+      "backgroundColor": "#1d2b53",
+      "textColor": "#5f574f",
+      "focusedBackgroundColor": "#7e2553",
+      "focusedTextColor": "#5f574f",
+      "placeholderColor": "#ab5236",
+      "selectionBg": "#008751",
+      "selectionFg": "#5f574f",
+      "cursorColor": "#83769c"
+    },
+    "textarea": {
+      "backgroundColor": "#1d2b53",
+      "textColor": "#5f574f",
+      "focusedBackgroundColor": "#7e2553",
+      "focusedTextColor": "#5f574f",
+      "placeholderColor": "#ab5236",
+      "selectionBg": "#008751",
+      "selectionFg": "#5f574f",
+      "cursorColor": "#83769c"
+    },
+    "select": {
+      "backgroundColor": "#000000",
+      "textColor": "#5f574f",
+      "focusedBackgroundColor": "#1d2b53",
+      "focusedTextColor": "#5f574f",
+      "selectedBackgroundColor": "#83769c",
+      "selectedTextColor": "#000000",
+      "descriptionColor": "#ab5236",
+      "selectedDescriptionColor": "#000000"
+    },
+    "tabSelect": {
+      "backgroundColor": "#000000",
+      "textColor": "#ab5236",
+      "focusedBackgroundColor": "#1d2b53",
+      "focusedTextColor": "#5f574f",
+      "selectedBackgroundColor": "#83769c",
+      "selectedTextColor": "#000000",
+      "selectedDescriptionColor": "#000000"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#1d2b53",
+        "foregroundColor": "#008751"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#ab5236",
+        "backgroundColor": "#1d2b53"
+      }
+    },
+    "markdown": {
+      "fg": "#5f574f",
+      "bg": "#000000",
+      "borderColor": "#008751"
+    },
+    "code": {
+      "fg": "#5f574f",
+      "bg": "#000000",
+      "selectionBg": "#7e2553",
+      "selectionFg": "#5f574f"
+    }
+  }
+}

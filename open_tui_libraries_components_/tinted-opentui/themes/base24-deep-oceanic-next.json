@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Deep Oceanic Next",
+  "slug": "deep-oceanic-next",
+  "system": "base24",
+  "author": "spearkkk (https://github.com/spearkkk)",
+  "palette": {
+    "base00": "#001c1f",
+    "base01": "#002931",
+    "base02": "#003640",
+    "base03": "#004852",
+    "base04": "#0093a3",
+    "base05": "#d4e1e8",
+    "base06": "#e0e9ef",
+    "base07": "#f2f7f9",
+    "base08": "#d3464d",
+    "base09": "#e37552",
+    "base0A": "#f3b863",
+    "base0B": "#63b784",
+    "base0C": "#4fb7ae",
+    "base0D": "#568ccf",
+    "base0E": "#8b66d6",
+    "base0F": "#d0658e"
+  },
+  "tokens": {
+    "background": "#001c1f",
+    "surface": "#002931",
+    "surfaceAlt": "#003640",
+    "surfaceRaised": "#003640",
+    "border": "#004852",
+    "borderFocused": "#568ccf",
+    "text": "#d4e1e8",
+    "textMuted": "#0093a3",
+    "textSubtle": "#004852",
+    "textInverse": "#001c1f",
+    "accent": "#568ccf",
+    "accentText": "#001c1f",
+    "success": "#63b784",
+    "warning": "#f3b863",
+    "danger": "#d3464d",
+    "info": "#4fb7ae",
+    "selectionBg": "#003640",
+    "selectionFg": "#d4e1e8",
+    "cursor": "#568ccf",
+    "scrollbarTrack": "#002931",
+    "scrollbarThumb": "#004852"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#001c1f",
+      "cursorColor": "#568ccf"
+    },
+    "box": {
+      "backgroundColor": "#001c1f",
+      "borderColor": "#004852",
+      "focusedBorderColor": "#568ccf"
+    },
+    "text": {
+      "fg": "#d4e1e8",
+      "bg": "#001c1f",
+      "selectionBg": "#003640",
+      "selectionFg": "#d4e1e8"
+    },
+    "input": {
+      "backgroundColor": "#002931",
+      "textColor": "#d4e1e8",
+      "focusedBackgroundColor": "#003640",
+      "focusedTextColor": "#d4e1e8",
+      "placeholderColor": "#0093a3",
+      "selectionBg": "#004852",
+      "selectionFg": "#d4e1e8",
+      "cursorColor": "#568ccf"
+    },
+    "textarea": {
+      "backgroundColor": "#002931",
+      "textColor": "#d4e1e8",
+      "focusedBackgroundColor": "#003640",
+      "focusedTextColor": "#d4e1e8",
+      "placeholderColor": "#0093a3",
+      "selectionBg": "#004852",
+      "selectionFg": "#d4e1e8",
+      "cursorColor": "#568ccf"
+    },
+    "select": {
+      "backgroundColor": "#001c1f",
+      "textColor": "#d4e1e8",
+      "focusedBackgroundColor": "#002931",
+      "focusedTextColor": "#d4e1e8",
+      "selectedBackgroundColor": "#568ccf",
+      "selectedTextColor": "#001c1f",
+      "descriptionColor": "#0093a3",
+      "selectedDescriptionColor": "#001c1f"
+    },
+    "tabSelect": {
+      "backgroundColor": "#001c1f",
+      "textColor": "#0093a3",
+      "focusedBackgroundColor": "#002931",
+      "focusedTextColor": "#d4e1e8",
+      "selectedBackgroundColor": "#568ccf",
+      "selectedTextColor": "#001c1f",
+      "selectedDescriptionColor": "#001c1f"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#002931",
+        "foregroundColor": "#004852"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#0093a3",
+        "backgroundColor": "#002931"
+      }
+    },
+    "markdown": {
+      "fg": "#d4e1e8",
+      "bg": "#001c1f",
+      "borderColor": "#004852"
+    },
+    "code": {
+      "fg": "#d4e1e8",
+      "bg": "#001c1f",
+      "selectionBg": "#003640",
+      "selectionFg": "#d4e1e8"
+    }
+  }
+}

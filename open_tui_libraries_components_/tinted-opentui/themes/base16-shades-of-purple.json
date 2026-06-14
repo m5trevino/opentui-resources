@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Shades of Purple",
+  "slug": "shades-of-purple",
+  "system": "base16",
+  "author": "Iolar Demartini Junior (http://github.com/demartini), based on Shades of Purple Theme (https://github.com/ahmadawais/shades-of-purple-vscode)",
+  "palette": {
+    "base00": "#1e1e3f",
+    "base01": "#43d426",
+    "base02": "#f1d000",
+    "base03": "#808080",
+    "base04": "#6871ff",
+    "base05": "#c7c7c7",
+    "base06": "#ff77ff",
+    "base07": "#ffffff",
+    "base08": "#d90429",
+    "base09": "#f92a1c",
+    "base0A": "#ffe700",
+    "base0B": "#3ad900",
+    "base0C": "#00c5c7",
+    "base0D": "#6943ff",
+    "base0E": "#ff2c70",
+    "base0F": "#79e8fb"
+  },
+  "tokens": {
+    "background": "#1e1e3f",
+    "surface": "#43d426",
+    "surfaceAlt": "#f1d000",
+    "surfaceRaised": "#f1d000",
+    "border": "#808080",
+    "borderFocused": "#6943ff",
+    "text": "#c7c7c7",
+    "textMuted": "#6871ff",
+    "textSubtle": "#808080",
+    "textInverse": "#1e1e3f",
+    "accent": "#6943ff",
+    "accentText": "#1e1e3f",
+    "success": "#3ad900",
+    "warning": "#ffe700",
+    "danger": "#d90429",
+    "info": "#00c5c7",
+    "selectionBg": "#f1d000",
+    "selectionFg": "#c7c7c7",
+    "cursor": "#6943ff",
+    "scrollbarTrack": "#43d426",
+    "scrollbarThumb": "#808080"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#1e1e3f",
+      "cursorColor": "#6943ff"
+    },
+    "box": {
+      "backgroundColor": "#1e1e3f",
+      "borderColor": "#808080",
+      "focusedBorderColor": "#6943ff"
+    },
+    "text": {
+      "fg": "#c7c7c7",
+      "bg": "#1e1e3f",
+      "selectionBg": "#f1d000",
+      "selectionFg": "#c7c7c7"
+    },
+    "input": {
+      "backgroundColor": "#43d426",
+      "textColor": "#c7c7c7",
+      "focusedBackgroundColor": "#f1d000",
+      "focusedTextColor": "#c7c7c7",
+      "placeholderColor": "#6871ff",
+      "selectionBg": "#808080",
+      "selectionFg": "#c7c7c7",
+      "cursorColor": "#6943ff"
+    },
+    "textarea": {
+      "backgroundColor": "#43d426",
+      "textColor": "#c7c7c7",
+      "focusedBackgroundColor": "#f1d000",
+      "focusedTextColor": "#c7c7c7",
+      "placeholderColor": "#6871ff",
+      "selectionBg": "#808080",
+      "selectionFg": "#c7c7c7",
+      "cursorColor": "#6943ff"
+    },
+    "select": {
+      "backgroundColor": "#1e1e3f",
+      "textColor": "#c7c7c7",
+      "focusedBackgroundColor": "#43d426",
+      "focusedTextColor": "#c7c7c7",
+      "selectedBackgroundColor": "#6943ff",
+      "selectedTextColor": "#1e1e3f",
+      "descriptionColor": "#6871ff",
+      "selectedDescriptionColor": "#1e1e3f"
+    },
+    "tabSelect": {
+      "backgroundColor": "#1e1e3f",
+      "textColor": "#6871ff",
+      "focusedBackgroundColor": "#43d426",
+      "focusedTextColor": "#c7c7c7",
+      "selectedBackgroundColor": "#6943ff",
+      "selectedTextColor": "#1e1e3f",
+      "selectedDescriptionColor": "#1e1e3f"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#43d426",
+        "foregroundColor": "#808080"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#6871ff",
+        "backgroundColor": "#43d426"
+      }
+    },
+    "markdown": {
+      "fg": "#c7c7c7",
+      "bg": "#1e1e3f",
+      "borderColor": "#808080"
+    },
+    "code": {
+      "fg": "#c7c7c7",
+      "bg": "#1e1e3f",
+      "selectionBg": "#f1d000",
+      "selectionFg": "#c7c7c7"
+    }
+  }
+}

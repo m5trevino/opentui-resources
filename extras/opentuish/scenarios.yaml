@@ -1,0 +1,11 @@
+- name: basic-info
+  steps:
+  - whoami
+  - uname -a
+  - uptime
+- name: network-info
+  steps:
+  - ip addr show
+  - netstat -tuln
+  - ss -tuln
+

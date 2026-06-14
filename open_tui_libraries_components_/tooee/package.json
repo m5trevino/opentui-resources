@@ -1,0 +1,39 @@
+{
+  "name": "tooee",
+  "private": true,
+  "description": "Terminal micro-apps built on OpenTUI",
+  "homepage": "https://github.com/gingerhendrix/tooee",
+  "bugs": "https://github.com/gingerhendrix/tooee/issues",
+  "license": "MIT",
+  "author": "Gareth Andrew",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gingerhendrix/tooee.git"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "examples"
+  ],
+  "scripts": {
+    "build": "bunx tsc -b",
+    "clean": "rm -rf packages/*/dist apps/*/dist",
+    "test": "bun --conditions=@tooee/source test",
+    "test:parallel": "find packages -name '*.test.ts' -o -name '*.test.tsx' | grep -v node_modules | xargs -P4 -I{} bun --conditions=@tooee/source test {}",
+    "check": "bunx tsc -b && bunx tsc -p examples",
+    "lint": "oxlint --react-plugin .",
+    "lint:fix": "oxlint --react-plugin --fix .",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check ."
+  },
+  "devDependencies": {
+    "@opentui/core": "^0.2.15",
+    "@opentui/react": "^0.2.15",
+    "@types/bun": "^1.3.10",
+    "ghostty-opentui": "^1.4.5",
+    "oxfmt": "^0.36.0",
+    "oxlint": "^1.51.0",
+    "react": "^19.2.4",
+    "tuistory": "^0.0.16"
+  }
+}

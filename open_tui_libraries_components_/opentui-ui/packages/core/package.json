@@ -1,0 +1,67 @@
+{
+  "name": "@opentui-ui/core",
+  "version": "0.0.2",
+  "description": "Framework-agnostic core renderables for terminal applications built on OpenTUI",
+  "author": "Matt Simpson",
+  "license": "MIT",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msmps/opentui-ui.git",
+    "directory": "packages/core"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./badge": "./src/badge/index.ts",
+    "./checkbox": "./src/checkbox/index.ts"
+  },
+  "publishConfig": {
+    "main": "./dist/index.mjs",
+    "types": "./dist/index.d.mts",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.mts",
+        "import": "./dist/index.mjs"
+      },
+      "./badge": {
+        "types": "./dist/badge/index.d.mts",
+        "import": "./dist/badge/index.mjs"
+      },
+      "./checkbox": {
+        "types": "./dist/checkbox/index.d.mts",
+        "import": "./dist/checkbox/index.mjs"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/msmps/opentui-ui/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/msmps/opentui-ui#readme",
+  "keywords": [
+    "headless",
+    "ui",
+    "components",
+    "tui",
+    "terminal",
+    "cli",
+    "opentui"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@opentui/core": "catalog:",
+    "@types/bun": "^1",
+    "tsdown": "^0.18.2",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "@opentui/core": "catalog:"
+  }
+}

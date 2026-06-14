@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Kanagawa Dragon",
+  "slug": "kanagawa-dragon",
+  "system": "base16",
+  "author": "Stefan Weigl-Bosker (https://github.com/sweiglbosker), Tommaso Laurenzi (https://github.com/rebelot/kanagawa.nvim)",
+  "palette": {
+    "base00": "#181616",
+    "base01": "#282727",
+    "base02": "#393836",
+    "base03": "#625e5a",
+    "base04": "#737c73",
+    "base05": "#c5c9c5",
+    "base06": "#c8c093",
+    "base07": "#c5c9c5",
+    "base08": "#c4746e",
+    "base09": "#b6927b",
+    "base0A": "#c4b28a",
+    "base0B": "#8a9a7b",
+    "base0C": "#8ea4a2",
+    "base0D": "#8ba4b0",
+    "base0E": "#a292a3",
+    "base0F": "#b98d7b"
+  },
+  "tokens": {
+    "background": "#181616",
+    "surface": "#282727",
+    "surfaceAlt": "#393836",
+    "surfaceRaised": "#393836",
+    "border": "#625e5a",
+    "borderFocused": "#8ba4b0",
+    "text": "#c5c9c5",
+    "textMuted": "#737c73",
+    "textSubtle": "#625e5a",
+    "textInverse": "#181616",
+    "accent": "#8ba4b0",
+    "accentText": "#181616",
+    "success": "#8a9a7b",
+    "warning": "#c4b28a",
+    "danger": "#c4746e",
+    "info": "#8ea4a2",
+    "selectionBg": "#393836",
+    "selectionFg": "#c5c9c5",
+    "cursor": "#8ba4b0",
+    "scrollbarTrack": "#282727",
+    "scrollbarThumb": "#625e5a"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#181616",
+      "cursorColor": "#8ba4b0"
+    },
+    "box": {
+      "backgroundColor": "#181616",
+      "borderColor": "#625e5a",
+      "focusedBorderColor": "#8ba4b0"
+    },
+    "text": {
+      "fg": "#c5c9c5",
+      "bg": "#181616",
+      "selectionBg": "#393836",
+      "selectionFg": "#c5c9c5"
+    },
+    "input": {
+      "backgroundColor": "#282727",
+      "textColor": "#c5c9c5",
+      "focusedBackgroundColor": "#393836",
+      "focusedTextColor": "#c5c9c5",
+      "placeholderColor": "#737c73",
+      "selectionBg": "#625e5a",
+      "selectionFg": "#c5c9c5",
+      "cursorColor": "#8ba4b0"
+    },
+    "textarea": {
+      "backgroundColor": "#282727",
+      "textColor": "#c5c9c5",
+      "focusedBackgroundColor": "#393836",
+      "focusedTextColor": "#c5c9c5",
+      "placeholderColor": "#737c73",
+      "selectionBg": "#625e5a",
+      "selectionFg": "#c5c9c5",
+      "cursorColor": "#8ba4b0"
+    },
+    "select": {
+      "backgroundColor": "#181616",
+      "textColor": "#c5c9c5",
+      "focusedBackgroundColor": "#282727",
+      "focusedTextColor": "#c5c9c5",
+      "selectedBackgroundColor": "#8ba4b0",
+      "selectedTextColor": "#181616",
+      "descriptionColor": "#737c73",
+      "selectedDescriptionColor": "#181616"
+    },
+    "tabSelect": {
+      "backgroundColor": "#181616",
+      "textColor": "#737c73",
+      "focusedBackgroundColor": "#282727",
+      "focusedTextColor": "#c5c9c5",
+      "selectedBackgroundColor": "#8ba4b0",
+      "selectedTextColor": "#181616",
+      "selectedDescriptionColor": "#181616"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#282727",
+        "foregroundColor": "#625e5a"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#737c73",
+        "backgroundColor": "#282727"
+      }
+    },
+    "markdown": {
+      "fg": "#c5c9c5",
+      "bg": "#181616",
+      "borderColor": "#625e5a"
+    },
+    "code": {
+      "fg": "#c5c9c5",
+      "bg": "#181616",
+      "selectionBg": "#393836",
+      "selectionFg": "#c5c9c5"
+    }
+  }
+}

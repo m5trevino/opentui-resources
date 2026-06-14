@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Brogrammer",
+  "slug": "brogrammer",
+  "system": "base16",
+  "author": "Vik Ramanujam (http://github.com/piggyslasher)",
+  "palette": {
+    "base00": "#1f1f1f",
+    "base01": "#f81118",
+    "base02": "#2dc55e",
+    "base03": "#ecba0f",
+    "base04": "#2a84d2",
+    "base05": "#4e5ab7",
+    "base06": "#1081d6",
+    "base07": "#d6dbe5",
+    "base08": "#d6dbe5",
+    "base09": "#de352e",
+    "base0A": "#1dd361",
+    "base0B": "#f3bd09",
+    "base0C": "#1081d6",
+    "base0D": "#5350b9",
+    "base0E": "#0f7ddb",
+    "base0F": "#ffffff"
+  },
+  "tokens": {
+    "background": "#1f1f1f",
+    "surface": "#f81118",
+    "surfaceAlt": "#2dc55e",
+    "surfaceRaised": "#2dc55e",
+    "border": "#ecba0f",
+    "borderFocused": "#5350b9",
+    "text": "#4e5ab7",
+    "textMuted": "#2a84d2",
+    "textSubtle": "#ecba0f",
+    "textInverse": "#1f1f1f",
+    "accent": "#5350b9",
+    "accentText": "#1f1f1f",
+    "success": "#f3bd09",
+    "warning": "#1dd361",
+    "danger": "#d6dbe5",
+    "info": "#1081d6",
+    "selectionBg": "#2dc55e",
+    "selectionFg": "#4e5ab7",
+    "cursor": "#5350b9",
+    "scrollbarTrack": "#f81118",
+    "scrollbarThumb": "#ecba0f"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#1f1f1f",
+      "cursorColor": "#5350b9"
+    },
+    "box": {
+      "backgroundColor": "#1f1f1f",
+      "borderColor": "#ecba0f",
+      "focusedBorderColor": "#5350b9"
+    },
+    "text": {
+      "fg": "#4e5ab7",
+      "bg": "#1f1f1f",
+      "selectionBg": "#2dc55e",
+      "selectionFg": "#4e5ab7"
+    },
+    "input": {
+      "backgroundColor": "#f81118",
+      "textColor": "#4e5ab7",
+      "focusedBackgroundColor": "#2dc55e",
+      "focusedTextColor": "#4e5ab7",
+      "placeholderColor": "#2a84d2",
+      "selectionBg": "#ecba0f",
+      "selectionFg": "#4e5ab7",
+      "cursorColor": "#5350b9"
+    },
+    "textarea": {
+      "backgroundColor": "#f81118",
+      "textColor": "#4e5ab7",
+      "focusedBackgroundColor": "#2dc55e",
+      "focusedTextColor": "#4e5ab7",
+      "placeholderColor": "#2a84d2",
+      "selectionBg": "#ecba0f",
+      "selectionFg": "#4e5ab7",
+      "cursorColor": "#5350b9"
+    },
+    "select": {
+      "backgroundColor": "#1f1f1f",
+      "textColor": "#4e5ab7",
+      "focusedBackgroundColor": "#f81118",
+      "focusedTextColor": "#4e5ab7",
+      "selectedBackgroundColor": "#5350b9",
+      "selectedTextColor": "#1f1f1f",
+      "descriptionColor": "#2a84d2",
+      "selectedDescriptionColor": "#1f1f1f"
+    },
+    "tabSelect": {
+      "backgroundColor": "#1f1f1f",
+      "textColor": "#2a84d2",
+      "focusedBackgroundColor": "#f81118",
+      "focusedTextColor": "#4e5ab7",
+      "selectedBackgroundColor": "#5350b9",
+      "selectedTextColor": "#1f1f1f",
+      "selectedDescriptionColor": "#1f1f1f"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#f81118",
+        "foregroundColor": "#ecba0f"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#2a84d2",
+        "backgroundColor": "#f81118"
+      }
+    },
+    "markdown": {
+      "fg": "#4e5ab7",
+      "bg": "#1f1f1f",
+      "borderColor": "#ecba0f"
+    },
+    "code": {
+      "fg": "#4e5ab7",
+      "bg": "#1f1f1f",
+      "selectionBg": "#2dc55e",
+      "selectionFg": "#4e5ab7"
+    }
+  }
+}

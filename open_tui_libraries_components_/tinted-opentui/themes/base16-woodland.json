@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Woodland",
+  "slug": "woodland",
+  "system": "base16",
+  "author": "Jay Cornwall (https://jcornwall.com)",
+  "palette": {
+    "base00": "#231e18",
+    "base01": "#302b25",
+    "base02": "#48413a",
+    "base03": "#9d8b70",
+    "base04": "#b4a490",
+    "base05": "#cabcb1",
+    "base06": "#d7c8bc",
+    "base07": "#e4d4c8",
+    "base08": "#d35c5c",
+    "base09": "#ca7f32",
+    "base0A": "#e0ac16",
+    "base0B": "#b7ba53",
+    "base0C": "#6eb958",
+    "base0D": "#88a4d3",
+    "base0E": "#bb90e2",
+    "base0F": "#b49368"
+  },
+  "tokens": {
+    "background": "#231e18",
+    "surface": "#302b25",
+    "surfaceAlt": "#48413a",
+    "surfaceRaised": "#48413a",
+    "border": "#9d8b70",
+    "borderFocused": "#88a4d3",
+    "text": "#cabcb1",
+    "textMuted": "#b4a490",
+    "textSubtle": "#9d8b70",
+    "textInverse": "#231e18",
+    "accent": "#88a4d3",
+    "accentText": "#231e18",
+    "success": "#b7ba53",
+    "warning": "#e0ac16",
+    "danger": "#d35c5c",
+    "info": "#6eb958",
+    "selectionBg": "#48413a",
+    "selectionFg": "#cabcb1",
+    "cursor": "#88a4d3",
+    "scrollbarTrack": "#302b25",
+    "scrollbarThumb": "#9d8b70"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#231e18",
+      "cursorColor": "#88a4d3"
+    },
+    "box": {
+      "backgroundColor": "#231e18",
+      "borderColor": "#9d8b70",
+      "focusedBorderColor": "#88a4d3"
+    },
+    "text": {
+      "fg": "#cabcb1",
+      "bg": "#231e18",
+      "selectionBg": "#48413a",
+      "selectionFg": "#cabcb1"
+    },
+    "input": {
+      "backgroundColor": "#302b25",
+      "textColor": "#cabcb1",
+      "focusedBackgroundColor": "#48413a",
+      "focusedTextColor": "#cabcb1",
+      "placeholderColor": "#b4a490",
+      "selectionBg": "#9d8b70",
+      "selectionFg": "#cabcb1",
+      "cursorColor": "#88a4d3"
+    },
+    "textarea": {
+      "backgroundColor": "#302b25",
+      "textColor": "#cabcb1",
+      "focusedBackgroundColor": "#48413a",
+      "focusedTextColor": "#cabcb1",
+      "placeholderColor": "#b4a490",
+      "selectionBg": "#9d8b70",
+      "selectionFg": "#cabcb1",
+      "cursorColor": "#88a4d3"
+    },
+    "select": {
+      "backgroundColor": "#231e18",
+      "textColor": "#cabcb1",
+      "focusedBackgroundColor": "#302b25",
+      "focusedTextColor": "#cabcb1",
+      "selectedBackgroundColor": "#88a4d3",
+      "selectedTextColor": "#231e18",
+      "descriptionColor": "#b4a490",
+      "selectedDescriptionColor": "#231e18"
+    },
+    "tabSelect": {
+      "backgroundColor": "#231e18",
+      "textColor": "#b4a490",
+      "focusedBackgroundColor": "#302b25",
+      "focusedTextColor": "#cabcb1",
+      "selectedBackgroundColor": "#88a4d3",
+      "selectedTextColor": "#231e18",
+      "selectedDescriptionColor": "#231e18"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#302b25",
+        "foregroundColor": "#9d8b70"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#b4a490",
+        "backgroundColor": "#302b25"
+      }
+    },
+    "markdown": {
+      "fg": "#cabcb1",
+      "bg": "#231e18",
+      "borderColor": "#9d8b70"
+    },
+    "code": {
+      "fg": "#cabcb1",
+      "bg": "#231e18",
+      "selectionBg": "#48413a",
+      "selectionFg": "#cabcb1"
+    }
+  }
+}

@@ -1,0 +1,245 @@
+import type { LayoutMode } from "../../core/types";
+import type { MenuEntry, MenuId } from "../components/chrome/menu";
+import type { AppTheme } from "../themes";
+
+export interface BuildAppMenusOptions {
+  activeThemeId: string;
+  availableThemes: AppTheme[];
+  canRefreshCurrentInput: boolean;
+  focusFilter: () => void;
+  layoutMode: LayoutMode;
+  moveToAnnotatedFile: (delta: number) => void;
+  moveToAnnotatedHunk: (delta: number) => void;
+  moveToHunk: (delta: number) => void;
+  refreshCurrentInput: () => void;
+  requestQuit: () => void;
+  selectLayoutMode: (mode: LayoutMode) => void;
+  selectThemeId: (themeId: string) => void;
+  copyDecorations: boolean;
+  showAgentNotes: boolean;
+  showHelp: boolean;
+  showHunkHeaders: boolean;
+  showLineNumbers: boolean;
+  renderSidebar: boolean;
+  toggleCopyDecorations: () => void;
+  toggleAgentNotes: () => void;
+  toggleFocusArea: () => void;
+  toggleHelp: () => void;
+  toggleHunkHeaders: () => void;
+  toggleLineNumbers: () => void;
+  toggleLineWrap: () => void;
+  toggleSidebar: () => void;
+  triggerEditSelectedFile: () => void;
+  wrapLines: boolean;
+}
+
+/** Build the top-level app menus from the current app state and actions. */
+export function buildAppMenus({
+  activeThemeId,
+  availableThemes,
+  canRefreshCurrentInput,
+  focusFilter,
+  layoutMode,
+  moveToAnnotatedFile,
+  moveToAnnotatedHunk,
+  moveToHunk,
+  refreshCurrentInput,
+  requestQuit,
+  selectLayoutMode,
+  selectThemeId,
+  copyDecorations,
+  showAgentNotes,
+  showHelp,
+  showHunkHeaders,
+  showLineNumbers,
+  renderSidebar,
+  toggleCopyDecorations,
+  toggleAgentNotes,
+  toggleFocusArea,
+  toggleHelp,
+  toggleHunkHeaders,
+  toggleLineNumbers,
+  toggleLineWrap,
+  toggleSidebar,
+  triggerEditSelectedFile,
+  wrapLines,
+}: BuildAppMenusOptions): Record<MenuId, MenuEntry[]> {
+  const themeMenuEntries: MenuEntry[] = availableThemes.map((theme) => ({
+    kind: "item",
+    label: theme.label,
+    checked: theme.id === activeThemeId,
+    action: () => selectThemeId(theme.id),
+  }));
+
+  const fileMenuEntries: MenuEntry[] = [
+    {
+      kind: "item",
+      label: "Toggle files/filter focus",
+      hint: "Tab",
+      action: toggleFocusArea,
+    },
+    {
+      kind: "item",
+      label: "Focus filter",
+      hint: "/",
+      action: focusFilter,
+    },
+    {
+      kind: "item",
+      label: "Open file in editor",
+      action: triggerEditSelectedFile,
+    },
+  ];
+
+  if (canRefreshCurrentInput) {
+    fileMenuEntries.push({
+      kind: "item",
+      label: "Reload",
+      hint: "r",
+      action: refreshCurrentInput,
+    });
+  }
+
+  fileMenuEntries.push(
+    { kind: "separator" },
+    {
+      kind: "item",
+      label: "Quit",
+      hint: "q",
+      action: requestQuit,
+    },
+  );
+
+  return {
+    file: fileMenuEntries,
+    view: [
+      {
+        kind: "item",
+        label: "Split view",
+        hint: "1",
+        checked: layoutMode === "split",
+        action: () => selectLayoutMode("split"),
+      },
+      {
+        kind: "item",
+        label: "Stacked view",
+        hint: "2",
+        checked: layoutMode === "stack",
+        action: () => selectLayoutMode("stack"),
+      },
+      {
+        kind: "item",
+        label: "Auto layout",
+        hint: "0",
+        checked: layoutMode === "auto",
+        action: () => selectLayoutMode("auto"),
+      },
+      { kind: "separator" },
+      {
+        kind: "item",
+        label: "Sidebar",
+        hint: "s",
+        checked: renderSidebar,
+        action: toggleSidebar,
+      },
+      { kind: "separator" },
+      {
+        kind: "item",
+        label: "Agent notes",
+        hint: "a",
+        checked: showAgentNotes,
+        action: toggleAgentNotes,
+      },
+      {
+        kind: "item",
+        label: "Line numbers",
+        hint: "l",
+        checked: showLineNumbers,
+        action: toggleLineNumbers,
+      },
+      {
+        kind: "item",
+        label: "Line wrapping",
+        hint: "w",
+        checked: wrapLines,
+        action: toggleLineWrap,
+      },
+      {
+        kind: "item",
+        label: "Hunk metadata",
+        hint: "m",
+        checked: showHunkHeaders,
+        action: toggleHunkHeaders,
+      },
+      {
+        kind: "item",
+        label: "Copy decorations",
+        checked: copyDecorations,
+        action: toggleCopyDecorations,
+      },
+    ],
+    navigate: [
+      {
+        kind: "item",
+        label: "Previous hunk",
+        hint: "[",
+        action: () => moveToHunk(-1),
+      },
+      {
+        kind: "item",
+        label: "Next hunk",
+        hint: "]",
+        action: () => moveToHunk(1),
+      },
+      { kind: "separator" },
+      {
+        kind: "item",
+        label: "Previous comment",
+        hint: "{",
+        action: () => moveToAnnotatedHunk(-1),
+      },
+      {
+        kind: "item",
+        label: "Next comment",
+        hint: "}",
+        action: () => moveToAnnotatedHunk(1),
+      },
+      { kind: "separator" },
+      {
+        kind: "item",
+        label: "Focus filter",
+        hint: "/",
+        action: focusFilter,
+      },
+    ],
+    theme: themeMenuEntries,
+    agent: [
+      {
+        kind: "item",
+        label: "Agent notes",
+        hint: "a",
+        checked: showAgentNotes,
+        action: toggleAgentNotes,
+      },
+      {
+        kind: "item",
+        label: "Next annotated file",
+        action: () => moveToAnnotatedFile(1),
+      },
+      {
+        kind: "item",
+        label: "Previous annotated file",
+        action: () => moveToAnnotatedFile(-1),
+      },
+    ],
+    help: [
+      {
+        kind: "item",
+        label: "Controls help",
+        hint: "?",
+        checked: showHelp,
+        action: toggleHelp,
+      },
+    ],
+  };
+}

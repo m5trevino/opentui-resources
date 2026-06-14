@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Black Metal (Gorgoroth)",
+  "slug": "black-metal-gorgoroth",
+  "system": "base16",
+  "author": "metalelf0 (https://github.com/metalelf0)",
+  "palette": {
+    "base00": "#000000",
+    "base01": "#121212",
+    "base02": "#222222",
+    "base03": "#333333",
+    "base04": "#999999",
+    "base05": "#c1c1c1",
+    "base06": "#999999",
+    "base07": "#c1c1c1",
+    "base08": "#5f8787",
+    "base09": "#aaaaaa",
+    "base0A": "#8c7f70",
+    "base0B": "#9b8d7f",
+    "base0C": "#aaaaaa",
+    "base0D": "#888888",
+    "base0E": "#999999",
+    "base0F": "#444444"
+  },
+  "tokens": {
+    "background": "#000000",
+    "surface": "#121212",
+    "surfaceAlt": "#222222",
+    "surfaceRaised": "#222222",
+    "border": "#333333",
+    "borderFocused": "#888888",
+    "text": "#c1c1c1",
+    "textMuted": "#999999",
+    "textSubtle": "#333333",
+    "textInverse": "#000000",
+    "accent": "#888888",
+    "accentText": "#000000",
+    "success": "#9b8d7f",
+    "warning": "#8c7f70",
+    "danger": "#5f8787",
+    "info": "#aaaaaa",
+    "selectionBg": "#222222",
+    "selectionFg": "#c1c1c1",
+    "cursor": "#888888",
+    "scrollbarTrack": "#121212",
+    "scrollbarThumb": "#333333"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#000000",
+      "cursorColor": "#888888"
+    },
+    "box": {
+      "backgroundColor": "#000000",
+      "borderColor": "#333333",
+      "focusedBorderColor": "#888888"
+    },
+    "text": {
+      "fg": "#c1c1c1",
+      "bg": "#000000",
+      "selectionBg": "#222222",
+      "selectionFg": "#c1c1c1"
+    },
+    "input": {
+      "backgroundColor": "#121212",
+      "textColor": "#c1c1c1",
+      "focusedBackgroundColor": "#222222",
+      "focusedTextColor": "#c1c1c1",
+      "placeholderColor": "#999999",
+      "selectionBg": "#333333",
+      "selectionFg": "#c1c1c1",
+      "cursorColor": "#888888"
+    },
+    "textarea": {
+      "backgroundColor": "#121212",
+      "textColor": "#c1c1c1",
+      "focusedBackgroundColor": "#222222",
+      "focusedTextColor": "#c1c1c1",
+      "placeholderColor": "#999999",
+      "selectionBg": "#333333",
+      "selectionFg": "#c1c1c1",
+      "cursorColor": "#888888"
+    },
+    "select": {
+      "backgroundColor": "#000000",
+      "textColor": "#c1c1c1",
+      "focusedBackgroundColor": "#121212",
+      "focusedTextColor": "#c1c1c1",
+      "selectedBackgroundColor": "#888888",
+      "selectedTextColor": "#000000",
+      "descriptionColor": "#999999",
+      "selectedDescriptionColor": "#000000"
+    },
+    "tabSelect": {
+      "backgroundColor": "#000000",
+      "textColor": "#999999",
+      "focusedBackgroundColor": "#121212",
+      "focusedTextColor": "#c1c1c1",
+      "selectedBackgroundColor": "#888888",
+      "selectedTextColor": "#000000",
+      "selectedDescriptionColor": "#000000"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#121212",
+        "foregroundColor": "#333333"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#999999",
+        "backgroundColor": "#121212"
+      }
+    },
+    "markdown": {
+      "fg": "#c1c1c1",
+      "bg": "#000000",
+      "borderColor": "#333333"
+    },
+    "code": {
+      "fg": "#c1c1c1",
+      "bg": "#000000",
+      "selectionBg": "#222222",
+      "selectionFg": "#c1c1c1"
+    }
+  }
+}

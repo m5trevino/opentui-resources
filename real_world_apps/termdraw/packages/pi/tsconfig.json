@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "bun"],
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@termdraw/opentui": ["../opentui/src/index.ts"]
+    }
+  },
+  "include": [
+    "extensions/**/*.ts",
+    "extensions/**/*.test.ts",
+    "islands/**/*.tsx",
+    "../../types/**/*.d.ts"
+  ]
+}

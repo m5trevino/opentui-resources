@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@opentui/react",
+    "customConditions": ["@tooee/source"],
+    "types": ["bun"]
+  },
+  "files": [],
+  "references": [
+    { "path": "packages/config" },
+    { "path": "packages/commands" },
+    { "path": "packages/themes" },
+    { "path": "packages/overlays" },
+    { "path": "packages/clipboard" },
+    { "path": "packages/fuzzy" },
+    { "path": "packages/marks" },
+    { "path": "packages/toasts" },
+    { "path": "packages/search" },
+    { "path": "packages/layout" },
+    { "path": "packages/renderers" },
+    { "path": "packages/shell" },
+    { "path": "packages/view" },
+    { "path": "packages/ask" },
+
+    { "path": "packages/router" },
+    { "path": "packages/choose" },
+    { "path": "apps/cli" }
+  ]
+}

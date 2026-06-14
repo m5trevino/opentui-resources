@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Jet Brains Darcula",
+  "slug": "jet-brains-darcula",
+  "system": "base24",
+  "author": "FredHappyface (https://github.com/fredHappyface)",
+  "palette": {
+    "base00": "#202020",
+    "base01": "#000000",
+    "base02": "#555555",
+    "base03": "#6b6b6b",
+    "base04": "#818181",
+    "base05": "#979797",
+    "base06": "#adadad",
+    "base07": "#eeeeee",
+    "base08": "#fa5355",
+    "base09": "#c2c300",
+    "base0A": "#6d9df1",
+    "base0B": "#126e00",
+    "base0C": "#33c2c1",
+    "base0D": "#4581eb",
+    "base0E": "#fa54ff",
+    "base0F": "#7d292a"
+  },
+  "tokens": {
+    "background": "#202020",
+    "surface": "#000000",
+    "surfaceAlt": "#555555",
+    "surfaceRaised": "#555555",
+    "border": "#6b6b6b",
+    "borderFocused": "#4581eb",
+    "text": "#979797",
+    "textMuted": "#818181",
+    "textSubtle": "#6b6b6b",
+    "textInverse": "#202020",
+    "accent": "#4581eb",
+    "accentText": "#202020",
+    "success": "#126e00",
+    "warning": "#6d9df1",
+    "danger": "#fa5355",
+    "info": "#33c2c1",
+    "selectionBg": "#555555",
+    "selectionFg": "#979797",
+    "cursor": "#4581eb",
+    "scrollbarTrack": "#000000",
+    "scrollbarThumb": "#6b6b6b"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#202020",
+      "cursorColor": "#4581eb"
+    },
+    "box": {
+      "backgroundColor": "#202020",
+      "borderColor": "#6b6b6b",
+      "focusedBorderColor": "#4581eb"
+    },
+    "text": {
+      "fg": "#979797",
+      "bg": "#202020",
+      "selectionBg": "#555555",
+      "selectionFg": "#979797"
+    },
+    "input": {
+      "backgroundColor": "#000000",
+      "textColor": "#979797",
+      "focusedBackgroundColor": "#555555",
+      "focusedTextColor": "#979797",
+      "placeholderColor": "#818181",
+      "selectionBg": "#6b6b6b",
+      "selectionFg": "#979797",
+      "cursorColor": "#4581eb"
+    },
+    "textarea": {
+      "backgroundColor": "#000000",
+      "textColor": "#979797",
+      "focusedBackgroundColor": "#555555",
+      "focusedTextColor": "#979797",
+      "placeholderColor": "#818181",
+      "selectionBg": "#6b6b6b",
+      "selectionFg": "#979797",
+      "cursorColor": "#4581eb"
+    },
+    "select": {
+      "backgroundColor": "#202020",
+      "textColor": "#979797",
+      "focusedBackgroundColor": "#000000",
+      "focusedTextColor": "#979797",
+      "selectedBackgroundColor": "#4581eb",
+      "selectedTextColor": "#202020",
+      "descriptionColor": "#818181",
+      "selectedDescriptionColor": "#202020"
+    },
+    "tabSelect": {
+      "backgroundColor": "#202020",
+      "textColor": "#818181",
+      "focusedBackgroundColor": "#000000",
+      "focusedTextColor": "#979797",
+      "selectedBackgroundColor": "#4581eb",
+      "selectedTextColor": "#202020",
+      "selectedDescriptionColor": "#202020"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#000000",
+        "foregroundColor": "#6b6b6b"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#818181",
+        "backgroundColor": "#000000"
+      }
+    },
+    "markdown": {
+      "fg": "#979797",
+      "bg": "#202020",
+      "borderColor": "#6b6b6b"
+    },
+    "code": {
+      "fg": "#979797",
+      "bg": "#202020",
+      "selectionBg": "#555555",
+      "selectionFg": "#979797"
+    }
+  }
+}

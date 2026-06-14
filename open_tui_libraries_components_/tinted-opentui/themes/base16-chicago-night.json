@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Chicago Night",
+  "slug": "chicago-night",
+  "system": "base16",
+  "author": "Wendell, Ryan &lt;ryanjwendell@gmail.com&gt;",
+  "palette": {
+    "base00": "#1e2a24",
+    "base01": "#2a3b32",
+    "base02": "#364c40",
+    "base03": "#5f7368",
+    "base04": "#8a9a91",
+    "base05": "#a7b8af",
+    "base06": "#c1cdc7",
+    "base07": "#dbe3de",
+    "base08": "#c60c30",
+    "base09": "#f9461c",
+    "base0A": "#f9e300",
+    "base0B": "#009b3a",
+    "base0C": "#00a1de",
+    "base0D": "#522398",
+    "base0E": "#e27ea6",
+    "base0F": "#62361b"
+  },
+  "tokens": {
+    "background": "#1e2a24",
+    "surface": "#2a3b32",
+    "surfaceAlt": "#364c40",
+    "surfaceRaised": "#364c40",
+    "border": "#5f7368",
+    "borderFocused": "#522398",
+    "text": "#a7b8af",
+    "textMuted": "#8a9a91",
+    "textSubtle": "#5f7368",
+    "textInverse": "#1e2a24",
+    "accent": "#522398",
+    "accentText": "#1e2a24",
+    "success": "#009b3a",
+    "warning": "#f9e300",
+    "danger": "#c60c30",
+    "info": "#00a1de",
+    "selectionBg": "#364c40",
+    "selectionFg": "#a7b8af",
+    "cursor": "#522398",
+    "scrollbarTrack": "#2a3b32",
+    "scrollbarThumb": "#5f7368"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#1e2a24",
+      "cursorColor": "#522398"
+    },
+    "box": {
+      "backgroundColor": "#1e2a24",
+      "borderColor": "#5f7368",
+      "focusedBorderColor": "#522398"
+    },
+    "text": {
+      "fg": "#a7b8af",
+      "bg": "#1e2a24",
+      "selectionBg": "#364c40",
+      "selectionFg": "#a7b8af"
+    },
+    "input": {
+      "backgroundColor": "#2a3b32",
+      "textColor": "#a7b8af",
+      "focusedBackgroundColor": "#364c40",
+      "focusedTextColor": "#a7b8af",
+      "placeholderColor": "#8a9a91",
+      "selectionBg": "#5f7368",
+      "selectionFg": "#a7b8af",
+      "cursorColor": "#522398"
+    },
+    "textarea": {
+      "backgroundColor": "#2a3b32",
+      "textColor": "#a7b8af",
+      "focusedBackgroundColor": "#364c40",
+      "focusedTextColor": "#a7b8af",
+      "placeholderColor": "#8a9a91",
+      "selectionBg": "#5f7368",
+      "selectionFg": "#a7b8af",
+      "cursorColor": "#522398"
+    },
+    "select": {
+      "backgroundColor": "#1e2a24",
+      "textColor": "#a7b8af",
+      "focusedBackgroundColor": "#2a3b32",
+      "focusedTextColor": "#a7b8af",
+      "selectedBackgroundColor": "#522398",
+      "selectedTextColor": "#1e2a24",
+      "descriptionColor": "#8a9a91",
+      "selectedDescriptionColor": "#1e2a24"
+    },
+    "tabSelect": {
+      "backgroundColor": "#1e2a24",
+      "textColor": "#8a9a91",
+      "focusedBackgroundColor": "#2a3b32",
+      "focusedTextColor": "#a7b8af",
+      "selectedBackgroundColor": "#522398",
+      "selectedTextColor": "#1e2a24",
+      "selectedDescriptionColor": "#1e2a24"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#2a3b32",
+        "foregroundColor": "#5f7368"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#8a9a91",
+        "backgroundColor": "#2a3b32"
+      }
+    },
+    "markdown": {
+      "fg": "#a7b8af",
+      "bg": "#1e2a24",
+      "borderColor": "#5f7368"
+    },
+    "code": {
+      "fg": "#a7b8af",
+      "bg": "#1e2a24",
+      "selectionBg": "#364c40",
+      "selectionFg": "#a7b8af"
+    }
+  }
+}

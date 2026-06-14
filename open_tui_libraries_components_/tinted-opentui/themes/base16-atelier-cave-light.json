@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "name": "Atelier Cave Light",
+  "slug": "atelier-cave-light",
+  "system": "base16",
+  "author": "Bram de Haan (http://atelierbramdehaan.nl)",
+  "palette": {
+    "base00": "#efecf4",
+    "base01": "#e2dfe7",
+    "base02": "#8b8792",
+    "base03": "#7e7887",
+    "base04": "#655f6d",
+    "base05": "#585260",
+    "base06": "#26232a",
+    "base07": "#19171c",
+    "base08": "#be4678",
+    "base09": "#aa573c",
+    "base0A": "#a06e3b",
+    "base0B": "#2a9292",
+    "base0C": "#398bc6",
+    "base0D": "#576ddb",
+    "base0E": "#955ae7",
+    "base0F": "#bf40bf"
+  },
+  "tokens": {
+    "background": "#efecf4",
+    "surface": "#e2dfe7",
+    "surfaceAlt": "#8b8792",
+    "surfaceRaised": "#8b8792",
+    "border": "#7e7887",
+    "borderFocused": "#576ddb",
+    "text": "#585260",
+    "textMuted": "#655f6d",
+    "textSubtle": "#7e7887",
+    "textInverse": "#efecf4",
+    "accent": "#576ddb",
+    "accentText": "#efecf4",
+    "success": "#2a9292",
+    "warning": "#a06e3b",
+    "danger": "#be4678",
+    "info": "#398bc6",
+    "selectionBg": "#8b8792",
+    "selectionFg": "#585260",
+    "cursor": "#576ddb",
+    "scrollbarTrack": "#e2dfe7",
+    "scrollbarThumb": "#7e7887"
+  },
+  "components": {
+    "renderer": {
+      "backgroundColor": "#efecf4",
+      "cursorColor": "#576ddb"
+    },
+    "box": {
+      "backgroundColor": "#efecf4",
+      "borderColor": "#7e7887",
+      "focusedBorderColor": "#576ddb"
+    },
+    "text": {
+      "fg": "#585260",
+      "bg": "#efecf4",
+      "selectionBg": "#8b8792",
+      "selectionFg": "#585260"
+    },
+    "input": {
+      "backgroundColor": "#e2dfe7",
+      "textColor": "#585260",
+      "focusedBackgroundColor": "#8b8792",
+      "focusedTextColor": "#585260",
+      "placeholderColor": "#655f6d",
+      "selectionBg": "#7e7887",
+      "selectionFg": "#585260",
+      "cursorColor": "#576ddb"
+    },
+    "textarea": {
+      "backgroundColor": "#e2dfe7",
+      "textColor": "#585260",
+      "focusedBackgroundColor": "#8b8792",
+      "focusedTextColor": "#585260",
+      "placeholderColor": "#655f6d",
+      "selectionBg": "#7e7887",
+      "selectionFg": "#585260",
+      "cursorColor": "#576ddb"
+    },
+    "select": {
+      "backgroundColor": "#efecf4",
+      "textColor": "#585260",
+      "focusedBackgroundColor": "#e2dfe7",
+      "focusedTextColor": "#585260",
+      "selectedBackgroundColor": "#576ddb",
+      "selectedTextColor": "#efecf4",
+      "descriptionColor": "#655f6d",
+      "selectedDescriptionColor": "#efecf4"
+    },
+    "tabSelect": {
+      "backgroundColor": "#efecf4",
+      "textColor": "#655f6d",
+      "focusedBackgroundColor": "#e2dfe7",
+      "focusedTextColor": "#585260",
+      "selectedBackgroundColor": "#576ddb",
+      "selectedTextColor": "#efecf4",
+      "selectedDescriptionColor": "#efecf4"
+    },
+    "scrollbar": {
+      "trackOptions": {
+        "backgroundColor": "#e2dfe7",
+        "foregroundColor": "#7e7887"
+      },
+      "arrowOptions": {
+        "foregroundColor": "#655f6d",
+        "backgroundColor": "#e2dfe7"
+      }
+    },
+    "markdown": {
+      "fg": "#585260",
+      "bg": "#efecf4",
+      "borderColor": "#7e7887"
+    },
+    "code": {
+      "fg": "#585260",
+      "bg": "#efecf4",
+      "selectionBg": "#8b8792",
+      "selectionFg": "#585260"
+    }
+  }
+}
