@@ -1,5 +1,5 @@
 ---
-name: opentui-lazymem
+name: opentui-skill
 description: |
   Memory management agent for macOS dev environments. Collects live memory state
   across processes, Claude agent sessions, Node/dev tools, and Docker containers,

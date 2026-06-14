@@ -1,5 +1,5 @@
 ---
-name: opentui-debug
+name: jcha0713-igl-opentui-debug
 description: Debug OpenTUI applications using file-based logging when console.log is captured by the TUI overlay.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: opentui-opentui
+name: opentui1
 description: Comprehensive OpenTUI skill for building terminal user interfaces. Covers the core imperative API, React reconciler, and Solid reconciler. Use for any TUI development task including components, layout, keyboard handling, animations, and testing.
 metadata:
    references: core, react, solid

@@ -951,9 +951,7 @@ export function Component({ title, items }: ComponentProps) {
 
 For detailed API references and advanced topics, see:
 - [Component API Reference](references/COMPONENT_API.md) - Complete component props and options
-- [Core API Reference](references/CORE_API.md) - Low-level Core package API
 - [Layout Guide](references/LAYOUT.md) - In-depth Yoga/Flexbox layout guide
-- [Styling Guide](references/STYLING.md) - Colors, text attributes, and styling patterns
 
 ## Examples
 

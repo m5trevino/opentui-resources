@@ -85,7 +85,7 @@ This makes it impossible to miss when one slice ends and a new fresh agent start
 | User wants JSX, React hooks, familiar component model | `@opentui/react` | Default choice. Full reconciler with `useState`, `useEffect`, `useKeyboard`. |
 | User wants SolidJS signals, smaller bundle, or Solid ecosystem | `@opentui/solid` | Solid reconciler with `createSignal` and `createEffect`. |
 | User needs maximum control, custom renderables, minimal deps | `@opentui/core` | Imperative renderables (classes) with direct `renderer.root.add()`. |
-| User wants a quick scaffold | `scripts/create-opentui-app.sh` | Bash script in the repo that generates a working project skeleton. |
+| User wants a quick scaffold | `bunx create-tui` | CLI tool that generates a working project skeleton. |
 
 **Default to `@opentui/react` unless the user explicitly requests Solid or raw imperative APIs.**
 

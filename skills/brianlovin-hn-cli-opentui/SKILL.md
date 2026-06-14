@@ -1,5 +1,5 @@
 ---
-name: OpenTUI
+name: brianlovin-hn-cli-opentui
 description: Build terminal UIs with OpenTUI, a TypeScript library using Yoga-powered flexbox layout. Use when creating terminal applications, working with Text/Box/Input/Select/ScrollBox components, handling keyboard input, or writing OpenTUI tests.
 ---
 

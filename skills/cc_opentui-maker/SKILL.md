@@ -1,5 +1,5 @@
 ---
-name: opentui-maker
+name: cc_opentui-maker
 description: Use proactively when the user wants to create, scaffold, or modify Terminal User Interface (TUI) applications using OpenTUI with SolidJS reactivity. Specialist for generating TUI components, routes, contexts, and ensuring correct build configuration with SolidJS preload and JSX pragma patterns.
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
